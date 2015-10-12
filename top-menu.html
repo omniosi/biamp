@@ -5,17 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" >
 	<title>Biamp - top menu</title>
 	<style type="text/css">
-/* FONT STYLES --------------------------------------------------------- */
-	@font-face {
-		font-family: 'BigNoodleTitlingOblique';
-		src: url('../fonts/2F5E63_0_0.eot');
-		src: url('../fonts/2F5E63_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2F5E63_0_0.woff2') format('woff2'),url('webfonts/2F5E63_0_0.woff') format('woff'),url('webfonts/2F5E63_0_0.ttf') format('truetype');
-	}
- 	@font-face {
-		font-family: 'BigNoodleTitling';
-		src: url('../fonts/2F5E63_2_0.eot');
-		src: url('../fonts/2F5E63_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2F5E63_2_0.woff2') format('woff2'),url('webfonts/2F5E63_2_0.woff') format('woff'),url('webfonts/2F5E63_2_0.ttf') format('truetype');
-	}
+	/* FONTS --------------------------------------------------------- */
+
 	/* GLOBAL STYLES --------------------------------------------------------- */
 	*{
 		margin: 0;
@@ -28,13 +19,17 @@
 		text-shadow:none;
 		text-decoration: none;
 		word-wrap: break-word;
-		color: #08c;
 	}
 	a:focus,
 	a:hover{
 		text-decoration: underline;
 	}
-	/* HEADER STYLES --------------------------------------------------------- */
+	/* ANIMATION --------------------------------------------------------- */
+	.opening{animation:opening 1s ease 0s 1 both;}
+	.closing{animation:closing 1s ease 0s 1 both;}
+	@keyframes opening{ from{height:0%;} to{height:100%;} }
+	@keyframes closing{ from{height:100%;} to{height:0%;} }
+	/* HEADER --------------------------------------------------------- */
 	.top-menu{
 		position: relative;
 		/*padding: 20px;*/
@@ -69,6 +64,7 @@
 		height: 80px;
 		border-right: 1px solid rgb(88,85,86);
 		padding: 26px 20px;
+		cursor: pointer;
 	}
 	.search{
 		border-right: none;
@@ -92,7 +88,8 @@
 				<div class="two"></div>
 				<div class="three"></div>
 			</div>
-			<ul>
+			<ul style="height:0">
+			<!-- <ul style="display:none"> -->
 				<li><a href="#">Solutions</a></li>
 				<li><a href="#">Products</a></li>
 				<li><a href="#">Training &amp; Support</a></li>
@@ -124,7 +121,27 @@
 		</form>
 	</div>
 	<script type="text/javascript">
+		var dropIcon = document.getElementsByClassName('drop-menu-icon')[0];
+		var mobileMenu = document.getElementsByClassName('mobile-menu')[0].getElementsByTagName('ul')[0];
 
+		dropIcon.addEventListener("click", function(){
+			// if (mobileMenu.style.display == 'none'){
+			if (mobileMenu.style.height == 0){
+				dropIcon.classList.add('close');
+				// mobileMenu.style.display = 'block';
+				mobileMenu.classList.add('opening');
+				mobileMenu.classList.remove('closing');
+				// mobileMenu.style.height = '100%';
+				// mobileMenu.style.height = 'auto';
+				mobileMenu.style.height = 400;
+			}else{
+				dropIcon.classList.remove('close');
+				// mobileMenu.style.display = 'none';
+				mobileMenu.classList.add('closing');
+				mobileMenu.classList.remove('opening');
+				mobileMenu.style.height = 0;
+			}
+		});
 	</script>
 </body>
 </html>
