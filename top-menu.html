@@ -24,11 +24,6 @@
 	a:hover{
 		text-decoration: underline;
 	}
-	/* ANIMATION --------------------------------------------------------- */
-	.opening{animation:opening 1s ease 0s 1 both;}
-	.closing{animation:closing 1s ease 0s 1 both;}
-	@keyframes opening{ from{height:0%;} to{height:100%;} }
-	@keyframes closing{ from{height:100%;} to{height:0%;} }
 	/* HEADER --------------------------------------------------------- */
 	.top-menu{
 		position: relative;
@@ -88,8 +83,7 @@
 				<div class="two"></div>
 				<div class="three"></div>
 			</div>
-			<ul style="height:0">
-			<!-- <ul style="display:none"> -->
+			<ul style="display:none">
 				<li><a href="#">Solutions</a></li>
 				<li><a href="#">Products</a></li>
 				<li><a href="#">Training &amp; Support</a></li>
@@ -120,26 +114,18 @@
 			<input>
 		</form>
 	</div>
+	<script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript">
 		var dropIcon = document.getElementsByClassName('drop-menu-icon')[0];
 		var mobileMenu = document.getElementsByClassName('mobile-menu')[0].getElementsByTagName('ul')[0];
 
 		dropIcon.addEventListener("click", function(){
-			// if (mobileMenu.style.display == 'none'){
-			if (mobileMenu.style.height == 0){
+			if (mobileMenu.style.display == 'none'){
 				dropIcon.classList.add('close');
-				// mobileMenu.style.display = 'block';
-				mobileMenu.classList.add('opening');
-				mobileMenu.classList.remove('closing');
-				// mobileMenu.style.height = '100%';
-				// mobileMenu.style.height = 'auto';
-				mobileMenu.style.height = 400;
+				mobileMenu.style.display = 'block';
 			}else{
 				dropIcon.classList.remove('close');
-				// mobileMenu.style.display = 'none';
-				mobileMenu.classList.add('closing');
-				mobileMenu.classList.remove('opening');
-				mobileMenu.style.height = 0;
+				mobileMenu.style.display = 'none';
 			}
 		});
 	</script>
