@@ -73,15 +73,20 @@
 		margin-bottom: 10px;
 		background: white;
 		position: relative;
+		transition: opacity 0.25s, top 0.25s, transform 0.25s;
 	}
+	.drop-menu-icon.close .two,
 	.drop-menu-icon.close .one{
+		-ms-transform:rotate(45deg);
 		transform:rotate(45deg);
 		top: 10px;
 	}
 	.drop-menu-icon.close .two{
-		opacity:0;
+		/*opacity:0;*/
+		top: -2px;
 	}
 	.drop-menu-icon.close .three{
+		-ms-transform:rotate(-45deg);
 		transform:rotate(-45deg);
 		top: -14px;
 	}
