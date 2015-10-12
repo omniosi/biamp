@@ -72,6 +72,18 @@
 		height: 2px;
 		margin-bottom: 10px;
 		background: white;
+		position: relative;
+	}
+	.drop-menu-icon.close .one{
+		transform:rotate(45deg);
+		top: 10px;
+	}
+	.drop-menu-icon.close .two{
+		opacity:0;
+	}
+	.drop-menu-icon.close .three{
+		transform:rotate(-45deg);
+		top: -14px;
 	}
 	</style>
 </head>
@@ -122,10 +134,14 @@
 		dropIcon.addEventListener("click", function(){
 			if (mobileMenu.style.display == 'none'){
 				dropIcon.classList.add('close');
-				mobileMenu.style.display = 'block';
+				// mobileMenu.style.display = 'block';
+				// $('.mobile-menu').find('ul').show();
+				$('.mobile-menu').find('ul').slideDown();
 			}else{
 				dropIcon.classList.remove('close');
-				mobileMenu.style.display = 'none';
+				// mobileMenu.style.display = 'none';
+				// mobileMenu.hide();
+				$('.mobile-menu').find('ul').slideUp();
 			}
 		});
 	</script>
