@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta	charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" >
+	<title>Biamp - top menu</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		-webkit-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+	a{
+		text-decoration: none;
+		color: black;
+	}
+	a:focus,
+	a:hover{
+		text-decoration: underline;
+	}
+	.top-menu{
+		position: relative;
+		/*padding: 20px;*/
+		height: 80px;
+		background: black;
+	}
+	.top-menu .logo{
+		padding: 20px;
+		text-align: center;
+	}
+	.search,
+	.mobile-menu{
+		position: absolute;
+		top: 0;
+	}
+	.mobile-menu ul{
+		background: grey;
+	}
+	.mobile-menu ul li a{
+		padding: 15px 20px;
+		display: block;
+	}
+	.search,
+	.drop-menu-icon{
+		width: 80px;
+		height: 80px;
+		border-right: 1px solid white;
+	}
+	.search{
+		border-right: none;
+		border-left: 1px solid white;
+		right: 0;
+	}
+	</style>
+</head>
+<body>
+	<div class="top-menu">
+		<div class="mobile-menu">
+			<div class="drop-menu-icon"></div>
+			<ul>
+				<li><a href="#">Solutions</a></li>
+				<li><a href="#">Products</a></li>
+				<li><a href="#">Training &amp; Support</a></li>
+				<li><a href="#">Company</a></li>
+				<li><a href="#">Downloads</a></li>
+				<li><a href="#">Online Support</a></li>
+			</ul>
+		</div>
+		<div class="logo">
+			<img src="img/biamp_newlogo_inverse_2clr.svg" style="height:40px">
+		</div>
+	</div>
+	<div class="desk-menu" style="display:none">
+		<ul>
+			<li><a href="#">Solutions</a></li>
+			<li><a href="#">Products</a></li>
+			<li><a href="#">Training &amp; Support</a></li>
+			<li><a href="#">Company</a></li>
+			<li><a href="#">Downloads</a></li>
+			<li><a href="#">Online Support</a></li>
+		</ul>
+	</div>
+	<div class="search">
+		<i class="search icon"></i>
+		<form>
+			<input>
+		</form>
+	</div>
+	<script type="text/javascript">
+
+	</script>
+</body>
+</html>
