@@ -45,21 +45,53 @@
 		text-align: center;
 	}
 	.search,
+	.main-menu,
 	.mobile-menu{
 		position: absolute;
 		top: 0;
 	}
 	.search form,
+	.main-menu ul,
 	.mobile-menu ul{
 		background: rgb(88,85,86);
+		padding-top: 10px;
 	}
+	.main-menu{
+		font-size: 1em;
+		text-transform: uppercase;
+	}
+	.main-menu ul li{
+		list-style: none;
+	}
+	.main-menu ul li a,
 	.mobile-menu ul li a{
-		padding: 16px 20px;
+		/*padding: 16px 20px;*/
+		margin: 16px 20px;
+		padding: 0 0 7px;
 		display: block;
+		background: rgb(88,85,86);
 	}
+	.main-menu ul li:nth-child(6) a{
+		/*padding-bottom: 5px;*/
+	}
+	.main-menu ul li:last-child a,
 	.mobile-menu ul li:last-child a{
-		padding: 0 10px 8px;
+		/*padding: 0 10px 8px;*/
+		margin: 0 10px 8px;
+		padding: 0;
+		position: relative;
+		top: -12px;
 	}
+		.main-menu ul li a:hover{
+			text-decoration: none;
+			padding: 0 0 5px;
+			border-bottom: 2px solid rgb(217,39,46);
+		}
+		.main-menu ul li:last-child a:hover{
+			border: none;
+			padding: 0;
+		}
+
 	/*.drop-menu-icon{ display:block; }*/
 	.desk-menu{
 		/*display: none; */
@@ -139,28 +171,63 @@
 		border-radius: 6px;
 		border: none;
 		color: rgb(88,85,86);
+		color: rgb(200,199,199);
 		padding-left: 15px;
 		font-size: 18px;
 	}
 
 	/*desktop*/
-	@media (min-width:1220px){
-		.drop-menu-icon{
-			display:none;
-		}
-		.desk-menu{
-			display: block !important;
-		}
+	@media (min-width:1250px){
 		.top-menu .logo{
 			text-align: left;
 			padding-left: 40px;
+		}
+		.drop-menu-icon{
+			display:none;
+		}
+		.main-menu{
+			position: absolute;
+			top: 0;
+			right: 80px;
+		}
+		.main-menu ul{
+			display: block !important;
+			position: relative;
+			top: 0;
+			background: none;
+		}
+		.main-menu ul li{
+			/*list-style: none;*/
+			display:inline-block;
+			vertical-align: top;
+			/*margin: 36px 15px;*/
+			/*margin: 36px 1em;*/
+		}
+		.main-menu ul li:last-child{
+			/*margin: 13px 15px 10px 0px;*/
+			margin: 13px 1em 10px 0px;
+		}
+		.main-menu ul li a{
+			padding: 0;
+			/*margin:30px 20px;*/
+			margin:26px 1em;
+			background: none;
+		}
+		.main-menu ul li a:hover{
+			text-decoration: none;
+			border-bottom: 2px solid rgb(217,39,46);
+			padding-bottom: 5px;
+		}
+		.main-menu ul li:last-child a:hover{
+			border: none;
 		}
 	}
 	</style>
 </head>
 <body>
 	<div class="top-menu">
-		<div class="mobile-menu">
+		<!-- <div class="mobile-menu"> -->
+		<div class="main-menu">
 			<div class="drop-menu-icon">
 				<div class="one"></div>
 				<div class="two"></div>
@@ -179,7 +246,7 @@
 		<div class="logo">
 			<img src="img/biamp_newlogo_inverse_2clr.svg" style="height:40px">
 		</div>
-		<div class="desk-menu" style="display:none">
+<!-- 		<div class="desk-menu" style="display:none">
 			<ul>
 				<li><a href="#">Solutions</a></li>
 				<li><a href="#">Products</a></li>
@@ -189,7 +256,7 @@
 				<li><a href="#">Online Support</a></li>
 				<li><a href="#"><img src="img/user-account-icon.svg" class="user-account icon" width="56" height="56" alt="User Account" /></a></li>
 			</ul>
-		</div>
+		</div> -->
 		<div class="search">
 			<img src="img/search-icon.svg" width="40" height="40" >
 			<form style="display:none">
@@ -201,40 +268,48 @@
 	<script type="text/javascript">
 	$(document).ready(function(){
 		var dropIcon = document.getElementsByClassName('drop-menu-icon')[0];
-		var mobileMenu = document.getElementsByClassName('mobile-menu')[0].getElementsByTagName('ul')[0];
+		var menu = document.getElementsByClassName('main-menu')[0].getElementsByTagName('ul')[0];
+		// var mobileMenu = document.getElementsByClassName('mobile-menu')[0].getElementsByTagName('ul')[0];
 		// var searchIcon = $('.search').find('img');
 		var searchIcon = document.getElementsByClassName('search')[0].getElementsByTagName('img')[0];
 		// var searchBox = $('.search').find('form');
 		var searchBox = document.getElementsByClassName('search')[0].getElementsByTagName('form')[0];
 
 		dropIcon.addEventListener("click", function(){
-			if (mobileMenu.style.display == 'none'){
+			if (menu.style.display == 'none'){
+			// if (mobileMenu.style.display == 'none'){
 				$('.search').find('form').slideUp(100);
 				dropIcon.classList.add('close');
-				$('.mobile-menu').find('ul').slideDown();
+				$('.main-menu').find('ul').slideDown();
+				// $('.mobile-menu').find('ul').slideDown();
 			}else{
 				dropIcon.classList.remove('close');
-				$('.mobile-menu').find('ul').slideUp();
+				$('.main-menu').find('ul').slideUp();
+				// $('.mobile-menu').find('ul').slideUp();
 			}
 		});
 		$('.search').find('img').click(function(){
-			if (searchBox.style.display == 'none'){
-				$('.mobile-menu').find('ul').slideUp(100);
-				searchIcon.classList.add('close');
-				// searchBox.slideDown();
-				$('.search').find('form').slideDown(100);
-			}else{
-				searchIcon.classList.remove('close');
-				// searchBox.slideUp();
-				$('.search').find('form').slideUp(100,function(){
-					$(this).find('input').val('Search Biamp');
-				});
-			}
+				if (searchBox.style.display == 'none'){
+					if (window.innerWidth <= 1250){
+						dropIcon.classList.remove('close');
+						$('.main-menu').find('ul').slideUp(100);
+					}
+					searchIcon.classList.add('close');
+					// searchBox.slideDown();
+					$('.search').find('form').slideDown(100);
+				}else{
+					searchIcon.classList.remove('close');
+					// searchBox.slideUp();
+					$('.search').find('form').slideUp(100,function(){
+						$(this).find('input').val('Search Biamp').css('color', 'rgb(200,199,199)');
+					});
+				}
 		});
 		var searchField = document.getElementsByClassName('search')[0].getElementsByTagName('form')[0].getElementsByTagName('input')[0];
 
 		searchField.addEventListener("click", function(){
 			this.value = "";
+			this.style.color = "rgb(88,85,86)";
 		});
 	});
 	</script>
