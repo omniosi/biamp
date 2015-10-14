@@ -47,12 +47,16 @@
 		position: absolute;
 		top: 0;
 	}
+	.search form,
 	.mobile-menu ul{
 		background: rgb(88,85,86);
 	}
 	.mobile-menu ul li a{
 		padding: 16px 20px;
 		display: block;
+	}
+	.mobile-menu ul li:last-child a{
+		padding: 0 10px 8px;
 	}
 	.search,
 	.drop-menu-icon{
@@ -61,11 +65,6 @@
 		border-right: 1px solid rgb(88,85,86);
 		padding: 26px 20px;
 		cursor: pointer;
-	}
-	.search{
-		border-right: none;
-		border-left: 1px solid rgb(88,85,86);
-		right: 0;
 	}
 	.drop-menu-icon .three,
 	.drop-menu-icon .two,
@@ -90,6 +89,30 @@
 		-ms-transform:rotate(-45deg);
 		transform:rotate(-45deg);
 		top: -14px;
+	}
+	.search{
+		border-right: none;
+		border-left: 1px solid rgb(88,85,86);
+		right: 0;
+		padding: 20px;
+		cursor: pointer;
+	}
+	.search form{
+		/*height:40px;*/
+		/*background: grey;*/
+		padding: 15px;
+		position: absolute;
+		top: 80px;
+		right: 0;
+	}
+	.search form input{
+		width: 355px;
+		height:40px;
+		border-radius: 6px;
+		border: none;
+		color: rgb(88,85,86);
+		padding-left: 15px;
+		font-size: 18px;
 	}
 	</style>
 </head>
@@ -127,29 +150,49 @@
 		</ul>
 	</div>
 	<div class="search">
-		<i class="search icon"></i>
-		<form>
-			<input>
+		<img src="img/search-icon.svg" width="40" height="40" >
+		<form style="display:none">
+			<input type="text" value="Search Biamp">
 		</form>
 	</div>
 	<script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript">
+	$(document).ready(function(){
 		var dropIcon = document.getElementsByClassName('drop-menu-icon')[0];
 		var mobileMenu = document.getElementsByClassName('mobile-menu')[0].getElementsByTagName('ul')[0];
+		// var searchIcon = $('.search').find('img');
+		var searchIcon = document.getElementsByClassName('search')[0].getElementsByTagName('img')[0];
+		// var searchBox = $('.search').find('form');
+		var searchBox = document.getElementsByClassName('search')[0].getElementsByTagName('form')[0];
 
 		dropIcon.addEventListener("click", function(){
 			if (mobileMenu.style.display == 'none'){
 				dropIcon.classList.add('close');
-				// mobileMenu.style.display = 'block';
-				// $('.mobile-menu').find('ul').show();
 				$('.mobile-menu').find('ul').slideDown();
 			}else{
 				dropIcon.classList.remove('close');
-				// mobileMenu.style.display = 'none';
-				// mobileMenu.hide();
 				$('.mobile-menu').find('ul').slideUp();
 			}
 		});
+		$('.search').find('img').click(function(){
+			if (searchBox.style.display == 'none'){
+				searchIcon.classList.add('close');
+				// searchBox.slideDown();
+				$('.search').find('form').slideDown(100);
+			}else{
+				searchIcon.classList.remove('close');
+				// searchBox.slideUp();
+				$('.search').find('form').slideUp(100,function(){
+					$(this).find('input').val('Search Biamp');
+				});
+			}
+		});
+		var searchField = document.getElementsByClassName('search')[0].getElementsByTagName('form')[0].getElementsByTagName('input')[0];
+
+		searchField.addEventListener("click", function(){
+			this.value = "";
+		});
+	});
 	</script>
 </body>
 </html>
