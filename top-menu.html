@@ -209,6 +209,7 @@
 
 		dropIcon.addEventListener("click", function(){
 			if (mobileMenu.style.display == 'none'){
+				$('.search').find('form').slideUp(100);
 				dropIcon.classList.add('close');
 				$('.mobile-menu').find('ul').slideDown();
 			}else{
@@ -218,6 +219,7 @@
 		});
 		$('.search').find('img').click(function(){
 			if (searchBox.style.display == 'none'){
+				$('.mobile-menu').find('ul').slideUp(100);
 				searchIcon.classList.add('close');
 				// searchBox.slideDown();
 				$('.search').find('form').slideDown(100);
