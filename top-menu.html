@@ -87,6 +87,7 @@
 		position: relative;
 		top: -12px;
 	}
+	.main-menu ul li a:focus,
 	.main-menu ul li a.focus,
 	.main-menu ul li a:hover{
 		text-decoration: none;
@@ -244,13 +245,13 @@
 				<div class="three"></div>
 			</div>
 			<ul style="display:none">
-				<li><a href="#">Solutions</a></li>
-				<li><a href="#">Products</a></li>
-				<li><a href="#">Training &amp; Support</a></li>
-				<li><a href="#">Company</a></li>
-				<li><a href="#">Downloads</a></li>
-				<li><a href="#">Online Support</a></li>
-				<li><a href="#"><img src="img/user-account-icon.svg" class="user-account icon" width="56" height="56" alt="User Account" /></a></li>
+				<li><a class="solutions" href="#">Solutions</a></li>
+				<li><a class="products" href="#">Products</a></li>
+				<li><a class="training" href="#">Training &amp; Support</a></li>
+				<li><a class="company" href="#">Company</a></li>
+				<li><a class="downloads" href="#">Downloads</a></li>
+				<li><a class="support" href="#">Online Support</a></li>
+				<li><a class="account" href="#"><img src="img/user-account-icon.svg" class="user-account icon" width="56" height="56" alt="User Account" /></a></li>
 			</ul>
 		</div>
 		<div class="logo">
@@ -262,39 +263,39 @@
 				<input type="text" value="Search Biamp">
 			</form>
 		</div>
-		<div class="mega-menu solutions">
+		<div style="display:none" class="mega-menu menu-one">
 			<div class="col two-col">
 				<p>BIAMP’S SOLUTIONS WILL BLAH BLAH AND WILL BLAH BLAH YOUR BLAH BLAH</p>
 			</div>
 			<div class="col four-col">
 				<h1>BY INDUSTRY</h1>
 				<ul>
-					<li>Business</li>
-					<li>Education</li>
-					<li>Government</li>
-					<li>Healthcare</li>
-					<li>Houses of Worship</li>
-					<li>Recreation</li>
+					<li><a href="#">Business</a></li>
+					<li><a href="#">Education</a></li>
+					<li><a href="#">Government</a></li>
+					<li><a href="#">Healthcare</a></li>
+					<li><a href="#">Houses of Worship</a></li>
+					<li><a href="#">Recreation</a></li>
 				</ul>
 				<h1>BY BUSINESS FUNCTION</h1>
 				<ul>
-					<li>CEO/CIO</li>
-					<li>Facilities</li>
-					<li>Information Technology</li>
-					<li>AV Integrator</li>
-					<li>Consultant</li>
-					<li>End User</li>
+					<li><a href="#">CEO/CIO</a></li>
+					<li><a href="#">Facilities</a></li>
+					<li><a href="#">Information Technology</a></li>
+					<li><a href="#">AV Integrator</a></li>
+					<li><a href="#">Consultant</a></li>
+					<li><a href="#">End User</a></li>
 				</ul>
 			</div>
 			<div class="col four-col">
 				<h1>BY ROOM SIZE</h1>
 				<ul>
-					<li>Business</li>
-					<li>Education</li>
-					<li>Government</li>
-					<li>Healthcare</li>
-					<li>Houses of Worship</li>
-					<li>Recreation</li>
+					<li><a href="#">Business</a></li>
+					<li><a href="#">Education</a></li>
+					<li><a href="#">Government</a></li>
+					<li><a href="#">Healthcare</a></li>
+					<li><a href="#">Houses of Worship</a></li>
+					<li><a href="#">Recreation</a></li>
 				</ul>
 			</div>
 		</div>
@@ -325,6 +326,9 @@
 						dropIcon.classList.remove('close');
 						$('.main-menu').find('ul').slideUp(100);
 					}
+					$('.solutions').removeClass('focus');
+					$('.menu-one').slideUp(100);
+
 					searchIcon.classList.add('close');
 					// searchBox.slideDown();
 					$('.search').find('form').slideDown(100);
@@ -341,6 +345,22 @@
 		searchField.addEventListener("click", function(){
 			this.value = "";
 			this.style.color = "rgb(88,85,86)";
+		});
+		// menu controls
+		var menuOne = document.getElementsByClassName('menu-one')[0];
+		$('.solutions').click(function(){
+			if( menuOne.style.display == 'none' ){
+				$(this).addClass('focus');
+				$('.menu-one').slideDown();
+			}else{
+					searchIcon.classList.remove('close');
+					$('.search').find('form').slideUp(100,function(){
+						$(this).find('input').val('Search Biamp').css('color', 'rgb(200,199,199)');
+					});
+
+				$(this).removeClass('focus');
+				$('.menu-one').slideUp();
+			}
 		});
 	});
 	</script>
