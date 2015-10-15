@@ -4,6 +4,7 @@
 	<meta	charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" >
 	<title>Biamp - top menu</title>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<!-- <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7367512/617108/css/fonts.css" /> -->
 	<style type="text/css">
 	/* FONTS --------------------------------------------------------- */
@@ -27,15 +28,14 @@
 	}
 	/* HEADER --------------------------------------------------------- */
 	.top-menu{
-		/*position: relative;*/
 		position: fixed;
 		width: 100%;
-		/*padding: 20px;*/
 		height: 80px;
-		background: rgb(79,78,78);
+		/*background: rgb(79,78,78);*/
+		background: #4f4e4e;
 	}
 	.top-menu a{
-		font-family: "Gotham SSm A", "Gotham SSm B", Arial, sans-serif;
+		font-family: "Gotham SSm A", "Gotham SSm B", "Montserrat", Arial, sans-serif;
 		font-weight: 400;
 		font-style: normal;
 		color: #fff;
@@ -45,15 +45,14 @@
 		text-align: center;
 	}
 	.search,
-	.main-menu,
-	.mobile-menu{
+	.main-menu{
 		position: absolute;
 		top: 0;
 	}
 	.search form,
-	.main-menu ul,
-	.mobile-menu ul{
-		background: rgb(88,85,86);
+	.main-menu ul{
+		/*background: rgb(88,85,86);*/
+		background: #585556;
 		padding-top: 10px;
 	}
 	.main-menu{
@@ -63,63 +62,32 @@
 	.main-menu ul li{
 		list-style: none;
 	}
-	.main-menu ul li a,
-	.mobile-menu ul li a{
-		/*padding: 16px 20px;*/
+	.main-menu ul li a{
 		margin: 16px 20px;
 		padding: 0 0 7px;
 		display: block;
-		background: rgb(88,85,86);
+		/*background: rgb(88,85,86);*/
+		background: #585556;
 	}
 	.main-menu ul li:nth-child(6) a{
 		/*padding-bottom: 5px;*/
 	}
-	.main-menu ul li:last-child a,
-	.mobile-menu ul li:last-child a{
-		/*padding: 0 10px 8px;*/
+	.main-menu ul li:last-child a{
 		margin: 0 10px 8px;
 		padding: 0;
 		position: relative;
 		top: -12px;
 	}
-		.main-menu ul li a:hover{
-			text-decoration: none;
-			padding: 0 0 5px;
-			border-bottom: 2px solid rgb(217,39,46);
-		}
-		.main-menu ul li:last-child a:hover{
-			border: none;
-			padding: 0;
-		}
-
-	/*.drop-menu-icon{ display:block; }*/
-	.desk-menu{
-		/*display: none; */
-		position: absolute;
-		top: 0;
-		right: 80px;
-		font-size: 1em;
-		text-transform: uppercase;
-	}
-	.desk-menu ul li{
-		list-style: none;
-		display:inline-block;
-		vertical-align: top;
-		/*margin: 36px 15px;*/
-		margin: 36px 1em;
-	}
-	.desk-menu ul li:last-child{
-		/*margin: 13px 15px 10px 0px;*/
-		margin: 13px 1em 10px 0px;
-	}
-	.desk-menu ul li a:hover{
+	.main-menu ul li a:hover{
 		text-decoration: none;
+		padding: 0 0 5px;
 		border-bottom: 2px solid rgb(217,39,46);
-		padding-bottom: 5px;
 	}
-	.desk-menu ul li:last-child a:hover{
+	.main-menu ul li:last-child a:hover{
 		border: none;
+		padding: 0;
 	}
+	/*.drop-menu-icon{ display:block; }*/
 	.search,
 	.drop-menu-icon{
 		width: 80px;
@@ -197,19 +165,14 @@
 			background: none;
 		}
 		.main-menu ul li{
-			/*list-style: none;*/
 			display:inline-block;
 			vertical-align: top;
-			/*margin: 36px 15px;*/
-			/*margin: 36px 1em;*/
 		}
 		.main-menu ul li:last-child{
-			/*margin: 13px 15px 10px 0px;*/
 			margin: 13px 1em 10px 0px;
 		}
 		.main-menu ul li a{
 			padding: 0;
-			/*margin:30px 20px;*/
 			margin:26px 1em;
 			background: none;
 		}
@@ -226,7 +189,6 @@
 </head>
 <body>
 	<div class="top-menu">
-		<!-- <div class="mobile-menu"> -->
 		<div class="main-menu">
 			<div class="drop-menu-icon">
 				<div class="one"></div>
@@ -246,17 +208,6 @@
 		<div class="logo">
 			<img src="img/biamp_newlogo_inverse_2clr.svg" style="height:40px">
 		</div>
-<!-- 		<div class="desk-menu" style="display:none">
-			<ul>
-				<li><a href="#">Solutions</a></li>
-				<li><a href="#">Products</a></li>
-				<li><a href="#">Training &amp; Support</a></li>
-				<li><a href="#">Company</a></li>
-				<li><a href="#">Downloads</a></li>
-				<li><a href="#">Online Support</a></li>
-				<li><a href="#"><img src="img/user-account-icon.svg" class="user-account icon" width="56" height="56" alt="User Account" /></a></li>
-			</ul>
-		</div> -->
 		<div class="search">
 			<img src="img/search-icon.svg" width="40" height="40" >
 			<form style="display:none">
@@ -269,7 +220,6 @@
 	$(document).ready(function(){
 		var dropIcon = document.getElementsByClassName('drop-menu-icon')[0];
 		var menu = document.getElementsByClassName('main-menu')[0].getElementsByTagName('ul')[0];
-		// var mobileMenu = document.getElementsByClassName('mobile-menu')[0].getElementsByTagName('ul')[0];
 		// var searchIcon = $('.search').find('img');
 		var searchIcon = document.getElementsByClassName('search')[0].getElementsByTagName('img')[0];
 		// var searchBox = $('.search').find('form');
@@ -277,15 +227,12 @@
 
 		dropIcon.addEventListener("click", function(){
 			if (menu.style.display == 'none'){
-			// if (mobileMenu.style.display == 'none'){
 				$('.search').find('form').slideUp(100);
 				dropIcon.classList.add('close');
 				$('.main-menu').find('ul').slideDown();
-				// $('.mobile-menu').find('ul').slideDown();
 			}else{
 				dropIcon.classList.remove('close');
 				$('.main-menu').find('ul').slideUp();
-				// $('.mobile-menu').find('ul').slideUp();
 			}
 		});
 		$('.search').find('img').click(function(){
