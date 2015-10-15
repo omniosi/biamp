@@ -26,6 +26,13 @@
 	a:hover{
 		text-decoration: underline;
 	}
+	.col{
+		display:inline-block;
+		vertical-align: top;
+	}
+	.two-col{ width: 50%; }
+	.four-col{ width: 25%; }
+
 	/* HEADER --------------------------------------------------------- */
 	.top-menu{
 		position: fixed;
@@ -34,7 +41,8 @@
 		/*background: rgb(79,78,78);*/
 		background: #4f4e4e;
 	}
-	.top-menu a{
+	.top-menu a,
+	.top-menu{
 		font-family: "Gotham SSm A", "Gotham SSm B", "Montserrat", Arial, sans-serif;
 		font-weight: 400;
 		font-style: normal;
@@ -49,6 +57,7 @@
 		position: absolute;
 		top: 0;
 	}
+	.mega-menu,
 	.search form,
 	.main-menu ul{
 		/*background: rgb(88,85,86);*/
@@ -78,6 +87,7 @@
 		position: relative;
 		top: -12px;
 	}
+	.main-menu ul li a.focus,
 	.main-menu ul li a:hover{
 		text-decoration: none;
 		padding: 0 0 5px;
@@ -143,6 +153,43 @@
 		padding-left: 15px;
 		font-size: 18px;
 	}
+	.mega-menu{
+		position: absolute;
+		top: 80px;
+		width: 100%;
+		padding: 20px 0 20px 20px;
+	}
+	.mega-menu .two-col{
+		padding: 40px 20px;
+		/*width: 40%;*/
+		font-size: 30px;
+		text-transform: uppercase;
+		padding-top: 135px;
+	}
+	.mega-menu .two-col p{
+		width: 530px;
+	}
+	.mega-menu .four-col{
+		width: 22%;
+		height: 500px;
+		border-left: 1px solid white;
+		padding:20px 30px;
+		margin-right: 2%;
+	}
+	.mega-menu .four-col h1{
+		font-size: 20px;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+	}
+	.mega-menu .four-col ul{
+		list-style: none;
+		padding-left: 31px;
+		font-size: 18px;
+		margin-bottom: 40px;
+	}
+	.mega-menu .four-col li{
+		margin-bottom: 5px;
+	}
 
 	/*desktop*/
 	@media (min-width:1250px){
@@ -176,6 +223,7 @@
 			margin:26px 1em;
 			background: none;
 		}
+		.main-menu ul li a.focus,
 		.main-menu ul li a:hover{
 			text-decoration: none;
 			border-bottom: 2px solid rgb(217,39,46);
@@ -213,6 +261,42 @@
 			<form style="display:none">
 				<input type="text" value="Search Biamp">
 			</form>
+		</div>
+		<div class="mega-menu solutions">
+			<div class="col two-col">
+				<p>BIAMP’S SOLUTIONS WILL BLAH BLAH AND WILL BLAH BLAH YOUR BLAH BLAH</p>
+			</div>
+			<div class="col four-col">
+				<h1>BY INDUSTRY</h1>
+				<ul>
+					<li>Business</li>
+					<li>Education</li>
+					<li>Government</li>
+					<li>Healthcare</li>
+					<li>Houses of Worship</li>
+					<li>Recreation</li>
+				</ul>
+				<h1>BY BUSINESS FUNCTION</h1>
+				<ul>
+					<li>CEO/CIO</li>
+					<li>Facilities</li>
+					<li>Information Technology</li>
+					<li>AV Integrator</li>
+					<li>Consultant</li>
+					<li>End User</li>
+				</ul>
+			</div>
+			<div class="col four-col">
+				<h1>BY ROOM SIZE</h1>
+				<ul>
+					<li>Business</li>
+					<li>Education</li>
+					<li>Government</li>
+					<li>Healthcare</li>
+					<li>Houses of Worship</li>
+					<li>Recreation</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 	<script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
