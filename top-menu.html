@@ -440,6 +440,7 @@
 
 		dropIcon.addEventListener("click", function(){
 			if (menu.style.display == 'none'){
+				$('.icon-search-icon').parent().addClass('focus');
 				$('.search').find('form').slideUp(100);
 				dropIcon.classList.add('close');
 				$('.main-menu').find('ul').slideDown();
@@ -454,6 +455,8 @@
 						dropIcon.classList.remove('close');
 						$('.main-menu').find('ul').slideUp(100);
 					}
+					$('.user-account').parent().removeClass('focus');
+					$('.menu-acct').slideUp();
 					$('.solutions').removeClass('focus');
 					$('.menu-one').slideUp(100);
 
@@ -476,14 +479,15 @@
 		var menuOne = document.getElementsByClassName('menu-one')[0];
 		$('.solutions').click(function(){
 			if( menuOne.style.display == 'none' ){
+				$('.user-account').parent().removeClass('focus');
+				$('.menu-acct').slideUp();
+				$('.icon-search-icon').parent().removeClass('focus');
+				$('.search').find('form').slideUp(100,function(){
+					$(this).find('input').val('Search Biamp').css('color', 'rgb(200,199,199)');
+				});
 				$('.solutions').addClass('focus');
 				$('.menu-one').slideDown();
 			}else{
-					searchIcon.classList.remove('close');
-					$('.search').find('form').slideUp(100,function(){
-						$(this).find('input').val('Search Biamp').css('color', 'rgb(200,199,199)');
-					});
-
 				$('.solutions').removeClass('focus');
 				$('.menu-one').slideUp();
 			}
@@ -492,6 +496,12 @@
 		var menuAcct = document.getElementsByClassName('menu-acct')[0];
 		$('.user-account').click(function(){
 			if( menuAcct.style.display == 'none' ){
+				$('.icon-search-icon').parent().removeClass('focus');
+				$('.search').find('form').slideUp(100,function(){
+					$(this).find('input').val('Search Biamp').css('color', 'rgb(200,199,199)');
+				});
+				$('.solutions').removeClass('focus');
+				$('.menu-one').slideUp();
 				$(this).parent().addClass('focus');
 				$('.menu-acct').slideDown();
 			}else{
