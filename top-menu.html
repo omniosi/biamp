@@ -155,7 +155,9 @@
 	}
 	/*.search a:hover .icon,*/
 	.search a:hover,
-	.main-menu ul li:last-child a:hover .icon{
+	.search a.focus,
+	.main-menu ul li:last-child a.focus,
+	.main-menu ul li:last-child a:hover{
 		color: #D9272E;
 		text-decoration: none;
 	}
@@ -455,12 +457,10 @@
 					$('.solutions').removeClass('focus');
 					$('.menu-one').slideUp(100);
 
-					searchIcon.classList.add('close');
-					// searchBox.slideDown();
+					$('.icon-search-icon').parent().addClass('focus');
 					$('.search').find('form').slideDown(100);
 				}else{
-					searchIcon.classList.remove('close');
-					// searchBox.slideUp();
+					$('.icon-search-icon').parent().removeClass('focus');
 					$('.search').find('form').slideUp(100,function(){
 						$(this).find('input').val('Search Biamp').css('color', 'rgb(200,199,199)');
 					});
@@ -492,10 +492,10 @@
 		var menuAcct = document.getElementsByClassName('menu-acct')[0];
 		$('.user-account').click(function(){
 			if( menuAcct.style.display == 'none' ){
-				$(this).addClass('focus');
+				$(this).parent().addClass('focus');
 				$('.menu-acct').slideDown();
 			}else{
-				$(this).removeClass('focus');
+				$(this).parent().removeClass('focus');
 				$('.menu-acct').slideUp();
 			}
 		});
