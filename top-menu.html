@@ -353,12 +353,12 @@
 				<li><a class="support" href="#">Online Support</a></li>
 				<li><a class="account" href="#">
 					<!-- <img src="img/user-account-icon.svg" class="user-account icon" width="56" height="56" alt="User Account" /> -->
-					<span class="icon icon-user-account-icon user-account" alt="User Account"></span>
+					<span class="icon icon-user-account-icon user-account"></span>
 					</a></li>
 			</ul>
 		</div>
 		<div class="logo">
-			<img src="img/biamp_newlogo_inverse_2clr.svg" style="height:40px">
+			<img src="img/biamp_newlogo_inverse_2clr.svg" alt="BIAMP" style="height:40px">
 		</div>
 		<div class="search">
 			<!-- <img src="img/search-icon.svg" width="40" height="40" > -->
@@ -440,7 +440,7 @@
 
 		dropIcon.addEventListener("click", function(){
 			if (menu.style.display == 'none'){
-				$('.icon-search-icon').parent().addClass('focus');
+				$('.icon-search-icon').parent().removeClass('focus');
 				$('.search').find('form').slideUp(100);
 				dropIcon.classList.add('close');
 				$('.main-menu').find('ul').slideDown();
@@ -509,6 +509,9 @@
 				$('.menu-acct').slideUp();
 			}
 		});
+		// repeat use code
+
+
 	});
 	</script>
 </body>
