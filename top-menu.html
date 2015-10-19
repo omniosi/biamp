@@ -116,6 +116,7 @@
 	.main-menu{
 		font-size: 1em;
 		text-transform: uppercase;
+		width: 100%;
 	}
 	.main-menu ul li{
 		list-style: none;
@@ -134,8 +135,9 @@
 		/*padding-bottom: 5px;*/
 	}
 	.main-menu ul li:last-child a{
-		margin: 0 10px 8px;
-		padding: 0;
+		margin: 0 20px 20px;
+		/*padding: 0;*/
+		padding-top: 8px;
 		position: relative;
 		top: -12px;
 	}
@@ -226,8 +228,117 @@
 		position: absolute;
 		top: 80px;
 		width: 100%;
-		padding: 20px 0 20px 20px;
+		padding: 20px;
 	}
+	.mega-menu .two-col{
+		width: 100%;
+		padding: 0  20px 20px;
+		font-size: 20px;
+		text-transform: uppercase;
+	}
+	.mega-menu .two-col p{
+		width: 75%;
+	}
+	.mega-menu .four-col{
+		width: 100%;
+		border-top: 1px solid white;
+		padding: 20px 20px 0;
+		margin-right: 0;
+	}
+	.mega-menu .four-col h1{
+		font-size: 20px;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+	}
+	.mega-menu .four-col ul{
+		list-style: none;
+		padding-left: 38px;
+		font-size: 18px;
+		margin-bottom: 40px;
+		display:none;
+	}
+	.mega-menu .four-col ul:last-child{
+		margin-bottom: 0;
+	}
+	.mega-menu .four-col li{
+		margin-bottom: 20px;
+	}
+	.mega-menu.menu-one{ top: 132px; }
+	.menu-acct{
+		width: 388px;
+		right: 0;
+		padding: 20px;
+		color: #C8C7C7;
+	}
+	.menu-acct ul{
+		margin-top: 10px;
+		border-bottom: 2px solid #4f4e4e;
+	}
+	.menu-acct ul li{
+		margin-bottom: 10px;
+	}
+	.menu-acct ul:last-child li:last-child,
+	.menu-acct ul:last-child{
+		border-bottom: none;
+		margin-bottom: 0;
+	}
+	.menu-acct ul li a{
+		color: #C8C7C7;
+	}
+	.menu-acct ul li a:hover{
+		text-decoration: none;
+		color: white;
+	}
+
+/*desktop*/
+@media (min-width:1420px){
+	.top-menu .logo{
+		text-align: left;
+		padding-left: 40px;
+	}
+	.drop-menu-icon{
+		display:none;
+	}
+	.main-menu{
+		position: absolute;
+		top: 0;
+		right: 80px;
+	}
+	.main-menu ul{
+		display: block !important;
+		position: relative;
+		top: 0;
+		background: none;
+	}
+	.main-menu ul li{
+		display:inline-block;
+		vertical-align: top;
+	}
+	.main-menu ul li:last-child{
+		margin: 8px 1em 10px 0px;
+	}
+	.main-menu ul li a{
+		padding: 0;
+		margin:26px 1em;
+		background: none;
+	}
+	.main-menu ul li:last-child a{
+		top: 0;
+	}
+	.main-menu ul li a.focus,
+	.main-menu ul li a:focus,
+	.main-menu ul li a:hover{
+		text-decoration: none;
+		border-bottom: 2px solid rgb(217,39,46);
+		padding-bottom: 5px;
+	}
+	/*.main-menu ul li a:visited,*/
+	.main-menu ul li:last-child a:focus,
+	.main-menu ul li:last-child a:hover{
+		border: none;
+		text-decoration: none;
+	}
+	/*mega menu*/
 	.mega-menu .two-col{
 		padding: 40px 20px;
 		/*width: 40%;*/
@@ -284,56 +395,7 @@
 		text-decoration: none;
 		color: white;
 	}
-
-	/*desktop*/
-	@media (min-width:1420px){
-		.top-menu .logo{
-			text-align: left;
-			padding-left: 40px;
-		}
-		.drop-menu-icon{
-			display:none;
-		}
-		.main-menu{
-			position: absolute;
-			top: 0;
-			right: 80px;
-		}
-		.main-menu ul{
-			display: block !important;
-			position: relative;
-			top: 0;
-			background: none;
-		}
-		.main-menu ul li{
-			display:inline-block;
-			vertical-align: top;
-		}
-		.main-menu ul li:last-child{
-			margin: 8px 1em 10px 0px;
-		}
-		.main-menu ul li a{
-			padding: 0;
-			margin:26px 1em;
-			background: none;
-		}
-		.main-menu ul li:last-child a{
-			top: 0;
-		}
-		.main-menu ul li a.focus,
-		.main-menu ul li a:focus,
-		.main-menu ul li a:hover{
-			text-decoration: none;
-			border-bottom: 2px solid rgb(217,39,46);
-			padding-bottom: 5px;
-		}
-		/*.main-menu ul li a:visited,*/
-		.main-menu ul li:last-child a:focus,
-		.main-menu ul li:last-child a:hover{
-			border: none;
-			text-decoration: none;
-		}
-	}
+}
 	</style>
 </head>
 <body>
@@ -500,6 +562,7 @@
 			if (window.innerWidth <= 1420){
 				dropIcon.classList.remove('close');
 				$('.main-menu').find('ul').slideUp(100);
+				solutionsClose();
 			}
 		}
 		function acctOpen(){
