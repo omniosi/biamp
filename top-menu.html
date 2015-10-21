@@ -158,6 +158,20 @@
 		/*background: rgb(88,85,86);*/
 		background: #585556;
 	}
+	.main-menu ul li a:before{
+		font-family: "icomoon-bia";
+		content:"\e805";
+		padding-bottom: 1em;
+		width: 1em;
+		height:40px;
+		font-size: 25px;
+		position: absolute;
+		right: 20px;
+		line-height: 18px;
+	}
+	.main-menu ul li:last-child a:before{
+		content: "";
+	}
 	.main-menu ul li a:visited{
 
 	}
@@ -355,6 +369,9 @@
 		margin:26px 1em;
 		background: none;
 	}
+	.main-menu ul li a:before{
+		content: "";
+	}
 	.main-menu ul li:last-child a:hover,
 	.main-menu ul li:last-child a{
 		top: 0;
@@ -455,7 +472,6 @@
 				<li><a class="downloads" href="#">Downloads</a></li>
 				<li><a class="support" href="#">Online Support</a></li>
 				<li><a class="account" href="#">
-					<!-- <img src="img/user-account-icon.svg" class="user-account icon" width="56" height="56" alt="User Account" /> -->
 					<span class="icon icon-user-account-icon user-account"></span>
 					</a></li>
 			</ul>
@@ -464,13 +480,14 @@
 			<img src="img/biamp_newlogo_inverse_2clr.svg" alt="BIAMP" style="height:40px">
 		</div>
 		<div class="search">
-			<!-- <img src="img/search-icon.svg" width="40" height="40" > -->
 			<a href="#"><span class="icon icon-search-icon"></span></a>
 			<form style="display:none">
 				<input type="text" value="Search Biamp">
 			</form>
 		</div>
 		<div style="display:none" class="mega-menu menu-one">
+			<!-- mobile menu title and back button -->
+
 			<div class="col two-col">
 				<p>BIAMP’S SOLUTIONS WILL BLAH BLAH AND WILL BLAH BLAH YOUR BLAH BLAH</p>
 			</div>
