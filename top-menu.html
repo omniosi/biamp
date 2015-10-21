@@ -7,6 +7,13 @@
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<!-- <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7367512/617108/css/fonts.css" /> -->
 	<style type="text/css">
+	/* COLORS --------------------------------------------------------- */
+		/*darker grey select = #494647*/
+		/*dark grey = rgb(79,78,78); #4f4e4e*/
+		/*med grey = rgb(88,85,86); #585556;*/
+		/*light grey = rgb(200,199,199); #C8C7C7;*/
+		/*red = rgb(217,39,46); #D9272E*/
+
 	/* FONTS --------------------------------------------------------- */
 @font-face {
 	font-family: 'icomoon-bia';
@@ -67,12 +74,6 @@
 .icon-linkedin2:before {
 	content: "\eac9";
 }
-	/* COLORS --------------------------------------------------------- */
-		/*dark grey = rgb(79,78,78); #4f4e4e*/
-		/*med grey = rgb(88,85,86); #585556;*/
-		/*light grey = rgb(200,199,199); #C8C7C7;*/
-		/*red = rgb(217,39,46); #D9272E*/
-
 	/* GLOBAL STYLES --------------------------------------------------------- */
 	*{
 		margin: 0;
@@ -273,7 +274,8 @@
 		position: absolute;
 		top: 80px;
 		width: 100%;
-		padding: 20px;
+		/*padding: 100px 20px 20px;*/
+		padding: 83px 20px 20px;
 	}
 	.mega-menu .two-col{
 		width: 100%;
@@ -309,7 +311,36 @@
 	.mega-menu .four-col li{
 		margin-bottom: 20px;
 	}
-	.mega-menu.menu-one{ top: 132px; }
+	/*.mega-menu.menu-one{ top: 132px; }*/
+	.mega-menu .menu-back{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		/*height:80px;*/
+		height:62px;
+		border-bottom: 2px solid #D9272E;
+		background: #494647;
+	}
+	.mega-menu .menu-back .icon-keyboard_arrow_left{
+		width: 80px;
+		/*height:80px;*/
+		height:60px;
+		/*padding: 20px 20px 20px 17px;*/
+		padding: 10px 20px 10px 17px;
+		border-right: 1px solid #4f4e4e;
+		font-size: 40px;
+		cursor: pointer;
+		position: relative;
+		/*top: 20px;*/
+		top: 10px;
+	}
+	.mega-menu .menu-back .title{
+		font-size: 20px;
+		text-transform: uppercase;
+		color: #C8C7C7;
+		padding-left: 20px;
+	}
 	.menu-acct{
 		width: 320px;
 		right: 0;
@@ -391,6 +422,9 @@
 		text-decoration: none;
 	}
 	/*mega menu*/
+	.mega-menu{
+		padding: 20px;
+	}
 	.mega-menu.menu-one{
 		top: 80px;
 	}
@@ -487,7 +521,10 @@
 		</div>
 		<div style="display:none" class="mega-menu menu-one">
 			<!-- mobile menu title and back button -->
-
+			<div class="menu-back">
+				<span class="icon icon-keyboard_arrow_left"></span>
+				<span class="title">Solutions</span>
+			</div>
 			<div class="col two-col">
 				<p>BIAMP’S SOLUTIONS WILL BLAH BLAH AND WILL BLAH BLAH YOUR BLAH BLAH</p>
 			</div>
@@ -548,6 +585,7 @@
 		</div>
 	</div>
 	<script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
 	<script type="text/javascript">
 	$(document).ready(function(){
 		// search controls
@@ -590,6 +628,9 @@
 				}else{
 					$(this).next('ul').slideUp();
 				}
+			});
+			$('.menu-back').click(function(){
+				solutionsClose();
 			});
 		}
 		// menu controls
@@ -645,12 +686,22 @@
 			$('.menu-acct').slideUp(100);
 		}
 		function solutionsOpen(){
-			$('.solutions').addClass('focus');
-			$('.menu-one').slideDown();
+			if (window.innerWidth <= 1420){
+				$('.main-menu').find('ul').hide('slide', {direction:'left'}, 250);
+				$('.menu-one').show('slide', {direction: 'right'}, 250);
+			}else{
+				$('.solutions').addClass('focus');
+				$('.menu-one').slideDown();
+			}
 		}
 		function solutionsClose(){
-			$('.solutions').removeClass('focus');
-			$('.menu-one').slideUp(100);
+			if (window.innerWidth <= 1420){
+				$('.main-menu').find('ul').show('slide', {direction:'left'}, 250);
+				$('.menu-one').hide('slide', {direction: 'right'}, 250);
+			}else{
+				$('.solutions').removeClass('focus');
+				$('.menu-one').slideUp(100);
+			}
 		}
 	});
 	</script>
