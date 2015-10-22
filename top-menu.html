@@ -252,7 +252,7 @@
 		right: 0;
 	}
 	.search form input{
-		width: 355px;
+		width: 320px;
 		height:40px;
 		border-radius: 6px;
 		border: none;
@@ -326,6 +326,7 @@
 		position: relative;
 		/*top: 20px;*/
 		top: 10px;
+		color: #fff;
 	}
 	.mega-menu .menu-back .title{
 		font-size: 20px;
@@ -620,6 +621,7 @@
 		if (window.innerWidth <= 1420){
 			$('.mega-menu').find('h1').click(function(){
 				if( $(this).next('ul').css('display') == 'none' ){
+					$('.mega-menu').not('.menu-acct').find('ul').slideUp();
 					$(this).next('ul').slideDown();
 				}else{
 					$(this).next('ul').slideUp();
