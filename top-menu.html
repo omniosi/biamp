@@ -674,7 +674,9 @@
 			if (window.innerWidth <= 1420){
 				dropIcon.classList.remove('close');
 				$('.main-menu').find('ul').slideUp(100);
-				solutionsClose();
+				// solutionsClose();
+				$('.solutions').removeClass('focus');
+				$('.menu-one').slideUp(100);
 			}
 		}
 		function acctOpen(){
