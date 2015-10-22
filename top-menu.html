@@ -164,8 +164,8 @@
 		font-family: "icomoon-bia";
 		content:"\e805";
 		padding-bottom: 1em;
-		width: 1em;
-		height:40px;
+		/*width: 1em;*/
+		/*height:40px;*/
 		font-size: 25px;
 		position: absolute;
 		right: 20px;
@@ -334,7 +334,6 @@
 		padding-left: 20px;
 	}
 	.menu-acct{
-		width: 320px;
 		right: 0;
 		padding: 20px;
 		color: #C8C7C7;
@@ -602,11 +601,12 @@
 		var dropIcon = document.getElementsByClassName('drop-menu-icon')[0];
 		var menu = document.getElementsByClassName('main-menu')[0].getElementsByTagName('ul')[0];
 		var menuOne = document.getElementsByClassName('menu-one')[0];
+		var menuAcct = document.getElementsByClassName('menu-acct')[0];
 		dropIcon.addEventListener("click", function(){
 			acctClose();
 			searchClose();
 			solutionsClose();
-			if (menu.style.display == 'none'  && menuOne.style.display == 'none'){
+			if (menu.style.display == 'none'  && menuOne.style.display == 'none' && menuAcct.style.display == 'none'){
 				menuOpen();
 			}else{
 				menuClose();
@@ -636,7 +636,6 @@
 			}
 		});
 		// account controls
-		var menuAcct = document.getElementsByClassName('menu-acct')[0];
 		$('.user-account').click(function(){
 			searchClose();
 			solutionsClose();
@@ -669,8 +668,13 @@
 			}
 		}
 		function acctOpen(){
-			$('.user-account').parent().addClass('focus');
-			$('.menu-acct').slideDown();
+			if (window.innerWidth <= 1420){
+				$('.main-menu').find('ul').hide('slide', {direction:'left'}, 250);
+				$('.menu-acct').show('slide', {direction: 'right'}, 250);
+			}else{
+				$('.user-account').parent().addClass('focus');
+				$('.menu-acct').slideDown();
+			}
 		}
 		function acctClose(){
 			$('.user-account').parent().removeClass('focus');
