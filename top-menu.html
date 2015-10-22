@@ -117,10 +117,12 @@
 		position: fixed;
 		width: 100%;
 		height: 80px;
-		/*background: rgb(79,78,78);*/
+		z-index: 999;
 		background: #4f4e4e;
 		letter-spacing: 0.125em;
 	}
+	.mega-menu a,
+	.mega-menu,
 	.top-menu a,
 	.top-menu{
 		font-family: "Gotham SSm A", "Gotham SSm B", "Montserrat", Arial, sans-serif;
@@ -140,9 +142,9 @@
 	.mega-menu,
 	.search form,
 	.main-menu ul{
-		/*background: rgb(88,85,86);*/
 		background: #585556;
 		padding-top: 10px;
+		color: #fff;
 	}
 	.main-menu{
 		font-size: 1em;
@@ -156,7 +158,6 @@
 		margin: 16px 20px;
 		padding: 0 0 7px;
 		display: block;
-		/*background: rgb(88,85,86);*/
 		background: #585556;
 	}
 	.main-menu ul li a:before{
@@ -172,12 +173,6 @@
 	}
 	.main-menu ul li:last-child a:before{
 		content: "";
-	}
-	.main-menu ul li a:visited{
-
-	}
-	.main-menu ul li:nth-child(6) a{
-		/*padding-bottom: 5px;*/
 	}
 	.main-menu ul li:last-child a{
 		margin: 0 20px 20px;
@@ -196,12 +191,10 @@
 	.main-menu ul li:last-child a:hover{
 		border: none;
 		padding: 8px 0 5px;
-		/*padding-top: 8px;*/
 	}
 	.main-menu ul li:last-child a .icon{
 		font-size: 45px;
 	}
-	/*.search a:hover .icon,*/
 	.search a:hover,
 	.search a.focus,
 	.main-menu ul li:last-child a.focus,
@@ -235,7 +228,6 @@
 		top: 10px;
 	}
 	.drop-menu-icon.close .two{
-		/*opacity:0;*/
 		top: -2px;
 	}
 	.drop-menu-icon.close .three{
@@ -284,7 +276,7 @@
 		text-transform: uppercase;
 	}
 	.mega-menu .two-col p{
-		width: 75%;
+		/*width: 75%;*/
 	}
 	.mega-menu .four-col{
 		width: 100%;
@@ -415,7 +407,6 @@
 		border-bottom: 2px solid rgb(217,39,46);
 		padding-bottom: 5px;
 	}
-	/*.main-menu ul li a:visited,*/
 	.main-menu ul li:last-child a:focus,
 	.main-menu ul li:last-child a:hover{
 		border: none;
@@ -424,6 +415,9 @@
 	/*mega menu*/
 	.mega-menu{
 		padding: 20px;
+	}
+	.mega-menu .menu-back{
+		display:none;
 	}
 	.mega-menu.menu-one{
 		top: 80px;
@@ -436,7 +430,7 @@
 		padding-top: 135px;
 	}
 	.mega-menu .two-col p{
-		/*width: 70%;*/
+		width: 75%;
 	}
 	.mega-menu .four-col{
 		width: 22%;
@@ -519,6 +513,7 @@
 				<input type="text" value="Search Biamp">
 			</form>
 		</div>
+	</div>
 		<div style="display:none" class="mega-menu menu-one">
 			<!-- mobile menu title and back button -->
 			<div class="menu-back">
@@ -561,8 +556,6 @@
 			</div>
 		</div>
 		<div style="display:none" class="mega-menu menu-acct">
-		<!-- <div class="mega-menu menu-acct"> -->
-			<!-- <button>Sign In</button> -->
 			<a class="btn" href="#">Sign In</a>
 			<ul>
 				<li><a href=#>Your Account</a></li>
@@ -583,7 +576,6 @@
 				<li><a href=#>Not John? Sign Out</a></li>
 			</ul>
 		</div>
-	</div>
 	<script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
 	<script type="text/javascript">
@@ -593,10 +585,10 @@
 		var searchBox = document.getElementsByClassName('search')[0].getElementsByTagName('form')[0];
 		var searchField = document.getElementsByClassName('search')[0].getElementsByTagName('form')[0].getElementsByTagName('input')[0];
 		$('.search').find('.icon').click(function(){
+				menuClose();
+				acctClose();
+				solutionsClose();
 				if (searchBox.style.display == 'none'){
-					menuClose();
-					acctClose();
-					solutionsClose();
 					searchOpen();
 				}else{
 					searchClose();
@@ -609,15 +601,15 @@
 		// mobile menu controls
 		var dropIcon = document.getElementsByClassName('drop-menu-icon')[0];
 		var menu = document.getElementsByClassName('main-menu')[0].getElementsByTagName('ul')[0];
+		var menuOne = document.getElementsByClassName('menu-one')[0];
 		dropIcon.addEventListener("click", function(){
-			if (menu.style.display == 'none'){
-				acctClose();
-				searchClose();
-				solutionsClose();
+			acctClose();
+			searchClose();
+			solutionsClose();
+			if (menu.style.display == 'none'  && menuOne.style.display == 'none'){
 				menuOpen();
 			}else{
 				menuClose();
-				acctClose();
 			}
 		});
 		// -- mobile submenu controls
@@ -630,15 +622,14 @@
 				}
 			});
 			$('.menu-back').click(function(){
-				solutionsClose();
+				solutionsSubClose();
 			});
 		}
 		// menu controls
-		var menuOne = document.getElementsByClassName('menu-one')[0];
 		$('.solutions').click(function(){
+			acctClose();
+			searchClose();
 			if( menuOne.style.display == 'none' ){
-				acctClose();
-				searchClose();
 				solutionsOpen();
 			}else{
 				solutionsClose();
@@ -647,9 +638,9 @@
 		// account controls
 		var menuAcct = document.getElementsByClassName('menu-acct')[0];
 		$('.user-account').click(function(){
+			searchClose();
+			solutionsClose();
 			if( menuAcct.style.display == 'none' ){
-				searchClose();
-				solutionsClose();
 				acctOpen();
 			}else{
 				acctClose();
@@ -674,9 +665,7 @@
 			if (window.innerWidth <= 1420){
 				dropIcon.classList.remove('close');
 				$('.main-menu').find('ul').slideUp(100);
-				// solutionsClose();
-				$('.solutions').removeClass('focus');
-				$('.menu-one').slideUp(100);
+				solutionsClose();
 			}
 		}
 		function acctOpen(){
@@ -696,14 +685,13 @@
 				$('.menu-one').slideDown();
 			}
 		}
+		function solutionsSubClose(){
+			$('.main-menu').find('ul').show('slide', {direction:'left'}, 250);
+			$('.menu-one').hide('slide', {direction: 'right'}, 250);
+		}
 		function solutionsClose(){
-			if (window.innerWidth <= 1420){
-				$('.main-menu').find('ul').show('slide', {direction:'left'}, 250);
-				$('.menu-one').hide('slide', {direction: 'right'}, 250);
-			}else{
 				$('.solutions').removeClass('focus');
 				$('.menu-one').slideUp(100);
-			}
 		}
 	});
 	</script>
