@@ -555,6 +555,10 @@
 			</div>
 		</div>
 		<div style="display:none" class="mega-menu menu-acct">
+			<div class="menu-back">
+				<span class="icon icon-keyboard_arrow_left"></span>
+				<span class="title">Account</span>
+			</div>
 			<a class="btn" href="#">Sign In</a>
 			<ul>
 				<li><a href=#>Your Account</a></li>
@@ -623,6 +627,7 @@
 			});
 			$('.menu-back').click(function(){
 				solutionsSubClose();
+				acctSubClose();
 			});
 		}
 		// menu controls
@@ -675,6 +680,10 @@
 				$('.user-account').parent().addClass('focus');
 				$('.menu-acct').slideDown();
 			}
+		}
+		function acctSubClose(){
+				$('.main-menu').find('ul').show('slide', {direction:'left'}, 250);
+				$('.menu-acct').hide('slide', {direction: 'right'}, 250);
 		}
 		function acctClose(){
 			$('.user-account').parent().removeClass('focus');
