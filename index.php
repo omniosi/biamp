@@ -1,8 +1,13 @@
-<?php
-include 'top-menu.html';
-// echo "Hello World";
-// needs a space here!
-// echo "Last Statement";
+<!DOCTYPE html>
+<html>
+<head>
+	<?php include('head.php'); ?>
+	<?php include('top-menu_styles.php'); ?>
+</head>
+<body>
+	<?php include('top-menu.php'); ?>
 
-// the script ends here with no PHP closing tag.
-// be sure to add a semicolon to end this php statement.
+	<?php include('external-scripts.php'); ?>
+	<?php include('top-menu-scripts.php'); ?>
+</body>
+</html>
