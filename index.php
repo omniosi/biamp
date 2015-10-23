@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?php include('head.php'); ?>
-	<?php include('top-menu_styles.php'); ?>
+	<?php include('modules/head.php'); ?>
+	<?php include('modules/top-menu-styles.php'); ?>
 </head>
 <body>
-	<?php include('top-menu.php'); ?>
+	<?php include('modules/top-menu.php'); ?>
 
-	<?php include('external-scripts.php'); ?>
-	<?php include('top-menu-scripts.php'); ?>
+	<?php include('modules/external-scripts.php'); ?>
+	<?php include('modules/top-menu-scripts.php'); ?>
 </body>
 </html>
