@@ -40,3 +40,16 @@
 	color: #D9272E;
 	text-decoration: none;
 }
+.footer-menu li{
+	margin-bottom: 10px;
+}
+.footer-menu li a{
+	width: 100%;
+	display:block;
+	border-bottom: 1px solid #585556;
+}
+.footer .footer-menu li a.focus,
+.footer .footer-menu li a:hover{
+	border-bottom: 1px solid #D9272E;
+	color: #fff;
+}

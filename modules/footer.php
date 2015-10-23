@@ -8,13 +8,11 @@
 			<li class="youtube"><a href="#"><span class="icon icon-youtube"></span></a></li>
 		</ul>
 	</div>
-	<div class="footer-menu">
-		<ul>
+		<ul class="footer-menu">
 			<li class="phone"><a href="tel:+1-503-541-7287">503.541.7287</a></li>
 			<li class="blog"><a href="#">Blog</a></li>
 			<li class="buy"><a href="#">How to buy</a></li>
 			<li class="products"><a href="#">Biamp Products A-Z<span class="icon"></span></a></li>
 			<li class="language"><a href="#">English<span class="icon"></span></a></li>
 		</ul>
-	</div>
 </div>
