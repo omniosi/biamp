@@ -16,10 +16,12 @@
 		position: relative;
 		top: 0;
 		background: none;
+		color: #fff;
 	}
 	.main-menu ul li{
 		display:inline-block;
 		vertical-align: top;
+		border-bottom: none;
 	}
 	.main-menu ul li:last-child{
 		margin: 8px 1em 10px 0px;
@@ -28,6 +30,7 @@
 		padding: 0;
 		margin:26px 1em;
 		background: none;
+		color: #fff;
 	}
 	.main-menu ul li a:before{
 		content: "";
@@ -36,6 +39,7 @@
 	.main-menu ul li:last-child a{
 		top: 0;
 		padding:0;
+		margin: 0 20px 20px;
 	}
 	.main-menu ul li a.focus,
 	.main-menu ul li a:focus,
@@ -48,6 +52,14 @@
 	.main-menu ul li:last-child a:hover{
 		border: none;
 		text-decoration: none;
+		color: #D9272E;
+	}
+	.main-menu ul li:last-child a .icon{
+		font-size: 45px;
+	}
+	.icon-user-account-icon:before{
+		font-family: "icomoon-bia";
+		content: "\e800";
 	}
 	/*mega menu*/
 	.mega-menu{

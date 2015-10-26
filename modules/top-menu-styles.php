@@ -37,14 +37,21 @@
 		text-transform: uppercase;
 		width: 100%;
 	}
+	.main-menu ul{
+		background: #fff;
+		color: #585556;
+	}
 	.main-menu ul li{
 		list-style: none;
+		border-bottom: 1px solid #585556;
 	}
 	.main-menu ul li a{
-		margin: 16px 20px;
-		padding: 0 0 7px;
+		/*margin: 16px 20px;*/
+		/*padding: 0 0 7px;*/
+		padding: 16px 20px;
 		display: block;
-		background: #585556;
+		/*background: #585556;*/
+		color: #585556;
 	}
 	.main-menu ul li a:before{
 		font-family: "icomoon-bia";
@@ -61,30 +68,38 @@
 		content: "";
 	}
 	.main-menu ul li:last-child a{
-		margin: 0 20px 20px;
-		padding: 8px 0 5px;
-		/*padding-top: 8px;*/
-		position: relative;
-		top: -12px;
+		/*margin: 0 20px 20px;*/
+		/*padding: 8px 0 5px;*/
+		/*position: relative;*/
+		/*top: -12px;*/
 	}
 	.main-menu ul li a:focus,
 	.main-menu ul li a.focus,
 	.main-menu ul li a:hover{
 		text-decoration: none;
-		padding: 0 0 5px;
-		border-bottom: 2px solid rgb(217,39,46);
+		/*padding: 0 0 5px;*/
+		/*border-bottom: 2px solid rgb(217,39,46);*/
 	}
 	.main-menu ul li:last-child a:hover{
-		border: none;
-		padding: 8px 0 5px;
+		/*border: none;*/
+		/*padding: 8px 0 5px;*/
 	}
 	.main-menu ul li:last-child a .icon{
-		font-size: 45px;
+		/*font-size: 45px;*/
 	}
+	.icon-user-account-icon:before{
+		content: "Your Account";
+		font-family: "Gotham SSm A", "Gotham SSm B", "Montserrat", Arial, sans-serif;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 1em;
+		text-transform: uppercase;
+	}
+
+	/*.main-menu ul li:last-child a.focus,*/
+	/*.main-menu ul li:last-child a:hover,*/
 	.search a:hover,
-	.search a.focus,
-	.main-menu ul li:last-child a.focus,
-	.main-menu ul li:last-child a:hover{
+	.search a.focus{
 		color: #D9272E;
 		text-decoration: none;
 	}

@@ -46,7 +46,7 @@
 .footer-menu li a{
 	width: 100%;
 	display:block;
-	border-bottom: 1px solid #585556;
+	border-bottom: 1px solid #494647;
 }
 .footer .footer-menu li a.focus,
 .footer .footer-menu li a:hover{
