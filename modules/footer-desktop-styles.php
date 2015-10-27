@@ -35,4 +35,24 @@
 }
 .mega-menu.btm{
 	bottom: 80px;
+	padding: 20px;
+	overflow-y: none;
+}
+.mega-menu.btm ul li{
+	margin-bottom: 10px;
+	border-bottom: none;
+}
+.mega-menu.btm ul li a{
+	padding: 0;
+}
+.mega-menu.btm ul li a:before{
+	content: "";
+}
+.mega-menu.menu-prod .two-col{
+	/*width: 35%;*/
+	width: 25%;
+}
+.mega-menu.btm .four-col{
+	height: auto;
+	width: 10%;
 }

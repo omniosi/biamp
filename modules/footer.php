@@ -24,7 +24,7 @@
 	<div class="col two-col">
 		<p>Biamp Products</p>
 	</div>
-	<div class="col two-col">
+	<!-- <div class="col two-col"> -->
 		<ul class="col four-col">
 			<li><a href="#"><span>Discontinued Products</span></a></li>
 			<li><a href="#"><span>AudiaEXPI</span></a></li>
@@ -32,38 +32,46 @@
 			<li><a href="#"><span>AudiaEXPI-4</span></a></li>
 			<li><a href="#"><span>AudiaEXPO</span></a></li>
 			<li><a href="#"><span>AudiaEXPO-4</span></a></li>
+		</ul>
+		<ul class="col four-col">
 			<li><a href="#"><span>AudiaFLEX</span></a></li>
 			<li><a href="#"><span>AudiaFUSION</span></a></li>
 			<li><a href="#"><span>Biamp Canvas</span></a></li>
 			<li><a href="#"><span>CM1</span></a></li>
 			<li><a href="#"><span>daVinci</span></a></li>
 			<li><a href="#"><span>Logic Box</span></a></li>
+		</ul>
+		<ul class="col four-col">
 			<li><a href="#"><span>Nexia CS</span></a></li>
 			<li><a href="#"><span>Nexia PM</span></a></li>
 			<li><a href="#"><span>Nexia SP</span></a></li>
 			<li><a href="#"><span>Nexia TC</span></a></li>
 			<li><a href="#"><span>Nexia VC</span></a></li>
+			<li><a href="#"><span>NPS-1</span></a></li>
 		</ul>
 		<ul class="col four-col">
-			<li><a href="#"><span>NPS-1</span></a></li>
 			<li><a href="#"><span>Oreno</span></a></li>
 			<li><a href="#"><span>RCB Hub</span></a></li>
 			<li><a href="#"><span>RED-1</span></a></li>
 			<li><a href="#"><span>RED-1F</span></a></li>
 			<li><a href="#"><span>Select 8</span></a></li>
 			<li><a href="#"><span>Sona AEC Technology</span></a></li>
+		</ul>
+		<ul class="col four-col">
 			<li><a href="#"><span>Tesira EX-IN</span></a></li>
 			<li><a href="#"><span>Tesira EX-IO</span></a></li>
 			<li><a href="#"><span>Tesira EX-LOGIC</span></a></li>
 			<li><a href="#"><span>Tesira EX-MOD</span></a></li>
 			<li><a href="#"><span>Tesira EX-OUT</span></a></li>
 			<li><a href="#"><span>Tesira HD-1</span></a></li>
+		</ul>
+		<ul class="col four-col">
 			<li><a href="#"><span>Tesira SERVER</span></a></li>
 			<li><a href="#"><span>Tesira SERVER-IO</span></a></li>
 			<li><a href="#"><span>Tesira TEC-1i</span></a></li>
 			<li><a href="#"><span>Tesira TEC-1s</span></a></li>
 		</ul>
-	</div>
+	<!-- </div> -->
 </div>
 <div class="footer">
 	<div class="share">

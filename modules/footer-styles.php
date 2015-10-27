@@ -53,6 +53,12 @@
 	border-bottom: 1px solid #D9272E;
 	color: #fff;
 }
+.footer-menu li a .icon:after{
+	content: "\e802";
+}
+.footer-menu li a:hover .icon:after{
+	content: "\e803";
+}
 .mega-menu.btm{
 	/*position: static;*/
 	position: absolute;
@@ -66,21 +72,37 @@
 .mega-menu.btm .menu-back{
 	position: fixed;
 	top: auto;
+	z-index: 800;
 }
 .mega-menu.btm .two-col{
 	padding: 20px 20px 0;
 }
 .mega-menu.btm .two-col p{
-	padding-top: 84px;
+	padding-top: 80px;
+	padding-bottom: 20px;
 }
 .mega-menu.btm .four-col{
 	border:none;
 	padding: 0;
 }
-.mega-menu.btm li{
+.mega-menu.btm ul li{
 	text-transform: capitalize;
 	font-size: 16px;
 	margin-bottom: 0;
 	border-bottom: 1px solid #494647;
+}
+.mega-menu.btm ul li a{
 	padding: 20px 0;
+	display:block;
+}
+.mega-menu.btm ul li a:before{
+	font-family: "icomoon-bia";
+	content:"\e805";
+	padding-bottom: 1em;
+	/*width: 1em;*/
+	/*height:40px;*/
+	font-size: 25px;
+	position: absolute;
+	right: 40px;
+	line-height: 18px;
 }
