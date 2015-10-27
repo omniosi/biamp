@@ -1,5 +1,3 @@
-	<script type="text/javascript">
-	$(document).ready(function(){
 		// search controls
 		var searchIcon = document.getElementsByClassName('search')[0].getElementsByTagName('a')[0].getElementsByClassName('icon')[0];
 		var searchBox = document.getElementsByClassName('search')[0].getElementsByTagName('form')[0];
@@ -124,5 +122,3 @@
 				$('.solutions').removeClass('focus');
 				$('.menu-one').slideUp(100);
 		}
-	});
-	</script>

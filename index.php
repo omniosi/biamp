@@ -18,7 +18,11 @@
 	<?php include('modules/footer.php'); ?>
 
 	<?php include('modules/external-scripts.php'); ?>
-	<?php include('modules/top-menu-scripts.php'); ?>
-	<?php include('modules/footer-scripts.php'); ?>
-</body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			<?php include('modules/top-menu-scripts.php'); ?>
+			<?php include('modules/footer-scripts.php'); ?>
+		});
+	</script>
+	</body>
 </html>

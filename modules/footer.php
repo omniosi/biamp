@@ -1,3 +1,5 @@
+<!-- language menu modal -->
+<!-- <div class="mega-menu btm menu-lang" style="display:none"> -->
 <div class="mega-menu btm menu-lang">
 	<!-- mobile menu title and back button -->
 	<div class="menu-back">
@@ -15,7 +17,8 @@
 		<li><a href="#"><span>Español</span></a></li>
 	</ul>
 </div>
-<div class="mega-menu btm menu-prod">
+<!-- products menu modal -->
+<div class="mega-menu btm menu-prod" style="display:none">
 	<!-- mobile menu title and back button -->
 	<div class="menu-back">
 		<span class="icon icon-keyboard_arrow_left"></span>
@@ -77,17 +80,17 @@
 	<div class="share">
 		<span class="title">Share this page</span>
 		<ul>
-			<li class="twitter"><a href="#"><span class="icon icon-twitter"></span></a></li>
-			<li class="facebook"><a href="#"><span class="icon icon-facebook"></span></a></li>
-			<li class="linkedin"><a href="#"><span class="icon icon-linkedin"></span></a></li>
-			<li class="youtube"><a href="#"><span class="icon icon-youtube"></span></a></li>
+			<li><a href="#" class="twitter"><span class="icon icon-twitter"></span></a></li>
+			<li><a href="#" class="facebook"><span class="icon icon-facebook"></span></a></li>
+			<li><a href="#" class="linkedin"><span class="icon icon-linkedin"></span></a></li>
+			<li><a href="#" class="youtube"><span class="icon icon-youtube"></span></a></li>
 		</ul>
 	</div>
 		<ul class="footer-menu">
-			<li class="phone"><a href="tel:+1-503-541-7287">503.541.7287</a></li>
-			<li class="blog"><a href="#">Blog</a></li>
-			<li class="buy"><a href="#">How to buy</a></li>
-			<li class="products"><a href="#">Biamp Products A-Z<span class="icon"></span></a></li>
-			<li class="language"><a href="#">English<span class="icon"></span></a></li>
+			<li><a href="tel:+1-503-541-7287" class="phone">503.541.7287</a></li>
+			<li><a href="#" class="blog">Blog</a></li>
+			<li><a href="#" class="buy">How to buy</a></li>
+			<li><a href="#" class="products">Biamp Products A-Z<span class="icon"></span></a></li>
+			<li><a href="#" class="language">English<span class="icon"></span></a></li>
 		</ul>
 </div>
