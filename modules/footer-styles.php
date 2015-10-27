@@ -53,3 +53,34 @@
 	border-bottom: 1px solid #D9272E;
 	color: #fff;
 }
+.mega-menu.btm{
+	/*position: static;*/
+	position: absolute;
+	bottom: 0;
+	top: auto;
+	/*padding: 20px;*/
+	padding: 0 20px;
+	overflow-y: auto;
+	max-height: 347px;
+}
+.mega-menu.btm .menu-back{
+	position: fixed;
+	top: auto;
+}
+.mega-menu.btm .two-col{
+	padding: 20px 20px 0;
+}
+.mega-menu.btm .two-col p{
+	padding-top: 84px;
+}
+.mega-menu.btm .four-col{
+	border:none;
+	padding: 0;
+}
+.mega-menu.btm li{
+	text-transform: capitalize;
+	font-size: 16px;
+	margin-bottom: 0;
+	border-bottom: 1px solid #494647;
+	padding: 20px 0;
+}
