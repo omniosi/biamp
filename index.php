@@ -14,9 +14,15 @@
 	</style>
 </head>
 <body>
+	<!-- top-menu -->
 	<?php include('modules/top-menu.php'); ?>
+	<!-- page content -->
+	<?php include('modules/home.php'); ?>
+
+	<!-- footer -->
 	<?php include('modules/footer.php'); ?>
 
+	<!-- external scripts -->
 	<?php include('modules/external-scripts.php'); ?>
 	<script type="text/javascript">
 		$(document).ready(function(){

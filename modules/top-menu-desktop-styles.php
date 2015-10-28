@@ -106,6 +106,9 @@
 	.mega-menu .four-col li{
 		margin-bottom: 5px;
 	}
+	.mega-menu .four-col li a:hover{
+		text-decoration: underline;
+	}
 	.menu-acct{
 		width: 388px;
 		right: 0;

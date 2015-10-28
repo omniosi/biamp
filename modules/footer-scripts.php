@@ -11,6 +11,7 @@ footerProducts.addEventListener('click',function(){
 });
 function productsOpen(){
 	langClose();
+	topClose();
 	if (window.innerWidth <= 1420){
 		$('.footer').hide('slide',{direction:'left'},250);
 		$('.menu-prod').show('slide',{direction:'right'},250);
@@ -41,6 +42,7 @@ lang.addEventListener('click',function(){
 });
 function langOpen(){
 	productsClose();
+	topClose();
 	if (window.innerWidth <= 1420){
 		$('.footer').hide('slide',{direction:'left'},250);
 		$('.menu-lang').show('slide',{direction:'right'},250);
@@ -63,3 +65,11 @@ $('.footer-menu-back').click(function(){
 	langClose();
 	productsClose();
 });
+function topClose(){
+	menuClose();
+	acctClose();
+	solutionsClose();
+	searchClose();
+	// acctSubClose();
+	// solutionsSubClose();
+};

@@ -6,6 +6,7 @@
 				menuClose();
 				acctClose();
 				solutionsClose();
+				footerClose();
 				if (searchBox.style.display == 'none'){
 					searchOpen();
 				}else{
@@ -25,6 +26,7 @@
 			acctClose();
 			searchClose();
 			solutionsClose();
+			footerClose();
 			if (menu.style.display == 'none'  && menuOne.style.display == 'none' && menuAcct.style.display == 'none'){
 				menuOpen();
 			}else{
@@ -50,6 +52,7 @@
 		$('.solutions').click(function(){
 			acctClose();
 			searchClose();
+			footerClose();
 			if( menuOne.style.display == 'none' ){
 				solutionsOpen();
 			}else{
@@ -60,6 +63,7 @@
 		$('.user-account').click(function(){
 			searchClose();
 			solutionsClose();
+			footerClose();
 			if( menuAcct.style.display == 'none' ){
 				acctOpen();
 			}else{
@@ -121,4 +125,8 @@
 		function solutionsClose(){
 				$('.solutions').removeClass('focus');
 				$('.menu-one').slideUp(100);
+		}
+		function footerClose(){
+			langClose();
+			productsClose();
 		}
