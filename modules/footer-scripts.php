@@ -10,12 +10,23 @@ footerProducts.addEventListener('click',function(){
 	}
 });
 function productsOpen(){
-	footerProducts.classList.add('focus');
-	$('.menu-prod').slideDown();
+	langClose();
+	if (window.innerWidth <= 1420){
+		$('.footer').hide('slide',{direction:'left'},250);
+		$('.menu-prod').show('slide',{direction:'right'},250);
+	}else{
+		footerProducts.classList.add('focus');
+		$('.menu-prod').slideDown();
+	}
 }
 function productsClose(){
-	footerProducts.classList.remove('focus');
-	$('.menu-prod').slideUp();
+	if (window.innerWidth <= 1420){
+		$('.footer').show('slide',{direction:'left'},250);
+		$('.menu-prod').hide('slide',{direction:'right'},250);
+	}else{
+		footerProducts.classList.remove('focus');
+		$('.menu-prod').slideUp();
+	}
 }
 // footer language controls
 var lang = document.getElementsByClassName('language')[0];
@@ -29,10 +40,25 @@ lang.addEventListener('click',function(){
 	}
 });
 function langOpen(){
-	lang.classList.add('focus');
-	$('.menu-lang').slideDown();
+	productsClose();
+	if (window.innerWidth <= 1420){
+		$('.footer').hide('slide',{direction:'left'},250);
+		$('.menu-lang').show('slide',{direction:'right'},250);
+	}else{
+		lang.classList.add('focus');
+		$('.menu-lang').slideDown();
+	}
 }
 function langClose(){
-	lang.classList.remove('focus');
-	$('.menu-lang').slideUp();
+	if (window.innerWidth <= 1420){
+		$('.footer').show('slide',{direction:'left'},250);
+		$('.menu-lang').hide('slide',{direction:'right'},250);
+	}else{
+		lang.classList.remove('focus');
+		$('.menu-lang').slideUp();
+	}
 }
+$('.mega-menu.btm').find('.menu-back').click(function(){
+	langClose();
+	productsClose();
+});

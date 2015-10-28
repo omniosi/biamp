@@ -41,7 +41,7 @@
 					$(this).next('ul').slideUp();
 				}
 			});
-			$('.menu-back').click(function(){
+			$('.mega-menu').find('.menu-back').click(function(){
 				solutionsSubClose();
 				acctSubClose();
 			});
