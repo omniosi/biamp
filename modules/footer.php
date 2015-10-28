@@ -1,7 +1,7 @@
 <!-- language menu modal -->
 <div class="mega-menu btm menu-lang" style="display:none">
 	<!-- mobile menu title and back button -->
-	<div class="menu-back">
+	<div class="footer-menu-back">
 		<span class="icon icon-keyboard_arrow_left"></span>
 		<span class="title">Language</span>
 	</div>
