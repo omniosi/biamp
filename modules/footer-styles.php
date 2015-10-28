@@ -69,7 +69,7 @@
 	overflow-y: auto;
 	max-height: 347px;
 }
-.mega-menu.btm .menu-back{
+.mega-menu.btm .footer-menu-back{
 	position: fixed;
 	top: auto;
 	z-index: 800;

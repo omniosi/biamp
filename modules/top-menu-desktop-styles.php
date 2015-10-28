@@ -65,6 +65,7 @@
 	.mega-menu{
 		padding: 20px;
 	}
+	.mega-menu .footer-menu-back,
 	.mega-menu .menu-back{
 		display:none;
 	}

@@ -19,7 +19,7 @@
 <!-- products menu modal -->
 <div class="mega-menu btm menu-prod" style="display:none">
 	<!-- mobile menu title and back button -->
-	<div class="menu-back">
+	<div class="footer-menu-back">
 		<span class="icon icon-keyboard_arrow_left"></span>
 		<span class="title">Products</span>
 	</div>

@@ -206,6 +206,7 @@
 		margin-bottom: 20px;
 	}
 	/*.mega-menu.menu-one{ top: 132px; }*/
+	.mega-menu .footer-menu-back,
 	.mega-menu .menu-back{
 		position: absolute;
 		top: 0;
@@ -216,6 +217,7 @@
 		border-bottom: 2px solid #D9272E;
 		background: #494647;
 	}
+	.mega-menu .footer-menu-back .icon-keyboard_arrow_left,
 	.mega-menu .menu-back .icon-keyboard_arrow_left{
 		width: 80px;
 		/*height:80px;*/
@@ -230,6 +232,7 @@
 		top: 10px;
 		color: #fff;
 	}
+	.mega-menu .footer-menu-back .title,
 	.mega-menu .menu-back .title{
 		font-size: 20px;
 		text-transform: uppercase;
