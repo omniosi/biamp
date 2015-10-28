@@ -1,6 +1,5 @@
 <!-- language menu modal -->
-<!-- <div class="mega-menu btm menu-lang" style="display:none"> -->
-<div class="mega-menu btm menu-lang">
+<div class="mega-menu btm menu-lang" style="display:none">
 	<!-- mobile menu title and back button -->
 	<div class="menu-back">
 		<span class="icon icon-keyboard_arrow_left"></span>

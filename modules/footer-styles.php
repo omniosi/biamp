@@ -56,7 +56,7 @@
 .footer-menu li a .icon:after{
 	content: "\e802";
 }
-.footer-menu li a:hover .icon:after{
+.footer-menu li a.focus .icon:after{
 	content: "\e803";
 }
 .mega-menu.btm{
