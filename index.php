@@ -8,7 +8,8 @@
 		<?php include('modules/home-styles.php'); ?>
 		<?php include('modules/footer-styles.php'); ?>
 		/*--tablet--*/
-		@media (min-width:1000px){
+		/*@media (min-width:1000px){*/
+		@media (min-width:700px){
 			<?php include('modules/home-tablet-styles.php'); ?>
 		}
 		/*--desktop--*/

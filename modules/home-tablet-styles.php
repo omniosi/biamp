@@ -1,4 +1,4 @@
 /*--tablet styles--*/
-.main .billboard{
+.billboard{
 	height: 700px;
 }

@@ -1,4 +1,4 @@
-.main .billboard{
+.billboard{
 	/*position: absolute;*/
 	top: 80px;
 	bottom: 80px;

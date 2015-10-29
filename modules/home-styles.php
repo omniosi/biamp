@@ -1,15 +1,19 @@
 /*home styles*/
-.main{
-	padding-top: 80px;
-}
-.main .billboard{
+.billboard{
 	/*position: absolute;*/
+	position: relative;
 	top: 80px;
 	/*bottom: 80px;*/
 	height: 360px;
 	background: url('img/animation.png') 50% 50% no-repeat;
 	background-size: cover;
 	width: 100%;
+	z-index: 800;
+}
+.main{
+	/*padding-top: 80px;*/
+	/*position: fixed;*/
+	top: 80px;
 }
 .main .billboard img{
 	width: 100%;
