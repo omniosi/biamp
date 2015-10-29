@@ -1,6 +1,6 @@
-/* footer */
+/* -- footer -- */
 .footer{
-	position: absolute;
+	/*position: absolute;*/
 	bottom: 0;
 	z-index: 800;
 	/*position: static;*/

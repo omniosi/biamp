@@ -5,11 +5,17 @@
 	<style type="text/css">
 		<?php include('modules/global-styles.php'); ?>
 		<?php include('modules/top-menu-styles.php'); ?>
+		<?php include('modules/home-styles.php'); ?>
 		<?php include('modules/footer-styles.php'); ?>
-		/*desktop*/
+		/*--tablet--*/
+		@media (min-width:1000px){
+			<?php include('modules/home-tablet-styles.php'); ?>
+		}
+		/*--desktop--*/
 		@media (min-width:1420px){
 			<?php include('modules/top-menu-desktop-styles.php'); ?>
 			<?php include('modules/footer-desktop-styles.php'); ?>
+			<?php include('modules/home-desktop-styles.php'); ?>
 		}
 	</style>
 </head>

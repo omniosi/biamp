@@ -43,6 +43,9 @@
 	*{
 		margin: 0;
 		padding: 0;
+		font-family: "Gotham SSm A", "Gotham SSm B", "Montserrat", Arial, sans-serif;
+		font-weight: 400;
+		font-style: normal;
 		-webkit-box-sizing:border-box;
 		box-sizing:border-box;
 	}
