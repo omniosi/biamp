@@ -89,7 +89,8 @@
 			<li><a href="tel:+1-503-541-7287" class="phone">503.541.7287</a></li>
 			<li><a href="#" class="blog">Blog</a></li>
 			<li><a href="#" class="buy">How to buy</a></li>
-			<li><a href="#" class="products">Biamp Products A-Z<span class="icon"></span></a></li>
-			<li><a href="#" class="language">English<span class="icon"></span></a></li>
+			<!-- leave href off these last two to prevent page jump to top on click -->
+			<li><a class="products">Biamp Products A-Z<span class="icon"></span></a></li>
+			<li><a class="language">English<span class="icon"></span></a></li>
 		</ul>
 </div>

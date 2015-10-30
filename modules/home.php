@@ -11,8 +11,10 @@
 			<li><a href="#" class="events">news &amp; events</a></li>
 		</ul>
 	</div>
-	<div class="section">
+	<div class="title">
 		<h1>BIAMP SOLUTIONS</h1>
+	</div>
+	<div class="section">
 		<div class="copy">
 			<h1>By Industry</h1>
 			<p>Every industry has unique opportunities for system design, and each installation requires solutions that are powerful and flexible enough to suit a facility’s ever-evolving needs. No matter your field, we know you need quality audio equipment that is up to the challenge.</p>
@@ -30,7 +32,6 @@
 		</div>
 	</div>
 	<div class="section alt">
-		<h1>BIAMP SOLUTIONS</h1>
 		<div class="copy">
 			<h1>By Industry</h1>
 			<p>Every industry has unique opportunities for system design, and each installation requires solutions that are powerful and flexible enough to suit a facility’s ever-evolving needs. No matter your field, we know you need quality audio equipment that is up to the challenge.</p>
@@ -48,7 +49,6 @@
 		</div>
 	</div>
 	<div class="section">
-		<h1>BIAMP SOLUTIONS</h1>
 		<div class="copy">
 			<h1>By Industry</h1>
 			<p>Every industry has unique opportunities for system design, and each installation requires solutions that are powerful and flexible enough to suit a facility’s ever-evolving needs. No matter your field, we know you need quality audio equipment that is up to the challenge.</p>

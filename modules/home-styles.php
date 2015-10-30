@@ -49,15 +49,21 @@
 	background: #fff;
 	color: #585556;
 }
+.main .title,
+.copy h1,
 .art-menu ul li{
 	list-style: none;
 	border-bottom: 1px solid #585556;
 }
+.copy h1,
 .art-menu ul li a{
 	padding: 16px 20px;
 	display: block;
 	color: #585556;
+	font-size: 16px;
+	text-transform: uppercase;
 }
+.copy h1:before,
 .art-menu ul li a:before{
 	font-family: "icomoon-bia";
 	content:"\e805";
@@ -71,4 +77,20 @@
 .art-menu ul li a.focus,
 .art-menu ul li a:hover{
 	text-decoration: none;
+}
+.main .title{
+	padding: 20px;
+	color: #fff;
+	background: #585556;
+	font-size: 1.125em;
+}
+.main .title h1{
+	font-size: 1.5em;
+}
+.charts,
+.copy p{
+	display: none;
+}
+.section .copy h1{
+	/*display: block;*/
 }

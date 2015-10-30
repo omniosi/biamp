@@ -79,3 +79,6 @@
 	a:hover.btn{
 		border: 1px solid #D9272E;
 	}
+	.wrapper{
+		position: relative;
+	}

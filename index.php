@@ -21,19 +21,21 @@
 	</style>
 </head>
 <body>
-	<!-- top-menu -->
-	<?php include('modules/top-menu.php'); ?>
-	<!-- page content -->
-	<!-- <div class="billboard" style-"display:none"></div> -->
-	<div class="billboard"></div>
+	<div class="wrapper">
+		<!-- top-menu -->
+		<?php include('modules/top-menu.php'); ?>
+		<!-- page content -->
+		<!-- <div class="billboard" style-"display:none"></div> -->
+		<div class="billboard"></div>
 
-	<?php include('modules/home.php'); ?>
+		<?php include('modules/home.php'); ?>
 
-	<!-- footer -->
-	<?php include('modules/footer.php'); ?>
+		<!-- footer -->
+		<?php include('modules/footer.php'); ?>
 
-	<!-- external scripts -->
-	<?php include('modules/external-scripts.php'); ?>
+		<!-- external scripts -->
+		<?php include('modules/external-scripts.php'); ?>
+	</div>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			<?php include('modules/top-menu-scripts.php'); ?>

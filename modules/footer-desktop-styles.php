@@ -1,7 +1,8 @@
 .footer{
-	position: absolute;
-	bottom: 0;
-	z-index: 800;
+	/*position: absolute;*/
+	/*bottom: 0;*/
+	/*z-index: 800;*/
+	position: relative;
 	height: 80px;
 	padding-left: 40px;
 	overflow: hidden;
@@ -35,6 +36,7 @@
 }
 .mega-menu.btm{
 	bottom: 80px;
+	/*bottom: 0px;*/
 	padding: 20px;
 	overflow-y: visible;
 }

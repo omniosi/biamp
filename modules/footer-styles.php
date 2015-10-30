@@ -1,9 +1,9 @@
 /* -- footer -- */
 .footer{
 	/*position: absolute;*/
-	bottom: 0;
-	z-index: 800;
-	/*position: static;*/
+	/*bottom: 0;*/
+	/*z-index: 800;*/
+	position: relative;
 	background: #4f4e4e;
 	color: #fff;
 	font-family: "Gotham SSm A", "Gotham SSm B", "Montserrat", Arial, sans-serif;
@@ -34,6 +34,7 @@
 	display:inline-block;
 	vertical-align: top;
 	font-size: 30px;
+	margin-top: 4px;
 }
 .footer ul li a.focus,
 .footer ul li a:hover{

@@ -8,6 +8,7 @@ footerProducts.addEventListener('click',function(){
 	}else{
 		productsClose();
 	}
+	return false;
 });
 function productsOpen(){
 	langClose();
@@ -49,6 +50,7 @@ function langOpen(){
 	}else{
 		lang.classList.add('focus');
 		$('.menu-lang').slideDown();
+		return false;
 	}
 }
 function langClose(){
