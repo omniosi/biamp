@@ -11,7 +11,7 @@
 	z-index: 800;
 }
 .main{
-	/*padding-top: 80px;*/
+	padding-top: 80px;
 	/*position: fixed;*/
 	top: 80px;
 }
@@ -20,55 +20,55 @@
 }
 .main .poster{
 	width: 100%;
-	height: auto;
-	height: 600px;
+	height: 330px;
 	background: url('img/solutions-hdr.jpg') 50% 50% no-repeat;
 	background-size: cover;
+	background-position: 74% 63%;
+	/*background-size: 350%;*/
+	/*background-position: 75% 100%;*/
 }
 .main .poster h1{
-	font-size: 100px;
+	font-size: 32px;
 	line-height: 1.25em;
+	text-align: center;
 	color: #fff;
-	margin-left: 6%;
-	padding-top: 100px;
-	width: 45%;
+	/*margin-left: 20%;*/
+	margin-left: -125px;
+	/*padding-top: 200px;*/
+	padding-top: 150px;
+	width: 250px;
 	text-transform: uppercase;
+	text-shadow: 0 0 10px rgba(0,0,0,0.35),0 0 5px rgba(0,0,0,0.35);
+	left: 50%;
+	position: relative;
 }
 .main .art-menu{
-	/*height: 225px;*/
-	padding: 20px;
-	background: #f4f4f4;
+	background: #fff;
 }
-.main .art-menu ul{
-	text-align: center;
-	background: url(img/menu-line-arrows.svg) no-repeat;
-	background-position: 0	73px;
-	background-size: 816px 12px;
-	width: 816px;
-	height: 155px;
-	position: relative;
-	left: 50%;
-	margin-left: -408px;
+.art-menu ul{
+	background: #fff;
+	color: #585556;
 }
-.main .art-menu ul li{
-	display: inline-block;
-	vertical-align: top;
-	margin: 0 20px;
+.art-menu ul li{
+	list-style: none;
+	border-bottom: 1px solid #585556;
 }
-.main .art-menu ul li a{
+.art-menu ul li a{
+	padding: 16px 20px;
 	display: block;
-	background: url(img/solutions-art-menu.svg) no-repeat;
-	background-position: 0	0;
-	background-size: 816px 180px;
-	width: 135px;
-	height: 155px;
-	padding-top: 50%;
-	color: #808284;
+	color: #585556;
 }
-.main .art-menu ul li a:hover{
-	background-position: -140px	0;
-	text-indent: -9999px;
+.art-menu ul li a:before{
+	font-family: "icomoon-bia";
+	content:"\e805";
+	padding-bottom: 1em;
+	font-size: 25px;
+	position: absolute;
+	right: 20px;
+	line-height: 18px;
 }
-.main .art-menu ul li a.support:hover{ background-position: -280px	0; }
-.main .art-menu ul li a.new:hover{ background-position: -420px	0; }
-.main .art-menu ul li a.events:hover{ background-position: -560px	0; }
+.art-menu ul li a:focus,
+.art-menu ul li a.focus,
+.art-menu ul li a:hover{
+	text-decoration: none;
+}

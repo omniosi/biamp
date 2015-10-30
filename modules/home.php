@@ -1,8 +1,7 @@
 <!-- home page content -->
-<div class="billboard"></div>
 <div class="main">
 	<div class="poster">
-		<h1>This is how we do audio.</h1>
+		<h1>This is how we do audio</h1>
 	</div>
 	<div class="art-menu">
 		<ul>
