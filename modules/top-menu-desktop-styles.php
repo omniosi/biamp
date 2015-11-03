@@ -5,6 +5,7 @@
 	.drop-menu-icon{
 		display:none;
 	}
+	.search .icon{ border-left: 2px solid #616161; }
 	.search form input{
 		width: 320px;
 	}
@@ -78,20 +79,27 @@
 		top: 80px;
 	}
 	.mega-menu .two-col{
+		display: inline-block;
 		padding: 40px 20px;
 		width: 50%;
 		font-size: 30px;
 		text-transform: uppercase;
-		padding-top: 135px;
+		/*padding-top: 135px;*/
 	}
+	.mega-menu .two-col.desc{ display:inline-block; }
 	.mega-menu .two-col p{
-		width: 75%;
+		/*width: 75%;*/
+		width: 33%;
+		/*display:block;*/
+		position: absolute;
+		top: 50%;
+		margin-top: -30px;
 	}
 	.mega-menu .four-col{
 		width: 22%;
 		height: 500px;
 		border-top: none;
-		border-left: 1px solid white;
+		border-left: 1px solid #fff;
 		padding:20px 30px;
 		margin-right: 2%;
 	}
@@ -100,6 +108,19 @@
 		margin-bottom: 10px;
 		text-transform: uppercase;
 		cursor: none;
+		color: #fff;
+		background: none;
+		padding: 0px;
+	}
+	.mega-menu .four-col h1:before{
+		content: "";
+	}
+	.mega-menu,
+	.search form,
+	.main-menu ul{
+		/*background: #585556;*/
+		padding-top: 10px;
+		/*color: #fff;*/
 	}
 	.mega-menu .four-col ul{
 		list-style: none;
@@ -107,12 +128,21 @@
 		font-size: 18px;
 		margin-bottom: 40px;
 		display:block;
+		background: none;
 	}
 	.mega-menu .four-col li{
 		margin-bottom: 5px;
 	}
+	.mega-menu .four-col li a{
+		padding: 0 1px 3px;
+	}
 	.mega-menu .four-col li a:hover{
 		/*text-decoration: underline;*/
+		color: #fff;
+	}
+	.mega-menu .four-col li:before,
+	.mega-menu .four-col li a:before{
+		content: "";
 	}
 	.menu-acct{
 		width: 388px;

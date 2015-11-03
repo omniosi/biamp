@@ -23,6 +23,10 @@
 	border-right: 1px solid #fff;
 	border-bottom: none;
 }
+.footer-menu li a.products,
+.footer-menu li a.blog{
+	display:inline-block;
+}
 .footer-menu li:last-child a{
 	border-right: none;
 }

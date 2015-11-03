@@ -29,7 +29,7 @@
 	.search form,
 	.main-menu ul{
 		background: #585556;
-		padding-top: 10px;
+		/*padding-top: 10px;*/
 		color: #fff;
 	}
 	.main-menu{
@@ -53,6 +53,8 @@
 		/*background: #585556;*/
 		color: #585556;
 	}
+	.mega-menu .four-col li:before,
+	.mega-menu .four-col h1:before,
 	.main-menu ul li a:before{
 		font-family: "icomoon-bia";
 		content:"\e805";
@@ -143,7 +145,6 @@
 		padding: 24px;
 		cursor: pointer;
 		display: block;
-		border-left: 2px solid #616161;
 	}
 	.search form{
 		padding: 15px;
@@ -166,8 +167,8 @@
 		position: absolute;
 		top: 80px;
 		width: 100%;
-		/*padding: 100px 20px 20px;*/
-		padding: 83px 20px 20px;
+		/*padding: 83px 20px 20px;*/
+		padding: 60px 0px 0px;
 		z-index: 900;
 	}
 	.mega-menu .two-col{
@@ -176,33 +177,57 @@
 		font-size: 20px;
 		text-transform: uppercase;
 	}
+	.mega-menu .two-col.desc{ display:none; }
 	.mega-menu .two-col p{
 		/*width: 75%;*/
+		/*display:none;*/
 	}
 	.mega-menu .four-col{
 		width: 100%;
-		border-top: 1px solid white;
-		padding: 20px 20px 0;
+		/*border-top: 1px solid white;*/
+		/*border-top: 1px solid #585556;*/
+		/*border-bottom: 1px solid #585556;*/
+		/*padding: 20px 20px 0;*/
 		margin-right: 0;
 	}
 	.mega-menu .four-col h1{
-		font-size: 20px;
-		margin-bottom: 20px;
+		/*font-size: 20px;*/
+		font-size: 1em;
+		/*margin-bottom: 20px;*/
 		text-transform: uppercase;
 		cursor: pointer;
+
+		/*padding: 16px 20px;*/
+		padding: 16px 53px;
+		display: block;
+		color: #585556;
+		background: #fff;
 	}
 	.mega-menu .four-col ul{
 		list-style: none;
-		padding-left: 38px;
+		/*padding-left: 53px;*/
 		font-size: 18px;
-		margin-bottom: 40px;
+		/*margin-bottom: 40px;*/
+		/*margin: 20px 0;*/
 		display:none;
+		background: #fff;
 	}
 	.mega-menu .four-col ul:last-child{
 		margin-bottom: 0;
 	}
 	.mega-menu .four-col li{
-		margin-bottom: 20px;
+		/*margin-bottom: 20px;*/
+		/*border-bottom: 1px solid #585556;*/
+		position: relative;
+	}
+	.mega-menu .four-col li a{
+		color: #C8C7C7;
+		font-size: 1em;
+		padding: 20px 20px 20px 53px;
+		display: block;
+	}
+	.mega-menu .four-col li a:hover{
+		color: #585556;
 	}
 	/*.mega-menu.menu-one{ top: 132px; }*/
 	.mega-menu .footer-menu-back,
@@ -221,9 +246,9 @@
 		width: 80px;
 		/*height:80px;*/
 		height:60px;
-		/*padding: 20px 20px 20px 17px;*/
-		padding: 10px 20px 10px 17px;
-		border-right: 1px solid #4f4e4e;
+		/*padding: 10px 20px 10px 17px;*/
+		padding: 10px 4px;
+		/*border-right: 1px solid #4f4e4e;*/
 		font-size: 40px;
 		cursor: pointer;
 		position: relative;
@@ -236,7 +261,7 @@
 		font-size: 20px;
 		text-transform: uppercase;
 		color: #C8C7C7;
-		padding-left: 20px;
+		/*padding-left: 20px;*/
 	}
 	.menu-acct{
 		right: 0;

@@ -62,7 +62,6 @@ function langClose(){
 		$('.menu-lang').slideUp();
 	}
 }
-// $('.mega-menu.btm').find('.menu-back').click(function(){
 $('.footer-menu-back').click(function(){
 	langClose();
 	productsClose();

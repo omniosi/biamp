@@ -35,7 +35,7 @@
 				<span class="icon icon-keyboard_arrow_left"></span>
 				<span class="title">Solutions</span>
 			</div>
-			<div class="col two-col">
+			<div class="col two-col desc">
 				<p>BIAMP’S SOLUTIONS WILL BLAH BLAH AND WILL BLAH BLAH YOUR BLAH BLAH</p>
 			</div>
 			<div class="col four-col">

@@ -45,22 +45,27 @@
 }
 .footer-menu li{
 	margin-bottom: 10px;
+	display: inline-block;
 }
 .footer-menu li a{
-	width: 100%;
-	display:block;
-	border-bottom: 1px solid #494647;
+	/*width: 100%;*/
+	/*display:block;*/
+	/*border-bottom: 1px solid #494647;*/
 }
 .footer .footer-menu li a.focus,
 .footer .footer-menu li a:hover{
-	border-bottom: 1px solid #D9272E;
-	color: #fff;
+	/*border-bottom: 1px solid #D9272E;*/
+	/*color: #fff;*/
 }
 .footer-menu li a .icon:after{
 	content: "\e802";
 }
 .footer-menu li a.focus .icon:after{
 	content: "\e803";
+}
+.footer-menu li a.products,
+.footer-menu li a.blog{
+	display:none;
 }
 .mega-menu.btm{
 	/*position: static;*/
