@@ -39,7 +39,7 @@
 	.main-menu ul li:last-child a{
 		top: 0;
 		padding:0;
-		margin: 0 20px 20px;
+		margin: 5px 20px 20px;
 	}
 	.main-menu ul li a.focus,
 	.main-menu ul li a:focus,
@@ -55,7 +55,7 @@
 		color: #D9272E;
 	}
 	.main-menu ul li:last-child a .icon{
-		font-size: 45px;
+		font-size: 35px;
 	}
 	.icon-user-account-icon:before{
 		font-family: "icomoon-bia";

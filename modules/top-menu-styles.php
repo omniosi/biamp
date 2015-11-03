@@ -85,7 +85,7 @@
 		/*padding: 8px 0 5px;*/
 	}
 	.main-menu ul li:last-child a .icon{
-		/*font-size: 45px;*/
+		/*font-size: 35px;*/
 	}
 	.icon-user-account-icon:before{
 		content: "Your Account";
@@ -109,8 +109,7 @@
 	.drop-menu-icon{
 		width: 80px;
 		height: 80px;
-		border-right: 1px solid rgb(88,85,86);
-		padding: 26px 20px;
+		padding: 26px 24px;
 		cursor: pointer;
 	}
 	.drop-menu-icon .three,
@@ -137,14 +136,12 @@
 		top: -14px;
 	}
 	.search{
-		border-right: none;
-		border-left: 1px solid rgb(88,85,86);
 		right: 0;
-		padding: 20px;
+		padding: 24px;
 		cursor: pointer;
 	}
 	.search .icon{
-		font-size: 40px;
+		font-size: 32px;
 	}
 	.search form{
 		padding: 15px;

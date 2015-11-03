@@ -18,7 +18,9 @@
 			</ul>
 		</div>
 		<div class="logo">
-			<img src="img/biamp_newlogo_inverse_2clr.svg" alt="BIAMP" style="height:40px">
+			<a href="/">
+				<img src="img/biamp_newlogo_inverse_2clr.svg" alt="BIAMP" style="height:40px">
+			</a>
 		</div>
 		<div class="search">
 			<a href="#"><span class="icon icon-search-icon"></span></a>
