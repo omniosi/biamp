@@ -105,7 +105,7 @@
 	}
 
 	/*.drop-menu-icon{ display:block; }*/
-	.search,
+	/*.search,*/
 	.drop-menu-icon{
 		width: 80px;
 		height: 80px;
@@ -137,11 +137,13 @@
 	}
 	.search{
 		right: 0;
-		padding: 24px;
-		cursor: pointer;
 	}
 	.search .icon{
 		font-size: 32px;
+		padding: 24px;
+		cursor: pointer;
+		display: block;
+		border-left: 2px solid #616161;
 	}
 	.search form{
 		padding: 15px;
@@ -150,7 +152,7 @@
 		right: 0;
 	}
 	.search form input{
-		width: 320px;
+		/*width: 320px;*/
 		height:40px;
 		border-radius: 6px;
 		border: none;
@@ -258,5 +260,5 @@
 	}
 	.menu-acct ul li a:hover{
 		text-decoration: none;
-		color: white;
+		color: #fff;
 	}

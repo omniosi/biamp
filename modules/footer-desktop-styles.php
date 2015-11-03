@@ -37,7 +37,7 @@
 .mega-menu.btm{
 	bottom: 80px;
 	/*bottom: 0px;*/
-	padding: 20px;
+	padding: 30px 20px;
 	overflow-y: visible;
 }
 .mega-menu.btm ul li{
@@ -51,9 +51,9 @@
 	content: "";
 }
 .mega-menu.menu-prod .two-col{
-	/*width: 35%;*/
 	width: 25%;
 }
+.mega-menu.btm .two-col{ font-size: 24px; }
 .mega-menu.btm .four-col{
 	height: auto;
 	width: 10%;
@@ -62,13 +62,10 @@
 	position: absolute;
 	right: 40px;
 	width: auto;
-	padding-top: 30px;
 }
 .mega-menu.menu-lang .two-col:last-child li{
 	display: inline-block;
+	vertical-align: top;
 	text-align: right;
-	margin: 10px 20px;
-}
-.mega-menu.menu-lang .two-col p{
-	padding-top: 20px;
+	margin: 0 20px;
 }

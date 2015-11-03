@@ -15,8 +15,10 @@
 }
 .footer a{
 	color: #fff;
+	/*color: #C8C7C7;*/
 	padding: 10px;
 }
+/*.footer a:hover{ color: #fff; }*/
 .footer .share{
 	margin-bottom: 20px;
 }
@@ -76,11 +78,12 @@
 	z-index: 800;
 }
 .mega-menu.btm .two-col{
-	padding: 20px 20px 0;
+	padding: 0 20px 0;
 }
 .mega-menu.btm .two-col p{
-	padding-top: 80px;
-	padding-bottom: 20px;
+	position: absolute;
+	top: 50%;
+	margin-top: -12px;
 }
 .mega-menu.btm .four-col{
 	border:none;

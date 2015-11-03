@@ -5,6 +5,9 @@
 	.drop-menu-icon{
 		display:none;
 	}
+	.search form input{
+		width: 320px;
+	}
 	.main-menu{
 		position: absolute;
 		top: 0;
@@ -65,6 +68,8 @@
 	.mega-menu{
 		padding: 20px;
 	}
+	.mega-menu a{ color: #C8C7C7; }
+	.mega-menu a:hover{ color: #fff; }
 	.mega-menu .footer-menu-back,
 	.mega-menu .menu-back{
 		display:none;
@@ -107,7 +112,7 @@
 		margin-bottom: 5px;
 	}
 	.mega-menu .four-col li a:hover{
-		text-decoration: underline;
+		/*text-decoration: underline;*/
 	}
 	.menu-acct{
 		width: 388px;

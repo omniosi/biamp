@@ -27,9 +27,10 @@
 		<!-- page content -->
 		<!-- <div class="billboard" style-"display:none"></div> -->
 		<div class="billboard"></div>
+		<div class="content">
+			<?php include('modules/home.php'); ?>
 
-		<?php include('modules/home.php'); ?>
-
+		</div>
 		<!-- footer -->
 		<?php include('modules/footer.php'); ?>
 
@@ -38,6 +39,7 @@
 	</div>
 	<script type="text/javascript">
 		$(document).ready(function(){
+			<?php include('modules/global-scripts.php'); ?>
 			<?php include('modules/top-menu-scripts.php'); ?>
 			<?php include('modules/footer-scripts.php'); ?>
 		});
