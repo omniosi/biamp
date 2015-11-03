@@ -80,7 +80,6 @@
 		<span class="title">Share this page</span>
 		<ul>
 			<li><a href="#" class="twitter"><span class="icon icon-twitter"></span></a></li>
-			<li><a href="#" class="facebook"><span class="icon icon-facebook"></span></a></li>
 			<li><a href="#" class="linkedin"><span class="icon icon-linkedin"></span></a></li>
 			<li><a href="#" class="youtube"><span class="icon icon-youtube"></span></a></li>
 		</ul>

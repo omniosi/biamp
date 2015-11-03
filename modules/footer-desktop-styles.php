@@ -1,8 +1,8 @@
 .footer{
-	/*position: absolute;*/
-	/*bottom: 0;*/
-	/*z-index: 800;*/
-	position: relative;
+	position: absolute;
+	bottom: 0;
+	z-index: 800;
+	/*position: relative;*/
 	height: 80px;
 	padding-left: 40px;
 	overflow: hidden;
