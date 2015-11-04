@@ -84,6 +84,9 @@
 	overflow-y: auto;
 	max-height: 347px;
 }
+.mega-menu.btm.menu-lang {
+	max-height: none;
+}
 .mega-menu.btm .footer-menu-back{
 	position: fixed;
 	position: absolute;
