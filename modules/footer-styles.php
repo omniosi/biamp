@@ -25,32 +25,39 @@
 .footer .title{
 	font-family: 'Bebas Neue', 'Oswald', Arial, sans-serif;
 	text-transform: uppercase;
-	font-size: 21px;
+	font-size: 1em;
 	letter-spacing: 0.05em;
 	padding-right: 10px;
 	position: relative;
-	top: 5px;
+	top: 10px;
 }
 .footer .share ul li,
 .footer .share ul{
 	display:inline-block;
 	vertical-align: top;
 	font-size: 30px;
-	margin-top: 4px;
+	/*margin-top: 4px;*/
 }
 .footer ul li a.focus,
 .footer ul li a:hover{
 	color: #D9272E;
 	text-decoration: none;
 }
+.footer .share,
+.footer .footer-menu{
+	text-align: center;
+}
 .footer-menu li{
 	margin-bottom: 10px;
 	display: inline-block;
+	margin-right: 2%;
 }
 .footer-menu li a{
 	/*width: 100%;*/
 	/*display:block;*/
 	/*border-bottom: 1px solid #494647;*/
+	padding: 0;
+	font-size: 0.85em;
 }
 .footer .footer-menu li a.focus,
 .footer .footer-menu li a:hover{

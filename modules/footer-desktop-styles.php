@@ -7,6 +7,9 @@
 	padding-left: 40px;
 	overflow: hidden;
 }
+.footer .title{
+	font-size: 21px;
+}
 .footer-menu{
 	position: absolute;
 	top: 30px;
@@ -16,12 +19,15 @@
 .footer-menu li a{
 	width: auto;
 	display: inline-block;
+	margin-right: 0;
+
 }
 .footer-menu li a{
 	/*padding: 10px 20px 30px;*/
 	padding: 0 20px;
 	border-right: 1px solid #fff;
 	border-bottom: none;
+	font-size: 16px;
 }
 .footer-menu li a.products,
 .footer-menu li a.blog{
