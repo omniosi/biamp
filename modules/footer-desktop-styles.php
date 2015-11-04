@@ -1,5 +1,5 @@
 .footer{
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	z-index: 800;
 	/*position: relative;*/
@@ -45,6 +45,7 @@
 	color: #D9272E;
 }
 .mega-menu.btm{
+	position: fixed;
 	bottom: 80px;
 	/*bottom: 0px;*/
 	padding: 30px 20px;
@@ -64,6 +65,11 @@
 	width: 25%;
 }
 .mega-menu.btm .two-col{ font-size: 24px; }
+.mega-menu.btm .two-col p{
+	position: absolute;
+	top: 50%;
+	margin-top: -12px;
+}
 .mega-menu.btm .four-col{
 	height: auto;
 	width: 10%;

@@ -86,16 +86,19 @@
 }
 .mega-menu.btm .footer-menu-back{
 	position: fixed;
+	position: absolute;
 	top: auto;
+	top: 0;
 	z-index: 800;
 }
 .mega-menu.btm .two-col{
-	padding: 0 20px 0;
+	/*padding: 0 20px 0;*/
+	padding: 20px 0 0;
 }
 .mega-menu.btm .two-col p{
-	position: absolute;
-	top: 50%;
-	margin-top: -12px;
+	/*position: absolute;*/
+	/*top: 50%;*/
+	/*margin-top: -12px;*/
 }
 .mega-menu.btm .four-col{
 	border:none;
