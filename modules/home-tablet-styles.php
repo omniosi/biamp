@@ -42,6 +42,7 @@
 	padding: 0;
 	padding-top: 50%;
 	color: #808284;
+	font-size: 14px;
 }
 .main .art-menu ul li a:before{ content: ""; }
 .main .art-menu ul li a:hover{
