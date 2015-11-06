@@ -5,7 +5,7 @@
 				<div class="two"></div>
 				<div class="three"></div>
 			</div>
-			<ul style="display:none">
+			<ul class="drop-menu" style="display:none">
 				<li><a class="solutions focus" href="#">Solutions</a></li>
 				<li><a class="products" href="#">Products</a></li>
 				<li><a class="training" href="#">Training &amp; Support</a></li>

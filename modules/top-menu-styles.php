@@ -40,6 +40,9 @@
 	.main-menu ul{
 		background: #fff;
 		color: #585556;
+		height: 240px;
+		overflow-y: scroll;
+		border-bottom: 1px solid #585556;
 	}
 	.main-menu ul li{
 		list-style: none;
@@ -62,8 +65,9 @@
 		/*width: 1em;*/
 		/*height:40px;*/
 		font-size: 25px;
-		position: absolute;
-		right: 20px;
+		/*position: absolute;*/
+		/*right: 20px;*/
+		float: right;
 		line-height: 18px;
 	}
 	.main-menu ul li:last-child a:before{

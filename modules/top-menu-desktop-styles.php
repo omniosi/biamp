@@ -21,6 +21,7 @@
 		top: 0;
 		background: none;
 		color: #fff;
+		border-bottom: none;
 	}
 	.main-menu ul li{
 		display:inline-block;

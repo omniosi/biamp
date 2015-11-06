@@ -54,6 +54,7 @@
 	/*bottom: 0px;*/
 	padding: 30px 20px;
 	overflow-y: visible;
+	height: auto;
 }
 .mega-menu.btm ul li{
 	margin-bottom: 10px;
@@ -83,6 +84,7 @@
 	position: absolute;
 	right: 40px;
 	width: auto;
+	padding: 0;
 }
 .mega-menu.menu-lang .two-col:last-child li{
 	display: inline-block;

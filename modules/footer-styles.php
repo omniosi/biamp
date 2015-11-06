@@ -86,6 +86,7 @@
 }
 .mega-menu.btm.menu-lang {
 	max-height: none;
+	/*height: auto;*/
 }
 .mega-menu.btm .footer-menu-back{
 	position: fixed;
