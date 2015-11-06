@@ -93,6 +93,7 @@
 	top: auto;
 	top: 0;
 	z-index: 800;
+	cursor: pointer;
 }
 .mega-menu.btm .two-col{
 	/*padding: 0 20px 0;*/

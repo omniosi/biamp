@@ -7,6 +7,10 @@
 	padding-left: 40px;
 	overflow: hidden;
 }
+.footer .share,
+.footer .footer-menu{
+	text-align: left;
+}
 .footer .title{
 	font-size: 21px;
 }
@@ -69,6 +73,7 @@
 	position: absolute;
 	top: 50%;
 	margin-top: -12px;
+	padding-left: 20px;
 }
 .mega-menu.btm .four-col{
 	height: auto;

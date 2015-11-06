@@ -25,8 +25,6 @@
 		<!-- top-menu -->
 		<?php include('modules/top-menu.php'); ?>
 		<!-- page content -->
-		<!-- <div class="billboard" style-"display:none"></div> -->
-		<div class="billboard"></div>
 		<div class="content">
 			<?php include('modules/home.php'); ?>
 

@@ -44,6 +44,7 @@
 }
 .main .art-menu{
 	background: #fff;
+	display:none;
 }
 .art-menu ul{
 	background: #fff;

@@ -7,7 +7,8 @@
 	height: 1070px;
 }
 .content{
-	padding-bottom: 100px;
+	/*padding-bottom: 100px;*/
+	padding-bottom: 50px;
 }
 .main .poster{
 	height: 600px;
@@ -22,6 +23,9 @@
 	text-align: left;
 	left: 0;
 }
+.main .art-menu{
+	display:block;
+}
 .main .title{
 	background: #fff;
 	padding: 80px 20px 20px;
@@ -35,7 +39,9 @@
 	font-weight: 100;
 }
 .section{
-	padding: 20px 20px 20px 40px;
+	/*padding: 20px 20px 100px 40px;*/
+	padding: 60px 20px 60px 40px;
+	position: relative;
 }
 .section .copy,
 .section .charts{
@@ -56,4 +62,58 @@
 }
 .copy h1:before{
 	content: "";
+}
+.copy p{
+	font-size: 1.25em;
+	font-weight: 100;
+	padding-top: 30px;
+}
+.section .charts{
+	/*position: absolute;*/
+	/*right: 0;*/
+	margin-left: 12%;
+}
+.charts li{
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	margin: 0 20px 20px 0;
+	width: 30%;
+}
+.charts li a{
+	/*padding: 20px 40px;*/
+	background: #E3EAEA;
+	border:1px solid #fff;
+	color: #585556;
+	display: block;
+	height: 80px;
+	/*line-height: 5em;*/
+	padding-top: 1.75em;
+}
+.section.alt{
+	background: url(img/desk-back.jpg) no-repeat;
+	background-size: cover;
+}
+.section.alt .copy{
+	float: right;
+	/*float: left;*/
+	margin-right: 8%;
+}
+.section.alt .charts{
+	margin-left: 0;
+	margin-right: 12%;
+	width: 33%;
+}
+.section.alt .charts li{
+	float: right;
+}
+.section.alt .charts li a{
+	background: #585556;
+	border-color: #585556;
+	color: #fff;
+}
+.section .charts li a:hover{
+	border:1px solid #D9272E;
+	background: none;
+	color: #D9272E;
 }
