@@ -11,6 +11,7 @@
 		/*@media (min-width:1000px){*/
 		@media (min-width:700px){
 			<?php include('modules/home-tablet-styles.php'); ?>
+			<?php include('modules/footer-tablet-styles.php'); ?>
 		}
 		/*--desktop--*/
 		@media (min-width:1420px){

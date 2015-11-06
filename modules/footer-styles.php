@@ -75,23 +75,21 @@
 	display:none;
 }
 .mega-menu.btm{
-	/*position: static;*/
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	top: auto;
 	/*padding: 20px;*/
 	padding: 0 20px;
 	overflow-y: auto;
-	max-height: 347px;
+	/*max-height: 347px;*/
+	height: 240px
 }
 .mega-menu.btm.menu-lang {
 	max-height: none;
 }
 .mega-menu.btm .footer-menu-back{
 	position: fixed;
-	position: absolute;
 	top: auto;
-	top: 0;
 	z-index: 800;
 	cursor: pointer;
 }

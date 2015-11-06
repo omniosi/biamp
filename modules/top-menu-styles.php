@@ -202,6 +202,7 @@
 		display: block;
 		color: #585556;
 		background: #fff;
+		border-bottom: 1px solid #585556;
 	}
 	.mega-menu .four-col ul{
 		list-style: none;
@@ -211,6 +212,7 @@
 		/*margin: 20px 0;*/
 		display:none;
 		background: #fff;
+		border-bottom: 1px solid #585556;
 	}
 	.mega-menu .four-col ul:last-child{
 		margin-bottom: 0;
