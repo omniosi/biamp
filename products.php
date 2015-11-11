@@ -42,6 +42,7 @@
 		$(document).ready(function(){
 			<?php include('modules/global-scripts.php'); ?>
 			<?php include('modules/top-menu-scripts.php'); ?>
+			<?php include('modules/products/scripts.php'); ?>
 			<?php include('modules/footer-scripts.php'); ?>
 		});
 	</script>
