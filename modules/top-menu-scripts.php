@@ -45,6 +45,9 @@
 			});
 			$('.mega-menu').find('.menu-back').click(function(){
 				solutionsSubClose();
+            productsSubClose();
+            companySubClose();
+            trainingSubClose();
 				acctSubClose();
 			});
 		}
