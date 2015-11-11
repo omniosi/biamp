@@ -29,10 +29,10 @@
 
 
             // search controls
-            var searchIcon = document.getElementsByClassName('search')[0].getElementsByTagName('a')[0].getElementsByClassName('icon')[0];
+            var searchIcon = document.getElementsByClassName('search-icon')[0].getElementsByTagName('a')[0].getElementsByClassName('icon')[0];
             var searchBox = document.getElementsByClassName('search')[0].getElementsByTagName('form')[0];
             var searchField = document.getElementsByClassName('search')[0].getElementsByTagName('form')[0].getElementsByTagName('input')[0];
-            $('.search').find('.icon').click(function (e)
+            $('.search-icon').find('.icon').click(function (e)
             {
                 e.stopPropagation();
                 topClose();
@@ -77,6 +77,7 @@
                 topClose();
                 footerClose();
                 if (menu.style.display == 'none' && menuOne.style.display == 'none' && menuAcct.style.display == 'none')
+                // if (menu.style.display == 'none' && menuOne.style.display == 'none' && menuTwo.style.display == 'none' && menuThree.style.display == 'none' && menuFour.style.display == 'none' && menuAcct.style.display == 'none')
                 {
                     menuOpen();
                 }
@@ -108,21 +109,24 @@
                 $('.mega-menu').find('h1').click(function (e)
                 {
                     e.stopPropagation();
-                    if ($(this).next('ul').css('display') == 'none') 
+                    if ($(this).next('ul').css('display') == 'none')
                     {
                         $('.mega-menu').not('.menu-acct').find('ul').slideUp();
                         $(this).next('ul').slideDown();
-                    } 
-                    else 
+                    }
+                    else
                     {
                         $(this).next('ul').slideUp();
                     }
                 });
 
-                $('.mega-menu').find('.menu-back').click(function (e) 
+                $('.mega-menu').find('.menu-back').click(function (e)
                 {
                     e.stopPropagation();
                     solutionsSubClose();
+                    productsSubClose();
+                    companySubClose();
+                    trainingSubClose();
                     acctSubClose();
                 });
             }
