@@ -50,12 +50,17 @@
 	background: #fff;
 	color: #585556;
 }
+.products .charts ul{
+	border-top: 1px solid #585556;
+}
+.products .charts ul li,
 .main .title,
 .copy h1,
 .art-menu ul li{
 	list-style: none;
 	border-bottom: 1px solid #585556;
 }
+.products .charts ul li a,
 .copy h1,
 .art-menu ul li a{
 	padding: 16px 20px;
@@ -64,6 +69,7 @@
 	font-size: 16px;
 	text-transform: uppercase;
 }
+.products .charts ul li a:before,
 .copy h1:before,
 .art-menu ul li a:before{
 	font-family: "icomoon-bia";
@@ -87,6 +93,19 @@
 }
 .main .title h1{
 	font-size: 1.5em;
+}
+.subhead{
+	padding: 20px;
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	display: none;
+}
+.subhead p{
+	font-family: 'Arvo', serif;
+	font-style: italic;
+	letter-spacing: 0.05em;
+	line-height: 1.65em;
 }
 .charts,
 .copy p{

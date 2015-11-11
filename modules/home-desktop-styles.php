@@ -38,6 +38,10 @@
 	font-size: 50px;
 	font-weight: 100;
 }
+.subhead{
+	padding: 20px 20px 20px 40px;
+	width: 65%;
+}
 .section{
 	/*padding: 20px 20px 100px 40px;*/
 	padding: 60px 20px 60px 40px;
