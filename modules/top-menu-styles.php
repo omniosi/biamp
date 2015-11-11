@@ -61,12 +61,7 @@
 	.main-menu ul li a:before{
 		font-family: "icomoon-bia";
 		content:"\e805";
-		padding-bottom: 1em;
-		/*width: 1em;*/
-		/*height:40px;*/
 		font-size: 25px;
-		/*position: absolute;*/
-		/*right: 20px;*/
 		float: right;
 		line-height: 18px;
 	}
