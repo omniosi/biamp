@@ -33,7 +33,8 @@
 		color: #fff;
 	}
 	.main-menu{
-		font-size: 1em;
+		/*font-size: 1em;*/
+		font-size: 16px;
 		text-transform: uppercase;
 		width: 100%;
 	}
