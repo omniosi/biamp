@@ -52,7 +52,7 @@
                     </a>
                 </div>
                 <div class="search-icon">
-                    <a href="#"><span class="icon icon-search-icon"></span></a>
+                    <a><span class="icon icon-search-icon"></span></a>
                 </div>
                 <div class="search" >
                     <form style="display:none">
@@ -446,15 +446,25 @@
                 clearAllDesktop();
                 topClose();
                 footerClose();
+
+                clearAll();
             });
 
 
-            $(document).bind('touchstart', function ()
-            {
-                //clearAll();
-                //topClose();
-                //footerClose();
-            });
+            // $(document).bind('touchstart', function ()
+            // {
+            //     clearAll();
+            //     topClose();
+            //     footerClose();
+            // });
+
+            // var content = document.getElementsByClassName('level4-content')[0];
+
+            // content.addEventListener('click', function(){
+            //     topClose();
+            //     footerClose();
+            //     clearAll();
+            // });
 
 
             function clearAll()
@@ -499,6 +509,8 @@
                     e.stopPropagation();
                     if (serverSubNav.style.display == 'none')
                     {
+                        topClose();
+                        footerClose();
                         clearAllDesktop();
                         $("#servers-subnav-desktop").show();
                     }
@@ -513,6 +525,8 @@
                     e.stopPropagation();
                     if (forteSubNav.style.display == 'none')
                     {
+                        topClose();
+                        footerClose();
                         clearAllDesktop();
                         $("#forte-subnav-desktop").show();
                     }
@@ -527,6 +541,8 @@
                     e.stopPropagation();
                     if (ampSubNav.style.display == 'none')
                     {
+                        topClose();
+                        footerClose();
                         clearAllDesktop();
                         $("#amps-subnav-desktop").show();
                     }
@@ -541,6 +557,8 @@
                     e.stopPropagation();
                     if (expanderSubNav.style.display == 'none')
                     {
+                        topClose();
+                        footerClose();
                         clearAllDesktop();
                         $("#expanders-subnav-desktop").show();
                     }
@@ -555,6 +573,8 @@
                     e.stopPropagation();
                     if (controlSubNav.style.display == 'none')
                     {
+                        topClose();
+                        footerClose();
                         clearAllDesktop();
                         $("#controls-subnav-desktop").show();
                     }
@@ -570,6 +590,8 @@
                     e.stopPropagation();
                     if (servers.style.display == 'none')
                     {
+                        topClose();
+                        footerClose();
                         clearAll();
                         $("#servers-subnav").show();
                     }
@@ -583,6 +605,8 @@
                     e.stopPropagation();
                     if (forte.style.display == 'none')
                     {
+                        topClose();
+                        footerClose();
                         clearAll();
                         $("#forte-subnav").show();
                     }
@@ -596,6 +620,8 @@
                     e.stopPropagation();
                     if (amps.style.display == 'none')
                     {
+                        topClose();
+                        footerClose();
                         clearAll();
                         $("#amps-subnav").show();
                     }
@@ -609,6 +635,8 @@
                     e.stopPropagation();
                     if (expanders.style.display == 'none')
                     {
+                        topClose();
+                        footerClose();
                         clearAll();
                         $("#expanders-subnav").show();
                     }
@@ -622,6 +650,8 @@
                     e.stopPropagation();
                     if (controls.style.display == 'none')
                     {
+                        topClose();
+                        footerClose();
                         clearAll();
                         $("#controls-subnav").show();
                     }
@@ -658,6 +688,7 @@
                 $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
 
             });
+
 
         </script>
 

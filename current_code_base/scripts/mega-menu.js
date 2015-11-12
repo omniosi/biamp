@@ -35,6 +35,8 @@
             $('.search-icon').find('.icon').click(function (e)
             {
                 e.stopPropagation();
+                clearAll();
+                clearAllDesktop();
                 topClose();
                 footerClose();
                 if (searchBox.style.display == 'none')
@@ -74,6 +76,8 @@
             dropIcon.addEventListener("click", function (e)
             {
                 e.stopPropagation();
+                clearAll();
+                clearAllDesktop();
                 topClose();
                 footerClose();
                 if (menu.style.display == 'none' && menuOne.style.display == 'none' && menuAcct.style.display == 'none')
@@ -136,6 +140,8 @@
             $('.solutions-nav').click(function (e)
             {
                 e.stopPropagation();
+                clearAll();
+                clearAllDesktop();
                 topClose();
                 footerClose();
                 if (menuOne.style.display == 'none')
@@ -179,6 +185,8 @@
             $('.products-nav').click(function (e)
             {
                 e.stopPropagation();
+                clearAll();
+                clearAllDesktop();
                 topClose();
                 footerClose();
                 if (menuTwo.style.display == 'none')
@@ -222,6 +230,8 @@
             $('.training-nav').click(function (e)
             {
                 e.stopPropagation();
+                clearAll();
+                clearAllDesktop();
                 topClose();
                 footerClose();
                 if (menuThree.style.display == 'none')
@@ -265,6 +275,8 @@
             $('.company-nav').click(function (e)
             {
                 e.stopPropagation();
+                clearAll();
+                clearAllDesktop();
                 topClose();
                 footerClose();
                 if (menuFour.style.display == 'none')
@@ -308,6 +320,8 @@
             $('.user-account').click(function (e)
             {
                 e.stopPropagation();
+                clearAll();
+                clearAllDesktop();
                 topClose();
                 footerClose();
                 if (menuAcct.style.display == 'none')
@@ -354,6 +368,8 @@
             footerProducts.addEventListener('click', function (e)
             {
                 e.stopPropagation();
+                clearAll();
+                clearAllDesktop();
                 topClose();
                 footerClose();
                 if (footerProdMenu.style.display == 'none')
@@ -403,6 +419,8 @@
             lang.addEventListener('click', function (e)
             {
                 e.stopPropagation();
+                clearAll();
+                clearAllDesktop();
                 topClose();
                 footerClose();
                 if (langMenu.style.display == 'none')
