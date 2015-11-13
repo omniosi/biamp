@@ -1,3 +1,4 @@
+<div class="content solutions">
 <!-- home page content -->
 <div class="main">
 	<div class="poster">
@@ -65,5 +66,5 @@
 			</ul>
 		</div>
 	</div>
-
+</div>
 </div>

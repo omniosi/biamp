@@ -11,9 +11,9 @@
 	z-index: 800;
 }
 .main{
-	padding-top: 80px;
+	/*padding-top: 80px;*/
 	/*position: fixed;*/
-	top: 80px;
+	/*top: 80px;*/
 }
 .main .billboard img{
 	width: 100%;

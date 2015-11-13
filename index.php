@@ -26,10 +26,7 @@
 		<!-- top-menu -->
 		<?php include('modules/top-menu.php'); ?>
 		<!-- page content -->
-		<div class="content">
-			<?php include('modules/home.php'); ?>
-
-		</div>
+		<?php include('modules/home.php'); ?>
 		<!-- footer -->
 		<?php include('modules/footer.php'); ?>
 

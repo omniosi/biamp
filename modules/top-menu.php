@@ -6,8 +6,8 @@
 				<div class="three"></div>
 			</div>
 			<ul class="drop-menu" style="display:none">
-				<li><a class="solutions focus" href="#">Solutions</a></li>
-				<li><a class="products" href="#">Products</a></li>
+				<li><a class="solutions focus" href="/">Solutions</a></li>
+				<li><a class="products" href="/products.php">Products</a></li>
 				<li><a class="training" href="#">Training &amp; Support</a></li>
 				<li><a class="company" href="#">Company</a></li>
 				<li><a class="downloads" href="#">Downloads</a></li>

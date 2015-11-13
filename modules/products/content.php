@@ -1,3 +1,4 @@
+<div class="content products">
 <!-- products page content -->
 <div class="main products">
 	<div class="poster">	</div>
@@ -23,4 +24,5 @@
 			</ul>
 		</div>
 	</div>
+</div>
 </div>

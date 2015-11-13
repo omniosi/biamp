@@ -82,3 +82,6 @@
 	.wrapper{
 		position: relative;
 	}
+	.content{
+		padding: 80px 0;
+	}
