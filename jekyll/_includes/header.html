@@ -19,7 +19,17 @@
         <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7367512/617108/css/fonts.css" />
         <link rel="stylesheet" href="styles/new.css" type="text/css" />
-
+			<style>
+				{% include solutions.css %}
+				/*--tablet--*/
+				@media (min-width:700px){
+					{% include solutions-tablet.css %}
+				}
+				/*--desktop--*/
+				@media (min-width:1420px){
+					{% include solutions-desktop.css %}
+				}
+			</style>
         <title>{{ site.name }} - {{ page.title }}</title>
     </head>
 
@@ -33,8 +43,8 @@
                         <div class="three"></div>
                     </div>
                     <ul class="drop-menu" style="display:none">
-                        <li><a class="solutions-nav" href="#">Solutions</a></li>
-                        <li><a class="products-nav" href="#">Products</a></li>
+                        <li><a class="solutions-nav" href="/">Solutions</a></li>
+                        <li><a class="products-nav" href="/products.html">Products</a></li>
                         <li><a class="training-nav" href="#">Training &amp; Support</a></li>
                         <li><a class="company-nav" href="#">Company</a></li>
                         <li><a class="downloads-nav" href="#">Downloads</a></li>

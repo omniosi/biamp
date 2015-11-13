@@ -23,7 +23,7 @@
 			</a>
 		</div>
 		<div class="search">
-			<a href="#"><span class="icon icon-search-icon"></span></a>
+			<a><span class="icon icon-search-icon"></span></a>
 			<form style="display:none">
 				<input type="text" value="Search Biamp">
 			</form>
