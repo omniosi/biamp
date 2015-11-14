@@ -20,14 +20,16 @@
         <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7367512/617108/css/fonts.css" />
         <link rel="stylesheet" href="styles/new.css" type="text/css" />
 			<style>
-				{% include solutions.css %}
+				{% include solutions/solutions.css %}
+				{% include products/products.css %}
 				/*--tablet--*/
 				@media (min-width:700px){
-					{% include solutions-tablet.css %}
+					{% include solutions/solutions-tablet.css %}
 				}
 				/*--desktop--*/
 				@media (min-width:1420px){
-					{% include solutions-desktop.css %}
+					{% include solutions/solutions-desktop.css %}
+					{% include products/products-desktop.css %}
 				}
 			</style>
         <title>{{ site.name }} - {{ page.title }}</title>
