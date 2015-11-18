@@ -1,0 +1,70 @@
+.nms{
+
+}
+.nms .poster{
+	background: url('img/nms-hero.jpg') 50% no-repeat;
+	background-size: cover;
+	height: 220px;
+}
+.nms .side-nav{
+	display:none;
+}
+.section{
+	padding: 7%;
+	text-align: center;
+}
+.section h1{
+	font-size: 1.75em;
+	font-weight: 200;
+	text-transform: uppercase;
+}
+.section h2{
+	font-size: 1.25em;
+	font-weight: 700;
+	margin: 1em 0;
+}
+.section p{
+	margin-bottom: 1em;
+	line-height: 1.25em;
+	letter-spacing: 0.05em;
+}
+.section p.em{
+	font-family: 'Archer', serif;
+	font-style: italic;
+	font-size: 1em;
+}
+.section img{
+	width: 100%;
+}
+.section.alt{
+	background: #F1F1F1;
+}
+.bottom.nav{
+
+}
+.bottom.nav li{
+	background: url('img/bottom-nav-one.jpg') no-repeat;
+	background-size: cover;
+	height: 200px;
+}
+.bottom.nav li:nth-child(2){	background: url('img/bottom-nav-two.jpg') no-repeat;}
+.bottom.nav li:nth-child(3){	background: url('img/bottom-nav-three.jpg') no-repeat;}
+.bottom.nav li a{
+	text-transform: uppercase;
+	background: rgba(255,255,255,0.75);
+	font-weight: bold;
+	padding: 35px 0;
+	display: block;
+	width: 200px;
+	font-size: 1.5em;
+	text-align: center;
+	height: 100px;
+	margin: 0 auto;
+	position: relative;
+	top: 50px;
+}
+.bottom.nav li a:hover,
+.bottom.nav li a{
+	color: #000;
+	text-decoration: none;
+}

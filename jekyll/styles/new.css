@@ -36,6 +36,14 @@
 	    font-style: normal;
     }
 
+/*    @font-face
+    {
+	    font-family: 'Archer';
+	    src: url('../fonts/archer/archer.otf');
+	    font-weight: normal;
+	    font-style: normal;
+    }
+*/
 
     .icon
     {
@@ -113,6 +121,12 @@
 	.wrapper
     {
 		position: relative;
+	}
+	.super{
+		font-size: 0.75em;
+		position: relative;
+		top: -5px;
+
 	}
 
 
@@ -878,6 +892,7 @@
     {
         /*margin: 0 0 50px 0;*/
         padding: 80px 0 0 0;
+        /*padding: 80px 0 130px 0;*/
         background-color: #ffffff;
     }
 
@@ -885,6 +900,7 @@
     .copy
     {
         margin: 0 25px 0 25px;
+        margin: 0;
         font-family: "Gotham SSm A", "Gotham SSm B", "Montserrat", Arial, sans-serif;
     }
 
@@ -3536,6 +3552,10 @@
             color: white;
         }
 
+			.copy{
+	        margin: 0 25px 0 25px;
+
+			}
 
         .footer
         {
@@ -3678,5 +3698,14 @@
             text-align: right;
             margin: 0 20px;
         }
+		.level3-content, .level4-content,
+		.content
+	    {
+	        /*margin: 0 0 50px 0;*/
+	        /*padding: 80px 0 0 0;*/
+	        /*padding: 80px 0 130px 0;*/
+	        padding: 80px 0;
+	        background-color: #ffffff;
+	    }
 
     }

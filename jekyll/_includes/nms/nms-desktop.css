@@ -1,0 +1,9 @@
+.nms .poster{
+	height: 220px;
+
+}
+.nms .side-nav{
+	display: block;
+	position: absolute;
+	right: 0;
+}
