@@ -6,6 +6,8 @@
 	background-size: cover;
 	height: 220px;
 }
+.markers,
+.pop-ups,
 .nms .side-nav{
 	display:none;
 }
@@ -44,8 +46,10 @@
 }
 .bottom.nav li{
 	background: url('img/bottom-nav-one.jpg') no-repeat;
-	background-size: cover;
-	height: 200px;
+	background-size: cover !important;
+	/*background-size: contain !important;*/
+	height: 180px;
+	background-position: 50% 50%;
 }
 .bottom.nav li:nth-child(2){	background: url('img/bottom-nav-two.jpg') no-repeat;}
 .bottom.nav li:nth-child(3){	background: url('img/bottom-nav-three.jpg') no-repeat;}
@@ -61,7 +65,7 @@
 	height: 100px;
 	margin: 0 auto;
 	position: relative;
-	top: 50px;
+	top: 40px;
 }
 .bottom.nav li a:hover,
 .bottom.nav li a{

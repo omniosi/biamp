@@ -19,21 +19,22 @@
         <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7367512/617108/css/fonts.css" />
         <link rel="stylesheet" href="styles/new.css" type="text/css" />
-			<style>
-				{% include solutions/solutions.css %}
-				{% include products/products.css %}
-				{% include nms/nms.css %}
-				/*--tablet--*/
-				@media (min-width:700px){
-					{% include solutions/solutions-tablet.css %}
-				}
-				/*--desktop--*/
-				@media (min-width:1420px){
-					{% include solutions/solutions-desktop.css %}
-					{% include products/products-desktop.css %}
-					{% include nms/nms-desktop.css %}
-				}
-			</style>
+   <style>
+	   {% include color-guide.css %}
+	   {% include solutions/solutions.css %}
+	   {% include products/products.css %}
+	   {% include nms/nms.css %}
+    /*--tablet--*/
+    @media (min-width:700px){
+     {% include solutions/solutions-tablet.css %}
+    }
+    /*--desktop--*/
+    @media (min-width:1420px){
+     {% include solutions/solutions-desktop.css %}
+     {% include products/products-desktop.css %}
+     {% include nms/nms-desktop.css %}
+    }
+   </style>
         <title>{{ site.name }} - {{ page.title }}</title>
     </head>
 
