@@ -1,2 +1,34 @@
 name: Biamp
 description: audio
+
+defaults:
+ -
+  scope:
+   path: "" # an empty string here means all files in the project
+   type: "pages"
+  values:
+   layout: "default"
+   color:
+    darkerGreySelect:
+     hex: '#494647'
+    darkGrey:
+     rgb: 'rgb(79,78,78)'
+     hex: '#4f4e4e'
+    medGrey:
+     rgb: 'rgb(88,85,86)'
+     hex: '#585556'
+    lightGrey:
+     rgb: 'rgb(200,199,199)'
+     hex: '#C8C7C7'
+    grey60:
+     rgb: 'rgb(128,130,133)'
+     hex: '#808284'
+    paleGrey:
+     rgb: 'rgb(244,244,244)'
+     hex: '#F4F4F4'
+    lightBlue:
+     rgb: 'rgb(227,234,234)'
+     hex: '#E3EAEA'
+    red:
+     rgb: 'rgb(217,39,46)'
+     hex: '#D9272E'
