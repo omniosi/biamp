@@ -1,5 +1,5 @@
-var menuItem = document.getElementsByClassName('solutions')[0];
-var menuProducts = document.getElementsByClassName('products')[0];
+// var menuItem = document.getElementsByClassName('solutions-nav')[0];
+// var menuProducts = document.getElementsByClassName('products-nav')[0];
 
-menuItem.classList.remove('focus');
-menuProducts.classList.add('focus');
+// menuItem.classList.remove('focus');
+// menuProducts.classList.add('focus');

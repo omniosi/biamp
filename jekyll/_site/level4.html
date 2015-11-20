@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="styles/font-awesome.css" type="text/css" />
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7367512/617108/css/fonts.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7367512/617108/css/fonts.css" /> -->
         <link rel="stylesheet" href="styles/new.css" type="text/css" />
    <style>
 	   /* COLORS --------------------------------------------------------- */
@@ -444,6 +444,7 @@
 }
 .markers .dot{
 	background: #D9272E;
+	/*background: ;*/
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
 	border-radius: 30px;
@@ -478,6 +479,12 @@
 	z-index: 1;
 	opacity: 0;
 	content: "";
+}
+.markers .dot:hover:before{
+	-webkit-animation: none;
+	-moz-animation: none;
+	animation: none;
+	content: none;
 }
 .markers .dot.two		{ top: 46%; left: 41%; }
 .markers .dot.three	{ top: 68%; left: 54%; }
@@ -1204,8 +1211,8 @@
                     }
                 });
 
-
-                function ScaleSlider()
+                /*
+                                function ScaleSlider()
                 {
                     var bodyWidth = document.body.clientWidth;
                     if (bodyWidth)
@@ -1230,13 +1237,40 @@
                 $Jssor$.$AddEvent(window, "resize", $Jssor$.$WindowResizeFilter(window, ScaleSlider));
                 $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
 
+                */
+
             });
 
-            var menuItem = document.getElementsByClassName('solutions')[0];
-var menuProducts = document.getElementsByClassName('products')[0];
+            // var menuItem = document.getElementsByClassName('solutions-nav')[0];
+// var menuProducts = document.getElementsByClassName('products-nav')[0];
 
-menuItem.classList.remove('focus');
-menuProducts.classList.add('focus');
+// menuItem.classList.remove('focus');
+// menuProducts.classList.add('focus');
+            // $('.dot').on('mouseover', function(){
+$('.dot').on('mouseenter', function(){
+// $('.dot').on('hover', function(){
+// $('.dot').hover(function(){
+	// $(this).next('li').show(400);
+	$(this).next('li').fadeIn(300);
+	// $(this).next('li').fadeIn(300).prev('li').on('mouseout',function(){});
+	// $(this).next('li').fadeIn(300, function(){
+		// $(this).on('mouseout'.fadeOut(300);
+	// });
+
+	// if( $(this).next('li').css('display')=='none' ){
+	// 	$(this).next('li').fadeIn(300);
+	// }else{
+	// 	$(this).next('li').fadeOut(300);
+	// }
+
+	// $(this).find('.pop').fadeIn(300);
+});
+$('.dot').on('mouseout', function(){
+	$(this).next('li').fadeOut(300);
+});
+// $('.pop').on('mouseout', function(){
+// 	$(this).fadeOut(300);
+// });
 
         </script>
 
