@@ -1,5 +1,6 @@
 name: Biamp
 description: audio
+red: "#D9272E"
 
 defaults:
  -

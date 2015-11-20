@@ -27,8 +27,8 @@
 
 }
 .markers .dot{
-	background: #D9272E;
-	/*background: {{ site.color.red.hex }};*/
+	/*background: #D9272E;*/
+	background: {{ site.red }};
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
 	border-radius: 30px;
