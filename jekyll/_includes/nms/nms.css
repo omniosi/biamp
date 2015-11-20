@@ -8,8 +8,51 @@
 }
 .markers,
 .pop-ups,
-.nms .side-nav{
+.side-nav{
 	display:none;
+}
+.side-nav{
+	position: absolute;
+	right: 20px;
+	padding-top: 100px;
+}
+.side-nav:after{
+	content: "";
+	width: 10px;
+	height: 150px;
+	z-index: 0;
+	position: absolute;
+	top: 110px;
+	right: -5px;
+	border-left: 1px solid {{ site.red }};
+}
+.side-nav li{
+	text-align: right;
+	font-size: 16px;
+	margin-bottom: 20px;
+	color: transparent;
+}
+.side-nav li.focus,
+.side-nav li:hover{
+	cursor: pointer;
+	color: {{ site.red }};
+}
+.side-nav li:after{
+	content: "";
+	position: relative;
+	top: 2px;
+	width: 10px;
+	height: 10px;
+	z-index: 10;
+	display: inline-block;
+	margin-left: 20px;
+	transform: rotate(45deg);
+	background: #fff;
+	border: 1px solid {{ site.red }};
+}
+.side-nav li.focus:after,
+.side-nav li:hover:after{
+	background: {{ site.red }};
 }
 .section{
 	padding: 7%;
@@ -30,6 +73,7 @@
 	line-height: 1.25em;
 	letter-spacing: 0.05em;
 }
+.side-nav li,
 .section p.em{
 	font-family: 'Archer', serif;
 	font-style: italic;

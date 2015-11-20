@@ -16,10 +16,6 @@
 .nms .side-nav{
 	display: block;
 }
-.nms .side-nav{
-	position: absolute;
-	right: 0;
-}
 .poster{
 	position: relative;
 }
