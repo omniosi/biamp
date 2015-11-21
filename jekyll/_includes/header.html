@@ -25,11 +25,13 @@
 	   {% include products/products.css %}
 	   {% include nms/nms.css %}
     /*--tablet--*/
-    @media (min-width:700px){
+    /*@media (min-width:700px){*/
+    @media (min-width:{{ site.tablet }}px){
      {% include solutions/solutions-tablet.css %}
     }
     /*--desktop--*/
-    @media (min-width:1420px){
+    /*@media (min-width:1420px){*/
+    @media (min-width:{{ site.desktop }}px){
      {% include solutions/solutions-desktop.css %}
      {% include products/products-desktop.css %}
      {% include nms/nms-desktop.css %}

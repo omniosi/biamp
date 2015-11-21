@@ -274,6 +274,7 @@
 	text-decoration: none;
 }
     /*--tablet--*/
+    /*@media (min-width:700px){*/
     @media (min-width:700px){
      /*--tablet styles--*/
 .billboard{
@@ -331,6 +332,7 @@
 .main .art-menu ul li a.events:hover{ background-position: -560px	0; }
     }
     /*--desktop--*/
+    /*@media (min-width:1420px){*/
     @media (min-width:1420px){
      .billboard{
 	/*position: absolute;*/
@@ -1321,31 +1323,52 @@
 
 // menuItem.classList.remove('focus');
 // menuProducts.classList.add('focus');
-            // $('.dot').on('mouseover', function(){
+            // poster pop-up functionality
 $('.dot').on('mouseenter', function(){
-// $('.dot').on('hover', function(){
-// $('.dot').hover(function(){
-	// $(this).next('li').show(400);
 	$(this).next('li').stop().fadeIn(300);
-	// $(this).next('li').fadeIn(300).prev('li').on('mouseout',function(){});
-	// $(this).next('li').fadeIn(300, function(){
-		// $(this).on('mouseout'.fadeOut(300);
-	// });
-
-	// if( $(this).next('li').css('display')=='none' ){
-	// 	$(this).next('li').fadeIn(300);
-	// }else{
-	// 	$(this).next('li').fadeOut(300);
-	// }
-
-	// $(this).find('.pop').fadeIn(300);
 });
 $('.dot').on('mouseout', function(){
 	$(this).next('li').stop().fadeOut(300);
 });
-// $('.pop').on('mouseout', function(){
-// 	$(this).fadeOut(300);
-// });
+// side nav functionality
+var nmsPoster = document.getElementsByClassName('nms')[0].getElementsByClassName('poster')[0];
+var sideNav = document.getElementsByClassName('side-nav')[0];
+
+function navLock(){
+	if( document.body.clientWidth >= 1420 ){
+		if( document.body.scrollTop >=  nmsPoster.clientHeight ){
+			sideNav.style.position = 'fixed';
+			sideNav.style.top = '100px';
+		}else{
+			sideNav.style.position = 'relative';
+			sideNav.style.top = '0px';
+		}
+	}
+}
+
+// requestAnimationFrame + customEvent
+;(function(){
+	var throttle = function(type, name, obj){
+		obj = obj || window;
+		var running = false;
+		var func = function(){
+			if(running){ return; }
+			running = true;
+			requestAnimationFrame(function(){
+				obj.dispatchEvent(new CustomEvent(name));
+				running = false;
+			});
+		};
+		obj.addEventListener(type,func);
+	};
+	/* init - you can init any addEventListener */
+	throttle("scroll", "optimizedScroll");
+})();
+// handle event
+window.addEventListener("optimizedScroll", function(){
+	// console.log("Resource conscious scroll callback!");
+	navLock();
+});
 
         </script>
 
