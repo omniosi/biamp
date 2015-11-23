@@ -1296,21 +1296,12 @@
 // menuItem.classList.remove('focus');
 // menuProducts.classList.add('focus');
             // poster pop-up functionality
-// $('.dot').on('mouseenter', function(){
-// 	$(this).removeClass('pulse');
-// 	$(this).next('li').stop().fadeIn(300);
-// });
-// $('.dot').on('mouseleave', function(){
-// 	$(this).addClass('pulse');
-// 	$(this).next('li').stop().fadeOut(300);
-// });
-
 $('.dot').hover(function(){
 	$(this).removeClass('pulse');
-	$(this).next('li').stop().fadeIn(300);
+	$(this).next('li').stop().fadeIn(200);
 },function(){
 	$(this).addClass('pulse');
-	$(this).next('li').stop().fadeOut(300);
+	$(this).next('li').stop().fadeOut(200);
 });
 
 // side nav functionality
@@ -1322,9 +1313,14 @@ function navLock(){
 		if( document.body.scrollTop >=  nmsPoster.clientHeight ){
 			sideNav.style.position = 'fixed';
 			sideNav.style.top = '100px';
+		}else if( document.body.scrollTop >= 1618){
+			sideNav.style.position = 'fixed';
+			sideNav.style.top = '100px';
+			// sideNav.nth-child(1).classList.add = 'focus';
+			sideNav.getElementsByTagName('li')[0].classList.add = 'focus';
 		}else{
-			sideNav.style.position = 'relative';
-			sideNav.style.top = '0px';
+			sideNav.style.position = 'absolute';
+			sideNav.style.top = 'auto';
 		}
 	}
 }
