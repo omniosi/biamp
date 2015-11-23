@@ -1271,14 +1271,25 @@ function navLock(){
 		if( document.body.scrollTop >=  nmsPoster.clientHeight ){
 			sideNav.style.position = 'fixed';
 			sideNav.style.top = '100px';
-		}else if( document.body.scrollTop >= 1618){
-			sideNav.style.position = 'fixed';
-			sideNav.style.top = '100px';
-			// sideNav.nth-child(1).classList.add = 'focus';
-			sideNav.getElementsByTagName('li')[0].classList.add = 'focus';
+			sideNav.style.bottom = 'auto'
 		}else{
 			sideNav.style.position = 'absolute';
 			sideNav.style.top = 'auto';
+			sideNav.style.bottom = 'auto'
+		}
+		if( document.body.scrollTop >= 1618 && document.body.scrollTop < 2650){
+			sideNav.getElementsByTagName('li')[0].classList.add('focus');
+		}else{
+			sideNav.getElementsByTagName('li')[0].classList.remove('focus');
+		}
+		document.body.scrollTop >= 2650 && document.body.scrollTop < 3984 ? sideNav.getElementsByTagName('li')[1].classList.add('focus'):sideNav.getElementsByTagName('li')[1].classList.remove('focus');
+		document.body.scrollTop >= 3984 && document.body.scrollTop < 4782 ? sideNav.getElementsByTagName('li')[2].classList.add('focus'):sideNav.getElementsByTagName('li')[2].classList.remove('focus');
+		document.body.scrollTop >= 4782 && document.body.scrollTop < 6785 ? sideNav.getElementsByTagName('li')[3].classList.add('focus'):sideNav.getElementsByTagName('li')[3].classList.remove('focus');
+		document.body.scrollTop >= 6785 && document.body.scrollTop < 7710 ? sideNav.getElementsByTagName('li')[4].classList.add('focus'):sideNav.getElementsByTagName('li')[4].classList.remove('focus');
+		if( document.body.scrollTop >= 7710 ) {
+			sideNav.style.position = 'absolute';
+			sideNav.style.top = 'auto'
+			sideNav.style.bottom = '700px'
 		}
 	}
 }
