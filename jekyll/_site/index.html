@@ -1307,7 +1307,14 @@ $('.dot').hover(function(){
 // side nav functionality
 var nmsPoster = document.getElementsByClassName('nms')[0].getElementsByClassName('poster')[0];
 var sideNav = document.getElementsByClassName('side-nav')[0];
+var s1top = 1618,
+		s2top	 = 2650,
+		s3top = 3984,
+		s4top = 4782,
+		s5top = 6785,
+		sEnd = 7710;
 
+// - side nav scroll positioning
 function navLock(){
 	if( document.body.clientWidth >= 1420 ){
 		if( document.body.scrollTop >=  nmsPoster.clientHeight ){
@@ -1319,24 +1326,24 @@ function navLock(){
 			sideNav.style.top = 'auto';
 			sideNav.style.bottom = 'auto'
 		}
-		if( document.body.scrollTop >= 1618 && document.body.scrollTop < 2650){
+		// if( document.body.scrollTop >= 1618 && document.body.scrollTop < 2650){
+		if( document.body.scrollTop >= s1top && document.body.scrollTop < s2top){
 			sideNav.getElementsByTagName('li')[0].classList.add('focus');
 		}else{
 			sideNav.getElementsByTagName('li')[0].classList.remove('focus');
 		}
-		document.body.scrollTop >= 2650 && document.body.scrollTop < 3984 ? sideNav.getElementsByTagName('li')[1].classList.add('focus'):sideNav.getElementsByTagName('li')[1].classList.remove('focus');
-		document.body.scrollTop >= 3984 && document.body.scrollTop < 4782 ? sideNav.getElementsByTagName('li')[2].classList.add('focus'):sideNav.getElementsByTagName('li')[2].classList.remove('focus');
-		document.body.scrollTop >= 4782 && document.body.scrollTop < 6785 ? sideNav.getElementsByTagName('li')[3].classList.add('focus'):sideNav.getElementsByTagName('li')[3].classList.remove('focus');
-		document.body.scrollTop >= 6785 && document.body.scrollTop < 7710 ? sideNav.getElementsByTagName('li')[4].classList.add('focus'):sideNav.getElementsByTagName('li')[4].classList.remove('focus');
-		if( document.body.scrollTop >= 7710 ) {
+		document.body.scrollTop >= s2top && document.body.scrollTop < s3top ? sideNav.getElementsByTagName('li')[1].classList.add('focus'):sideNav.getElementsByTagName('li')[1].classList.remove('focus');
+		document.body.scrollTop >= s3top && document.body.scrollTop < s4top ? sideNav.getElementsByTagName('li')[2].classList.add('focus'):sideNav.getElementsByTagName('li')[2].classList.remove('focus');
+		document.body.scrollTop >= s4top && document.body.scrollTop < s5top ? sideNav.getElementsByTagName('li')[3].classList.add('focus'):sideNav.getElementsByTagName('li')[3].classList.remove('focus');
+		document.body.scrollTop >= s5top && document.body.scrollTop < sEnd ? sideNav.getElementsByTagName('li')[4].classList.add('focus'):sideNav.getElementsByTagName('li')[4].classList.remove('focus');
+		if( document.body.scrollTop >= sEnd ) {
 			sideNav.style.position = 'absolute';
 			sideNav.style.top = 'auto'
 			sideNav.style.bottom = '700px'
 		}
 	}
 }
-
-// requestAnimationFrame + customEvent
+// - requestAnimationFrame + customEvent, Resource conscious scroll callback
 ;(function(){
 	var throttle = function(type, name, obj){
 		obj = obj || window;
@@ -1359,6 +1366,16 @@ window.addEventListener("optimizedScroll", function(){
 	// console.log("Resource conscious scroll callback!");
 	navLock();
 });
+ // - side-nav jump menu functionality
+sideNav.getElementsByTagName('li')[0].addEventListener('click', function(){
+	// document.body.scrollTop = s1top;
+	$('html,body').animate({scrollTop: s1top});
+});
+sideNav.getElementsByTagName('li')[1].addEventListener('click', function(){ $('html,body').animate({scrollTop: s2top}); });
+sideNav.getElementsByTagName('li')[2].addEventListener('click', function(){ $('html,body').animate({scrollTop: s3top}); });
+sideNav.getElementsByTagName('li')[3].addEventListener('click', function(){ $('html,body').animate({scrollTop: s4top}); });
+sideNav.getElementsByTagName('li')[4].addEventListener('click', function(){ $('html,body').animate({scrollTop: s5top}); });
+
 
         </script>
 

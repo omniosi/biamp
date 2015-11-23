@@ -900,13 +900,13 @@
 		<li>Paging</li>
 		<li>Sound Reinforcement</li>
 	</ul>
-	<div class="section one">
+	<div id="nms-sec-one" class="section one">
 		<h1>NETWORKED MEDIA SYSTEMS</h1>
 		<h2>What Is A Networked Media System?</h2>
 		<p class="em">A Networked Media System is any audio and/or video equipment that communicates over an organization&rsquo;s Ethernet network. Networked Media Systems are designed to maximize system resources while simplifying system administration.</p>
 		<p class="em">Networked Media Systems can support multiple types of solutions simultaneously. For example, a facility could have paging throughout a floor or building, conferencing in the meeting rooms, and sound reinforcement in the auditorium, all operating simultaneously and running on the corporate network. NMS leverages your existing network infrastructure, which results in a superior audio experience.</p>
 	</div>
-	<div class="section two">
+	<div id="nms-sec-two" class="section two">
 		<div class="full">
 			<h1>CONFIGURATIONS</h1>
 		</div>
@@ -921,14 +921,14 @@
 			<img src="img/nms-office-building.png" alt="Office Building">
 		</div>
 	</div>
-	<div class="section three">
+	<div id="nms-sec-three" class="section three">
 		<div class="full">
 			<h2>CONFERENCING</h2>
 			<p>A good conferencing solution is vital to every company, regardless of its size. Networked Media Systems can be integrated with a company’s VoIP system, providing additional signal processing to deliver crisp, echo-free audio every time. If a company is using soft codecs like Lync® or Skype™, a laptop can be connected to our USB interface in plug-and-play fashion, making it easy to enhance the audio of your conversations.</p>
 			<img src="img/nms-conferencing.png" alt="Conference Room layout">
 		</div>
 	</div>
-	<div class="section four alt">
+	<div id="nms-sec-four" class="section four alt">
 		<div class="full">
 			<div class="half">
 				<h2>PAGING</h2>
@@ -937,7 +937,7 @@
 			<img src="img/zoned-paging.png" alt="Paging Airport" class="half">
 		</div>
 	</div>
-	<div class="section five">
+	<div id="nms-sec-five" class="section five">
 		<div class="half">
 			<h2>SOUND REINFORCEMENT</h2>
 			<p>With sound reinforcement, there remains a great deal of art mixed with science in implementing robust audio solutions. In many cases, the space can be acoustically challenging, with multiple reflective surfaces or constraints on microphone and speaker placement for architectural reasons. Other applications, like a panel conference, require a large number of microphones. Networked Media Systems are well-suited for sound reinforcement applications for a number of reasons. Because they’re Ethernet-based, only one cable is required for both control signals and audio transport, minimizing the number of cable runs required, which is advantageous for historic venues and retro-fits. Advanced software capabilities, like dynamic processing and auto mixers, function like an autopilot for your audio system, eliminating the need for manual adjustment of room levels.</p>
@@ -1336,7 +1336,14 @@ $('.dot').hover(function(){
 // side nav functionality
 var nmsPoster = document.getElementsByClassName('nms')[0].getElementsByClassName('poster')[0];
 var sideNav = document.getElementsByClassName('side-nav')[0];
+var s1top = 1618,
+		s2top	 = 2650,
+		s3top = 3984,
+		s4top = 4782,
+		s5top = 6785,
+		sEnd = 7710;
 
+// - side nav scroll positioning
 function navLock(){
 	if( document.body.clientWidth >= 1420 ){
 		if( document.body.scrollTop >=  nmsPoster.clientHeight ){
@@ -1348,24 +1355,24 @@ function navLock(){
 			sideNav.style.top = 'auto';
 			sideNav.style.bottom = 'auto'
 		}
-		if( document.body.scrollTop >= 1618 && document.body.scrollTop < 2650){
+		// if( document.body.scrollTop >= 1618 && document.body.scrollTop < 2650){
+		if( document.body.scrollTop >= s1top && document.body.scrollTop < s2top){
 			sideNav.getElementsByTagName('li')[0].classList.add('focus');
 		}else{
 			sideNav.getElementsByTagName('li')[0].classList.remove('focus');
 		}
-		document.body.scrollTop >= 2650 && document.body.scrollTop < 3984 ? sideNav.getElementsByTagName('li')[1].classList.add('focus'):sideNav.getElementsByTagName('li')[1].classList.remove('focus');
-		document.body.scrollTop >= 3984 && document.body.scrollTop < 4782 ? sideNav.getElementsByTagName('li')[2].classList.add('focus'):sideNav.getElementsByTagName('li')[2].classList.remove('focus');
-		document.body.scrollTop >= 4782 && document.body.scrollTop < 6785 ? sideNav.getElementsByTagName('li')[3].classList.add('focus'):sideNav.getElementsByTagName('li')[3].classList.remove('focus');
-		document.body.scrollTop >= 6785 && document.body.scrollTop < 7710 ? sideNav.getElementsByTagName('li')[4].classList.add('focus'):sideNav.getElementsByTagName('li')[4].classList.remove('focus');
-		if( document.body.scrollTop >= 7710 ) {
+		document.body.scrollTop >= s2top && document.body.scrollTop < s3top ? sideNav.getElementsByTagName('li')[1].classList.add('focus'):sideNav.getElementsByTagName('li')[1].classList.remove('focus');
+		document.body.scrollTop >= s3top && document.body.scrollTop < s4top ? sideNav.getElementsByTagName('li')[2].classList.add('focus'):sideNav.getElementsByTagName('li')[2].classList.remove('focus');
+		document.body.scrollTop >= s4top && document.body.scrollTop < s5top ? sideNav.getElementsByTagName('li')[3].classList.add('focus'):sideNav.getElementsByTagName('li')[3].classList.remove('focus');
+		document.body.scrollTop >= s5top && document.body.scrollTop < sEnd ? sideNav.getElementsByTagName('li')[4].classList.add('focus'):sideNav.getElementsByTagName('li')[4].classList.remove('focus');
+		if( document.body.scrollTop >= sEnd ) {
 			sideNav.style.position = 'absolute';
 			sideNav.style.top = 'auto'
 			sideNav.style.bottom = '700px'
 		}
 	}
 }
-
-// requestAnimationFrame + customEvent
+// - requestAnimationFrame + customEvent, Resource conscious scroll callback
 ;(function(){
 	var throttle = function(type, name, obj){
 		obj = obj || window;
@@ -1388,6 +1395,16 @@ window.addEventListener("optimizedScroll", function(){
 	// console.log("Resource conscious scroll callback!");
 	navLock();
 });
+ // - side-nav jump menu functionality
+sideNav.getElementsByTagName('li')[0].addEventListener('click', function(){
+	// document.body.scrollTop = s1top;
+	$('html,body').animate({scrollTop: s1top});
+});
+sideNav.getElementsByTagName('li')[1].addEventListener('click', function(){ $('html,body').animate({scrollTop: s2top}); });
+sideNav.getElementsByTagName('li')[2].addEventListener('click', function(){ $('html,body').animate({scrollTop: s3top}); });
+sideNav.getElementsByTagName('li')[3].addEventListener('click', function(){ $('html,body').animate({scrollTop: s4top}); });
+sideNav.getElementsByTagName('li')[4].addEventListener('click', function(){ $('html,body').animate({scrollTop: s5top}); });
+
 
         </script>
 
