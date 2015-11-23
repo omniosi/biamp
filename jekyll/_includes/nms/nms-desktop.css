@@ -37,7 +37,7 @@
 	left: 9%;
 	z-index: 10;
 }
-.markers .dot:before{
+/*.markers .dot.pulse:before{
 	background: #D9272E;
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
@@ -59,13 +59,13 @@
 	z-index: 1;
 	opacity: 0;
 	content: "";
-}
-.markers .dot:hover:before{
+}*/
+/*.markers .dot:hover:before{
 	-webkit-animation: none;
 	-moz-animation: none;
 	animation: none;
 	content: none;
-}
+}*/
 .markers .dot.two		{ top: 46%; left: 41%; }
 .markers .dot.three	{ top: 68%; left: 54%; }
 .markers .dot.four		{ top: 15%; left: 64%; }

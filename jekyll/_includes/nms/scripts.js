@@ -1,10 +1,21 @@
 // poster pop-up functionality
-$('.dot').on('mouseenter', function(){
+// $('.dot').on('mouseenter', function(){
+// 	$(this).removeClass('pulse');
+// 	$(this).next('li').stop().fadeIn(300);
+// });
+// $('.dot').on('mouseleave', function(){
+// 	$(this).addClass('pulse');
+// 	$(this).next('li').stop().fadeOut(300);
+// });
+
+$('.dot').hover(function(){
+	$(this).removeClass('pulse');
 	$(this).next('li').stop().fadeIn(300);
-});
-$('.dot').on('mouseout', function(){
+},function(){
+	$(this).addClass('pulse');
 	$(this).next('li').stop().fadeOut(300);
 });
+
 // side nav functionality
 var nmsPoster = document.getElementsByClassName('nms')[0].getElementsByClassName('poster')[0];
 var sideNav = document.getElementsByClassName('side-nav')[0];

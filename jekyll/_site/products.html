@@ -499,7 +499,7 @@
 	left: 9%;
 	z-index: 10;
 }
-.markers .dot:before{
+/*.markers .dot.pulse:before{
 	background: #D9272E;
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
@@ -521,13 +521,13 @@
 	z-index: 1;
 	opacity: 0;
 	content: "";
-}
-.markers .dot:hover:before{
+}*/
+/*.markers .dot:hover:before{
 	-webkit-animation: none;
 	-moz-animation: none;
 	animation: none;
 	content: none;
-}
+}*/
 .markers .dot.two		{ top: 46%; left: 41%; }
 .markers .dot.three	{ top: 68%; left: 54%; }
 .markers .dot.four		{ top: 15%; left: 64%; }
@@ -1254,12 +1254,23 @@
 // menuItem.classList.remove('focus');
 // menuProducts.classList.add('focus');
             // poster pop-up functionality
-$('.dot').on('mouseenter', function(){
+// $('.dot').on('mouseenter', function(){
+// 	$(this).removeClass('pulse');
+// 	$(this).next('li').stop().fadeIn(300);
+// });
+// $('.dot').on('mouseleave', function(){
+// 	$(this).addClass('pulse');
+// 	$(this).next('li').stop().fadeOut(300);
+// });
+
+$('.dot').hover(function(){
+	$(this).removeClass('pulse');
 	$(this).next('li').stop().fadeIn(300);
-});
-$('.dot').on('mouseout', function(){
+},function(){
+	$(this).addClass('pulse');
 	$(this).next('li').stop().fadeOut(300);
 });
+
 // side nav functionality
 var nmsPoster = document.getElementsByClassName('nms')[0].getElementsByClassName('poster')[0];
 var sideNav = document.getElementsByClassName('side-nav')[0];
