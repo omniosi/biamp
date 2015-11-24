@@ -11,11 +11,16 @@ $('.dot').hover(function(){
 var nmsPoster = document.getElementsByClassName('nms')[0].getElementsByClassName('poster')[0];
 var sideNav = document.getElementsByClassName('side-nav')[0];
 var s1top = 1618,
-		s2top	 = 2650,
-		s3top = 3984,
-		s4top = 4664,
-		s5top = 6785,
-		sEnd = 7710;
+		// s2top	 = 2650,
+		s2top	 = 2538,
+		// s3top = 3984,
+		s3top = 2538,
+		// s4top = 4664,
+		s4top = 3292,
+		// s5top = 6785,
+		s5top = 4152,
+		// sEnd = 7595;
+		sEnd = 4406;
 
 // - side nav scroll positioning
 function navLock(){
@@ -42,7 +47,8 @@ function navLock(){
 		if( document.body.scrollTop >= sEnd ) {
 			sideNav.style.position = 'absolute';
 			sideNav.style.top = 'auto'
-			sideNav.style.bottom = '700px'
+			// sideNav.style.bottom = '700px'
+			sideNav.style.bottom = '300px'
 		}
 	}
 }

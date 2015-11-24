@@ -1,11 +1,45 @@
-.section{
+/*.section{*/
+.full{
 	width: 75%;
 	margin: 0 auto;
+}
+.section img.half,
+.half{
+	width: 45%;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 4%;
+}
+.section .half{
+	text-align: left;
+}
+.section .half h2{
+	margin-top: 0;
+}
+.section h1{ margin: 0 0 1em ; }
+.section.two h1{ margin: 0 0  2em; }
+.section.two{ min-height: 940px; }
+.section.two .half{
+	min-height: 700px;
+	position: relative;
+}
+.section.two .half img{
+	position: absolute;
+	bottom: 0px;
+}
+.section.four .half{
+	float: right;
+	text-align: right;
+}
+.section.four img.half{
+	float: none;
 }
 .bottom.nav li{
 	background: url('img/bottom-nav-one.jpg') no-repeat;
 	background-size: cover;
 	height: 200px;
+	width: 33.3%;
+	display: inline-block;
 }
 .nms .poster{
 	height: 1240px;

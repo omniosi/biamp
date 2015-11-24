@@ -15,6 +15,7 @@
 	position: absolute;
 	right: 20px;
 	padding-top: 100px;
+	z-index: 700;
 }
 .side-nav:after{
 	content: "";
@@ -63,6 +64,19 @@
 	font-weight: 200;
 	text-transform: uppercase;
 }
+.section.two h1:before,
+.section.two h1:after{
+	position: relative;
+	top: -0.275em;
+	/*width: 80px;*/
+	width: 7%;
+	height: 2px;
+	background: #000;
+	content: "";
+	display: inline-block;
+	margin-right: 0.275em;
+}
+.section.two h1:after{ margin-left: 0.275em; }
 .section h2{
 	font-size: 1.25em;
 	font-weight: 700;

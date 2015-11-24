@@ -172,6 +172,7 @@
 	position: absolute;
 	right: 20px;
 	padding-top: 100px;
+	z-index: 700;
 }
 .side-nav:after{
 	content: "";
@@ -220,6 +221,19 @@
 	font-weight: 200;
 	text-transform: uppercase;
 }
+.section.two h1:before,
+.section.two h1:after{
+	position: relative;
+	top: -0.275em;
+	/*width: 80px;*/
+	width: 7%;
+	height: 2px;
+	background: #000;
+	content: "";
+	display: inline-block;
+	margin-right: 0.275em;
+}
+.section.two h1:after{ margin-left: 0.275em; }
 .section h2{
 	font-size: 1.25em;
 	font-weight: 700;
@@ -468,14 +482,48 @@
      .products .poster{
 	background-position: initial;
 }
-     .section{
+     /*.section{*/
+.full{
 	width: 75%;
 	margin: 0 auto;
+}
+.section img.half,
+.half{
+	width: 45%;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 4%;
+}
+.section .half{
+	text-align: left;
+}
+.section .half h2{
+	margin-top: 0;
+}
+.section h1{ margin: 0 0 1em ; }
+.section.two h1{ margin: 0 0  2em; }
+.section.two{ min-height: 940px; }
+.section.two .half{
+	min-height: 700px;
+	position: relative;
+}
+.section.two .half img{
+	position: absolute;
+	bottom: 0px;
+}
+.section.four .half{
+	float: right;
+	text-align: right;
+}
+.section.four img.half{
+	float: none;
 }
 .bottom.nav li{
 	background: url('img/bottom-nav-one.jpg') no-repeat;
 	background-size: cover;
 	height: 200px;
+	width: 33.3%;
+	display: inline-block;
 }
 .nms .poster{
 	height: 1240px;
@@ -909,24 +957,26 @@
 		<li>Sound Reinforcement</li>
 	</ul>
 	<div id="nms-sec-one" class="section one">
-		<h1>NETWORKED MEDIA SYSTEMS</h1>
-		<h2>What Is A Networked Media System?</h2>
-		<p class="em">A Networked Media System is any audio and/or video equipment that communicates over an organization&rsquo;s Ethernet network. Networked Media Systems are designed to maximize system resources while simplifying system administration.</p>
-		<p class="em">Networked Media Systems can support multiple types of solutions simultaneously. For example, a facility could have paging throughout a floor or building, conferencing in the meeting rooms, and sound reinforcement in the auditorium, all operating simultaneously and running on the corporate network. NMS leverages your existing network infrastructure, which results in a superior audio experience.</p>
+		<div class="full">
+			<h1>NETWORKED MEDIA SYSTEMS</h1>
+			<h2>What Is A Networked Media System?</h2>
+			<p class="em">A Networked Media System is any audio and/or video equipment that communicates over an organization&rsquo;s Ethernet network. Networked Media Systems are designed to maximize system resources while simplifying system administration.</p>
+			<p class="em">Networked Media Systems can support multiple types of solutions simultaneously. For example, a facility could have paging throughout a floor or building, conferencing in the meeting rooms, and sound reinforcement in the auditorium, all operating simultaneously and running on the corporate network. NMS leverages your existing network infrastructure, which results in a superior audio experience.</p>
+		</div>
 	</div>
 	<div id="nms-sec-two" class="section two">
 		<div class="full">
 			<h1>CONFIGURATIONS</h1>
-		</div>
-		<div class="half">
-			<h2>Centralized NMS</h2>
-			<p>Centralized Networked Media Systems are designed to be cost effective, efficient, and scalable. With a centralized system, all of the DSP is in one physical location, such as a central AV rack or a server room. Housing the DSP in an unoccupied space makes maintenance easier and upgrades less time consuming. Expansion into new areas is also simplified by the need to install I/O endpoints only. Biamp’s Tesira family excels in centralized Networked Media Systems.</p>
-			<img src="img/nms-medical-center.png" alt="Medical Center">
-		</div>
-		<div class="half">
-			<h2>Decentrailzed NMS</h2>
-			<p>A decentralized Networked Media System, like Biamp’s Vocia<span class="super">®</span> family, places DSP at all of the endpoints, and distributes the demand for DSP across the network, sharing resources between devices as needed rather than routing all signals through a single point, which means there’s no single point of potential system failure. The decentralized model is zone-based, and each zone can be optimized for different scenarios – background music, paging, or even sound reinforcement - resulting in a more efficient system with nearly limitless possibilities.</p>
-			<img src="img/nms-office-building.png" alt="Office Building">
+			<div class="half">
+				<h2>Centralized NMS</h2>
+				<p>Centralized Networked Media Systems are designed to be cost effective, efficient, and scalable. With a centralized system, all of the DSP is in one physical location, such as a central AV rack or a server room. Housing the DSP in an unoccupied space makes maintenance easier and upgrades less time consuming. Expansion into new areas is also simplified by the need to install I/O endpoints only. Biamp’s Tesira family excels in centralized Networked Media Systems.</p>
+				<img src="img/nms-medical-center.png" alt="Medical Center">
+			</div>
+			<div class="half">
+				<h2>Decentrailzed NMS</h2>
+				<p>A decentralized Networked Media System, like Biamp’s Vocia<span class="super">®</span> family, places DSP at all of the endpoints, and distributes the demand for DSP across the network, sharing resources between devices as needed rather than routing all signals through a single point, which means there’s no single point of potential system failure. The decentralized model is zone-based, and each zone can be optimized for different scenarios – background music, paging, or even sound reinforcement - resulting in a more efficient system with nearly limitless possibilities.</p>
+				<img src="img/nms-office-building.png" alt="Office Building">
+			</div>
 		</div>
 	</div>
 	<div id="nms-sec-three" class="section three">
@@ -945,17 +995,23 @@
 			<img src="img/zoned-paging.png" alt="Paging Airport" class="half">
 		</div>
 	</div>
-	<div id="nms-sec-one" class="section five">
-		<div class="half">
-			<h2>SOUND REINFORCEMENT</h2>
-			<p>With sound reinforcement, there remains a great deal of art mixed with science in implementing robust audio solutions. In many cases, the space can be acoustically challenging, with multiple reflective surfaces or constraints on microphone and speaker placement for architectural reasons. Other applications, like a panel conference, require a large number of microphones. Networked Media Systems are well-suited for sound reinforcement applications for a number of reasons. Because they’re Ethernet-based, only one cable is required for both control signals and audio transport, minimizing the number of cable runs required, which is advantageous for historic venues and retro-fits. Advanced software capabilities, like dynamic processing and auto mixers, function like an autopilot for your audio system, eliminating the need for manual adjustment of room levels.</p>
+	<div id="nms-sec-five" class="section five">
+		<div class="full">
+			<div class="half">
+				<h2>SOUND REINFORCEMENT</h2>
+				<p>With sound reinforcement, there remains a great deal of art mixed with science in implementing robust audio solutions. In many cases, the space can be acoustically challenging, with multiple reflective surfaces or constraints on microphone and speaker placement for architectural reasons. Other applications, like a panel conference, require a large number of microphones. Networked Media Systems are well-suited for sound reinforcement applications for a number of reasons. Because they’re Ethernet-based, only one cable is required for both control signals and audio transport, minimizing the number of cable runs required, which is advantageous for historic venues and retro-fits. Advanced software capabilities, like dynamic processing and auto mixers, function like an autopilot for your audio system, eliminating the need for manual adjustment of room levels.</p>
+			</div>
+			<img src="img/nms-auditorium.png" alt="Reinforcement theatre" class="half">
 		</div>
-		<img src="img/nms-auditorium.png" alt="Reinforcement theatre" class="half">
 	</div>
 	<ul class="bottom nav">
-		<li><a href="#">brochure</a></li>
-		<li><a href="#">video</a></li>
-		<li><a href="#">case study</a></li>
+		<li>
+			<a href="#">brochure</a>
+		</li><li>
+		<a href="#">video</a>
+		</li><li>
+			<a href="#">case study</a>
+		</li>
 	</ul>
 </div>
             <div class="mega-menu btm menu-lang" style="display:none">
@@ -1345,11 +1401,16 @@ $('.dot').hover(function(){
 var nmsPoster = document.getElementsByClassName('nms')[0].getElementsByClassName('poster')[0];
 var sideNav = document.getElementsByClassName('side-nav')[0];
 var s1top = 1618,
-		s2top	 = 2650,
-		s3top = 3984,
-		s4top = 4664,
-		s5top = 6785,
-		sEnd = 7710;
+		// s2top	 = 2650,
+		s2top	 = 2538,
+		// s3top = 3984,
+		s3top = 2538,
+		// s4top = 4664,
+		s4top = 3292,
+		// s5top = 6785,
+		s5top = 4152,
+		// sEnd = 7595;
+		sEnd = 4406;
 
 // - side nav scroll positioning
 function navLock(){
@@ -1376,7 +1437,8 @@ function navLock(){
 		if( document.body.scrollTop >= sEnd ) {
 			sideNav.style.position = 'absolute';
 			sideNav.style.top = 'auto'
-			sideNav.style.bottom = '700px'
+			// sideNav.style.bottom = '700px'
+			sideNav.style.bottom = '300px'
 		}
 	}
 }
