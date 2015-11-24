@@ -82,8 +82,16 @@
 .section img{
 	width: 100%;
 }
-.section.alt{
-	background: #F1F1F1;
+.section.four.alt{
+	/*background: #F1F1F1;*/
+	background: {{ site.paleGrey }};
+}
+.section.three{
+	border-top: 2px solid {{ site.grey60 }};
+}
+.section.three img{
+	width: 70%;
+	margin-top: 50px;
 }
 .bottom.nav{
 

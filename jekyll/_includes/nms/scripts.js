@@ -13,7 +13,7 @@ var sideNav = document.getElementsByClassName('side-nav')[0];
 var s1top = 1618,
 		s2top	 = 2650,
 		s3top = 3984,
-		s4top = 4782,
+		s4top = 4664,
 		s5top = 6785,
 		sEnd = 7710;
 
