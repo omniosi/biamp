@@ -56,6 +56,7 @@
 .markers{
 
 }
+/*.markers .pulse,*/
 .markers .dot{
 	/*background: #D9272E;*/
 	background: {{ site.red }};
@@ -71,6 +72,21 @@
 	left: 9%;
 	z-index: 10;
 }
+/*.markers .pulse{
+	margin-top: -1px;
+	margin-left: -1px;
+	background: #D9272E;
+	border: 1px solid rgba(255,255,255,0.5);
+	-webkit-animation: pulse 3s ease-out;
+	-moz-animation: pulse 3s ease-out;
+	animation: pulse 3s ease-out;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	z-index: 1;
+	opacity: 0;
+}
+*/
 /*.markers .dot.pulse:before{
 	background: #D9272E;
 	-webkit-border-radius: 30px;
@@ -98,6 +114,10 @@
 	-webkit-animation: none;
 	-moz-animation: none;
 	animation: none;
+	-webkit-animation-iteration-count: none;
+		-moz-animation-iteration-count: none;
+					animation-iteration-count: none;
+	display: none;
 	content: none;
 }*/
 .markers .dot.two		{ top: 46%; left: 41%; }
@@ -121,6 +141,7 @@
 	border-bottom: 30px solid transparent;
 	border-right: 40px solid #D9272E;
 	position: absolute;
+	z-index: 20;
 	top: 60px;
 	left: -40px;
 	content: "";
@@ -141,11 +162,11 @@
 .markers .pop img{
 	float: right;
 }
-.markers .pop.two		{ top: 52%; left: 20%; }
-.markers .pop.three	{ top: 74%; left: 33%; }
-.markers .pop.four		{ top: 21%; left: 43%; }
-.markers .pop.five		{ top: 57%; left: 49%; }
-.markers .pop.six		{ top: 41.5%; left: 44.5%; }
+.markers .pop.two		{ top: 52%; left: 20%; z-index: 200; }
+.markers .pop.three	{ top: 74%; left: 33%; z-index: 300; }
+.markers .pop.four		{ top: 21%; left: 43%; z-index: 400; }
+.markers .pop.five		{ top: 57%; left: 49%; z-index: 500; }
+.markers .pop.six		{ top: 41.5%; left: 44.5%; z-index: 600; }
 .markers .pop.five:after,
 .markers .pop.five:before,
 .markers .pop.four:after,
