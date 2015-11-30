@@ -503,13 +503,25 @@
 .section h1{ margin: 0 0 1em ; }
 .section.two h1{ margin: 0 0  2em; }
 .section.two{ min-height: 940px; }
-.section.two .half{
+/*.section.two .half{
 	min-height: 700px;
 	position: relative;
+}*/
+.section.two .full:last-child{
+	padding-top: 50px;
 }
-.section.two .half img{
-	position: absolute;
-	bottom: 0px;
+.section.two .half,
+.section.four .half{
+	padding-top: 50px;
+}
+.section.two img.half,
+.section.four img.half{
+	/*position: absolute;*/
+	/*bottom: 0px;*/
+	padding-top: 0;
+}
+.section.three img{
+	width: 50%;
 }
 .section.four .half{
 	float: right;
@@ -540,7 +552,7 @@
 .markers{
 
 }
-/*.markers .pulse,*/
+/*.markers .pulse, */
 .markers .dot{
 	/*background: #D9272E;*/
 	background: #D9272E;
@@ -1396,17 +1408,12 @@ function popoff(){
 // side nav functionality
 var nmsPoster = document.getElementsByClassName('nms')[0].getElementsByClassName('poster')[0];
 var sideNav = document.getElementsByClassName('side-nav')[0];
-var s1top = 1618,
-		// s2top	 = 2650,
-		s2top	 = 2538,
-		// s3top = 3984,
-		s3top = 2538,
-		// s4top = 4664,
-		s4top = 3292,
-		// s5top = 6785,
-		s5top = 4152,
-		// sEnd = 7595;
-		sEnd = 4406;
+var s1top = 1626,
+		s2top	 = 2154,
+		s3top = 2748,
+		s4top = 3325,
+		s5top = 4191,
+		sEnd = 4434;
 
 // - side nav scroll positioning
 function navLock(){

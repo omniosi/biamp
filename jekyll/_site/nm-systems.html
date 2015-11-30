@@ -503,13 +503,25 @@
 .section h1{ margin: 0 0 1em ; }
 .section.two h1{ margin: 0 0  2em; }
 .section.two{ min-height: 940px; }
-.section.two .half{
+/*.section.two .half{
 	min-height: 700px;
 	position: relative;
+}*/
+.section.two .full:last-child{
+	padding-top: 50px;
 }
-.section.two .half img{
-	position: absolute;
-	bottom: 0px;
+.section.two .half,
+.section.four .half{
+	padding-top: 50px;
+}
+.section.two img.half,
+.section.four img.half{
+	/*position: absolute;*/
+	/*bottom: 0px;*/
+	padding-top: 0;
+}
+.section.three img{
+	width: 50%;
 }
 .section.four .half{
 	float: right;
@@ -540,7 +552,7 @@
 .markers{
 
 }
-/*.markers .pulse,*/
+/*.markers .pulse, */
 .markers .dot{
 	/*background: #D9272E;*/
 	background: #D9272E;
@@ -992,18 +1004,20 @@
 		</div>
 	</div>
 	<div id="nms-sec-two" class="section two">
+		<h1>CONFIGURATIONS</h1>
 		<div class="full">
-			<h1>CONFIGURATIONS</h1>
 			<div class="half">
 				<h2>Centralized NMS</h2>
 				<p>Centralized Networked Media Systems are designed to be cost effective, efficient, and scalable. With a centralized system, all of the DSP is in one physical location, such as a central AV rack or a server room. Housing the DSP in an unoccupied space makes maintenance easier and upgrades less time consuming. Expansion into new areas is also simplified by the need to install I/O endpoints only. Biamp’s Tesira family excels in centralized Networked Media Systems.</p>
-				<img src="img/nms-medical-center.png" alt="Medical Center">
 			</div>
+			<img class="half" src="img/nms-medical-center.png" alt="Medical Center">
+		</div>
+		<div class="full">
 			<div class="half">
 				<h2>Decentrailzed NMS</h2>
 				<p>A decentralized Networked Media System, like Biamp’s Vocia<span class="super">®</span> family, places DSP at all of the endpoints, and distributes the demand for DSP across the network, sharing resources between devices as needed rather than routing all signals through a single point, which means there’s no single point of potential system failure. The decentralized model is zone-based, and each zone can be optimized for different scenarios – background music, paging, or even sound reinforcement - resulting in a more efficient system with nearly limitless possibilities.</p>
-				<img src="img/nms-office-building.png" alt="Office Building">
 			</div>
+			<img class="half" src="img/nms-office-building.png" alt="Office Building">
 		</div>
 	</div>
 	<div id="nms-sec-three" class="section three">
@@ -1439,17 +1453,12 @@ function popoff(){
 // side nav functionality
 var nmsPoster = document.getElementsByClassName('nms')[0].getElementsByClassName('poster')[0];
 var sideNav = document.getElementsByClassName('side-nav')[0];
-var s1top = 1618,
-		// s2top	 = 2650,
-		s2top	 = 2538,
-		// s3top = 3984,
-		s3top = 2538,
-		// s4top = 4664,
-		s4top = 3292,
-		// s5top = 6785,
-		s5top = 4152,
-		// sEnd = 7595;
-		sEnd = 4406;
+var s1top = 1626,
+		s2top	 = 2154,
+		s3top = 2748,
+		s4top = 3325,
+		s5top = 4191,
+		sEnd = 4434;
 
 // - side nav scroll positioning
 function navLock(){
