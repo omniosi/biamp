@@ -23,7 +23,8 @@
 	height: 150px;
 	z-index: 0;
 	position: absolute;
-	top: 110px;
+	/*top: 110px;*/
+	top: 15px;
 	right: -5px;
 	border-left: 1px solid {{ site.red }};
 }
