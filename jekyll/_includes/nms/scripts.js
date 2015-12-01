@@ -4,19 +4,13 @@ $('.dot.two').hover(popon,popoff);
 $('.dot.three').hover(popon,popoff);
 $('.dot.four').hover(popon,popoff);
 $('.dot.five').hover(popon,popoff);
-$('.dot.six').hover(function(){
-	$(this).removeClass('pulse');
-	$(this).next('li').stop().fadeIn(200);
-},function(){
-	$(this).addClass('pulse');
-	$(this).next('li').stop().fadeOut(200);
-});
+$('.dot.six').hover(popon,popoff);
 function popon(){
-	$(this).removeClass('pulse');
+	// $(this).removeClass('pulse');
 	$(this).next('li').stop().fadeIn(200);
 }
 function popoff(){
-	$(this).addClass('pulse');
+	// $(this).addClass('pulse');
 	$(this).next('li').stop().fadeOut(200);
 }
 // side nav functionality
@@ -38,19 +32,12 @@ var limit = Math.max(
 	// ) - window.innerHeight;
 	);
 var
-	// s1top = 1614,
 	s1top = nmsPoster.clientHeight + nmsSecOne.clientHeight,
-	// s2top	 = 2123,
 	s2top = nmsPoster.clientHeight + nmsSecOne.clientHeight + nmsSecTwo.clientHeight - (nmsSecTwoA.clientHeight * 1.5),
-	// s3top = 2700,
 	s3top = nmsPoster.clientHeight + nmsSecOne.clientHeight + nmsSecTwo.clientHeight,
-	// s4top = 3330,
 	s4top = nmsPoster.clientHeight + nmsSecOne.clientHeight + nmsSecTwo.clientHeight + nmsSecThree.clientHeight,
-		// s5top = 4191,
 	s5top = nmsPoster.clientHeight + nmsSecOne.clientHeight + nmsSecTwo.clientHeight + nmsSecThree.clientHeight + nmsSecFour.clientHeight,
-		// sEnd = 4434;
 	sEnd = nmsPoster.clientHeight + nmsSecOne.clientHeight + nmsSecTwo.clientHeight + nmsSecThree.clientHeight + nmsSecFour.clientHeight + nmsSecFive.clientHeight;
-
 
 // - side nav scroll positioning
 function navLock(){
@@ -70,7 +57,6 @@ function navLock(){
 			sideNav.style.paddingTop = '0px';
 			sideNav.style.bottom = 'auto'
 		}
-		// if( document.body.scrollTop >= 1618 && document.body.scrollTop < 2650){
 		if( document.body.scrollTop >= s1top && document.body.scrollTop < s2top){
 			sideNav.getElementsByTagName('li')[0].classList.add('focus');
 		}else{
@@ -120,7 +106,6 @@ window.addEventListener("optimizedScroll", function(){
 });
  // - side-nav jump menu functionality
 sideNav.getElementsByTagName('li')[0].addEventListener('click', function(){
-	// document.body.scrollTop = s1top;
 	$('html,body').animate({scrollTop: s1top});
 });
 sideNav.getElementsByTagName('li')[1].addEventListener('click', function(){ $('html,body').animate({scrollTop: s2top}); });

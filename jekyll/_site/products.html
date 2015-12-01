@@ -550,13 +550,7 @@
 .poster{
 	position: relative;
 }
-.markers{
-
-}
-/*.markers .pulse, */
 .markers .dot{
-	/*background: #D9272E;*/
-	background: #D9272E;
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
 	border-radius: 30px;
@@ -567,25 +561,11 @@
 	top: 59%;
 	/*left: 172px;*/
 	left: 9%;
-	z-index: 10;
-}
-/*.markers .pulse{
-	margin-top: -1px;
-	margin-left: -1px;
+	z-index: 105;
+	/*background: #D9272E;*/
 	background: #D9272E;
-	border: 1px solid rgba(255,255,255,0.5);
-	-webkit-animation: pulse 3s ease-out;
-	-moz-animation: pulse 3s ease-out;
-	animation: pulse 3s ease-out;
-	-webkit-animation-iteration-count: infinite;
-	-moz-animation-iteration-count: infinite;
-	animation-iteration-count: infinite;
-	z-index: 1;
-	opacity: 0;
 }
-*/
-/*.markers .dot.pulse:before{
-	background: #D9272E;
+.markers .dot:before{
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
 	border-radius: 30px;
@@ -597,17 +577,16 @@
 	top: -1px;
 	left: -1px;
 	border: 1px solid rgba(255,255,255,0.5);
-	-webkit-animation: pulse 3s ease-out;
-	-moz-animation: pulse 3s ease-out;
-	animation: pulse 3s ease-out;
-	-webkit-animation-iteration-count: infinite;
-	-moz-animation-iteration-count: infinite;
-	animation-iteration-count: infinite;
+	-webkit-animation: pulse 3s ease-out infinite;
+	-moz-animation: pulse 3s ease-out infinite;
+	animation: pulse 3s ease-out infinite;
 	z-index: 1;
 	opacity: 0;
 	content: "";
-}*/
-/*.markers .dot:hover:before{
+	/*background: #D9272E;*/
+	background: #D9272E;
+}
+.markers .dot:hover:before{
 	-webkit-animation: none;
 	-moz-animation: none;
 	animation: none;
@@ -616,17 +595,17 @@
 					animation-iteration-count: none;
 	display: none;
 	content: none;
-}*/
-.markers .dot.two		{ top: 46%; left: 41%; }
-.markers .dot.three	{ top: 68%; left: 54%; }
-.markers .dot.four		{ top: 15%; left: 64%; }
-.markers .dot.five		{ top: 51%; left: 70%; }
-.markers .dot.six			{ top: 48%; left: 87%; }
+}
+.markers .dot.two		{ top: 42%; left: 41%; z-index: 125; }
+.markers .dot.three	{ top: 68%; left: 54%; z-index: 135; }
+.markers .dot.four		{ top: 15%; left: 64%; z-index: 145; }
+.markers .dot.five		{ top: 43%; left: 70%; z-index: 155; }
+.markers .dot.six			{ top: 47%; left: 87%; z-index: 165; }
 .markers .pop{
 	padding: 28px 30px;
 	background: #fff;
 	border: 3px solid #D9272E;
-	z-index: 20;
+	z-index: 100;
 	position: absolute;
 	top: 52.25%;
 	left: 12.5%;
@@ -659,11 +638,11 @@
 .markers .pop img{
 	float: right;
 }
-.markers .pop.two		{ top: 52%; left: 20%; z-index: 200; }
-.markers .pop.three	{ top: 74%; left: 33%; z-index: 300; }
-.markers .pop.four		{ top: 21%; left: 43%; z-index: 400; }
-.markers .pop.five		{ top: 57%; left: 49%; z-index: 500; }
-.markers .pop.six		{ top: 41.5%; left: 44.5%; z-index: 600; }
+.markers .pop.two		{ top: 48%; left: 20%; z-index: 120; }
+.markers .pop.three	{ top: 74%; left: 33%; z-index: 130; }
+.markers .pop.four		{ top: 21%; left: 43%; z-index: 140; }
+.markers .pop.five		{ top: 49%; left: 49%; z-index: 150; }
+.markers .pop.six		{ top: 40.5%; left: 44.5%; z-index: 160; }
 .markers .pop.five:after,
 .markers .pop.five:before,
 .markers .pop.four:after,
@@ -717,6 +696,25 @@
 	  50% { transform: scale(1.1); opacity: 0.3; }
 	  75% { transform: scale(1.5); opacity: 0.5; }
 	100% { transform: scale(2.0); opacity: 0.0; }
+}
+
+@-moz-keyframes pulsing{
+	    0% { color: #D9272E; }
+	  25% { color: #D9272E; }
+	  50% { color: #494647; }
+	100% { color: #D9272E; }
+}
+@-webkit-keyframes "pulsing"{
+	    0% { color: #D9272E; }
+	  25% { color: #D9272E; }
+	  50% { color: #494647; }
+	100% { color: #D9272E; }
+}
+@keyframes pulsing{
+	    0% { color: #D9272E; }
+	  25% { color: #D9272E; }
+	  50% { color: #494647; }
+	100% { color: #D9272E; }
 }
 
     }
@@ -1349,19 +1347,13 @@ $('.dot.two').hover(popon,popoff);
 $('.dot.three').hover(popon,popoff);
 $('.dot.four').hover(popon,popoff);
 $('.dot.five').hover(popon,popoff);
-$('.dot.six').hover(function(){
-	$(this).removeClass('pulse');
-	$(this).next('li').stop().fadeIn(200);
-},function(){
-	$(this).addClass('pulse');
-	$(this).next('li').stop().fadeOut(200);
-});
+$('.dot.six').hover(popon,popoff);
 function popon(){
-	$(this).removeClass('pulse');
+	// $(this).removeClass('pulse');
 	$(this).next('li').stop().fadeIn(200);
 }
 function popoff(){
-	$(this).addClass('pulse');
+	// $(this).addClass('pulse');
 	$(this).next('li').stop().fadeOut(200);
 }
 // side nav functionality
@@ -1383,19 +1375,12 @@ var limit = Math.max(
 	// ) - window.innerHeight;
 	);
 var
-	// s1top = 1614,
 	s1top = nmsPoster.clientHeight + nmsSecOne.clientHeight,
-	// s2top	 = 2123,
 	s2top = nmsPoster.clientHeight + nmsSecOne.clientHeight + nmsSecTwo.clientHeight - (nmsSecTwoA.clientHeight * 1.5),
-	// s3top = 2700,
 	s3top = nmsPoster.clientHeight + nmsSecOne.clientHeight + nmsSecTwo.clientHeight,
-	// s4top = 3330,
 	s4top = nmsPoster.clientHeight + nmsSecOne.clientHeight + nmsSecTwo.clientHeight + nmsSecThree.clientHeight,
-		// s5top = 4191,
 	s5top = nmsPoster.clientHeight + nmsSecOne.clientHeight + nmsSecTwo.clientHeight + nmsSecThree.clientHeight + nmsSecFour.clientHeight,
-		// sEnd = 4434;
 	sEnd = nmsPoster.clientHeight + nmsSecOne.clientHeight + nmsSecTwo.clientHeight + nmsSecThree.clientHeight + nmsSecFour.clientHeight + nmsSecFive.clientHeight;
-
 
 // - side nav scroll positioning
 function navLock(){
@@ -1415,7 +1400,6 @@ function navLock(){
 			sideNav.style.paddingTop = '0px';
 			sideNav.style.bottom = 'auto'
 		}
-		// if( document.body.scrollTop >= 1618 && document.body.scrollTop < 2650){
 		if( document.body.scrollTop >= s1top && document.body.scrollTop < s2top){
 			sideNav.getElementsByTagName('li')[0].classList.add('focus');
 		}else{
@@ -1465,7 +1449,6 @@ window.addEventListener("optimizedScroll", function(){
 });
  // - side-nav jump menu functionality
 sideNav.getElementsByTagName('li')[0].addEventListener('click', function(){
-	// document.body.scrollTop = s1top;
 	$('html,body').animate({scrollTop: s1top});
 });
 sideNav.getElementsByTagName('li')[1].addEventListener('click', function(){ $('html,body').animate({scrollTop: s2top}); });
