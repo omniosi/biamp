@@ -131,6 +131,7 @@
         <script type="text/javascript" src="scripts/jssor.js"></script>
         <script type="text/javascript" src="scripts/jssor.slider.js"></script>
         <script type="text/javascript" src="scripts/mega-menu.js"></script>
+
         <script>
 
             $(document).click(function ()
@@ -341,11 +342,14 @@
                 {% include scaleSlider.js %}
                 */
 
+                {% if page.page == "nmsystems" %}
+                    {% include nms/scripts.js %}
+                {% elsif page.page == "voip" %}
+                    {% include voip/voip-script.js %}
+                {% endif %}
+
             });
 
-            {% include products/products.js %}
-
         </script>
-
     </body>
 </html>

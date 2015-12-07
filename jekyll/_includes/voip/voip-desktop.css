@@ -1,0 +1,24 @@
+/*VoIP page Desktop CSS*/
+.voip .poster{
+	background: url(img/VOIP_bkg.jpg) no-repeat;
+	/*background-size: cover;*/
+	min-height: 400px;
+	position: relative;
+}
+.voip .poster .dial{
+	position: absolute;
+}
+.voip .poster .dial.one{
+	background: url(img/voip_dial_1-05.png) no-repeat;
+	width: 987px;
+	height: 978px;
+	top: 235px;
+	left: -263px;
+}
+.voip .poster .dial.two{
+	background: url(img/voip_dial_2-04.png) no-repeat;
+	width: 960px;
+	height: 944px;
+	top: 248px;
+	left: -236px;
+}

@@ -20,7 +20,7 @@
         <!-- <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7367512/617108/css/fonts.css" /> -->
         <link rel="stylesheet" href="styles/new.css" type="text/css" />
    <style>
-	   /*home styles*/
+     /*home styles*/
 .billboard{
 	/*position: absolute;*/
 	position: relative;
@@ -137,6 +137,7 @@
 	/*display: block;*/
 }
      
+       /*VoIP page CSS*/
      
     /*--tablet--*/
     @media (min-width:700px){
@@ -322,10 +323,34 @@
 	color: #D9272E;
 }
      
+         /*VoIP page Desktop CSS*/
+.voip .poster{
+	background: url(img/VOIP_bkg.jpg) no-repeat;
+	/*background-size: cover;*/
+	min-height: 400px;
+	position: relative;
+}
+.voip .poster .dial{
+	position: absolute;
+}
+.voip .poster .dial.one{
+	background: url(img/voip_dial_1-05.png) no-repeat;
+	width: 987px;
+	height: 978px;
+	top: 235px;
+	left: -263px;
+}
+.voip .poster .dial.two{
+	background: url(img/voip_dial_2-04.png) no-repeat;
+	width: 960px;
+	height: 944px;
+	top: 248px;
+	left: -236px;
+}
      
     }
    </style>
-        <title>Biamp - Voice Over IP</title>
+        <title>Biamp - Voice Over Internet Protocol</title>
     </head>
 
     <body>
@@ -545,9 +570,10 @@
                     <li><a href=#>Not John? Sign Out</a></li>
                 </ul>
             </div>
-	<div class="content nms">
+	<div class="content voip">
 	<div class="poster">
-
+		<div class="dial one"></div>
+		<div class="dial two"></div>
 	</div>
 </div>
             <div class="mega-menu btm menu-lang" style="display:none">
@@ -683,6 +709,7 @@
         <script type="text/javascript" src="scripts/jssor.js"></script>
         <script type="text/javascript" src="scripts/jssor.slider.js"></script>
         <script type="text/javascript" src="scripts/mega-menu.js"></script>
+
         <script>
 
             $(document).click(function ()
@@ -917,15 +944,25 @@
 
                 */
 
+                
+                    // VoIP page JS
+var voipPoster = document.getElementsByClassName('voip')[0].getElementsByClassName('poster')[0]
+	;
+// size poster height to match with proportionately
+voipPoster.style.height = (voipPoster.clientWidth * 0.81) + "px";
+
+// rotate dial art by mouse position
+$(".poster").mousemove(function(event){
+	var relX = event.pageX - $(this).offset().left;
+	var relY = event.pageY - $(this).offset().top;
+	var relBoxCoords = "(" + relX + "," + relY + ")";
+	console.log("mouse position =" + relBoxCoords);
+});
+
+                
+
             });
 
-            // var menuItem = document.getElementsByClassName('solutions-nav')[0];
-// var menuProducts = document.getElementsByClassName('products-nav')[0];
-
-// menuItem.classList.remove('focus');
-// menuProducts.classList.add('focus');
-
         </script>
-
     </body>
 </html>

@@ -20,12 +20,13 @@
         <!-- <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7367512/617108/css/fonts.css" /> -->
         <link rel="stylesheet" href="styles/new.css" type="text/css" />
    <style>
-	   {% include solutions/solutions.css %}
+     {% include solutions/solutions.css %}
      {% if page.page == "products" %}
        {% include products/products.css %}
-     {% endif %}
-     {% if page.page == "nmsystems" %}
+     {% elsif page.page == "nmsystems" %}
        {% include nms/nms.css %}
+     {% elsif page.page == "voip" %}
+       {% include voip/voip.css %}
      {% endif %}
     /*--tablet--*/
     @media (min-width:{{ site.tablet }}px){
@@ -39,9 +40,10 @@
      {% include solutions/solutions-desktop.css %}
      {% if page.page == "products" %}
          {% include products/products-desktop.css %}
-     {% endif %}
-     {% if page.page == "nmsystems" %}
+     {% elsif page.page == "nmsystems" %}
          {% include nms/nms-desktop.css %}
+     {% elsif page.page == "voip" %}
+         {% include voip/voip-desktop.css %}
      {% endif %}
     }
    </style>
