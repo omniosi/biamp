@@ -1,0 +1,13 @@
+.nms .poster{
+	height: 480px;
+}
+.section.two h1:before,
+.section.two h1:after{
+	/*width: 80px;*/
+	width: 7%;
+}
+.section.three img{
+	/*width: 70%;*/
+	margin: 50px auto 0;
+	display: block;
+}
