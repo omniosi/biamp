@@ -4,6 +4,11 @@
 	/*background-size: cover;*/
 	min-height: 400px;
 	position: relative;
+	color: {{site.voip}};
+}
+.voip .poster a{
+	/*color: {{site.voip}};*/
+	color: {{site.darkGrey}};
 }
 .voip .poster .dial{
 	position: absolute;
@@ -12,13 +17,30 @@
 	background: url(img/voip_dial_1-05.png) no-repeat;
 	width: 987px;
 	height: 978px;
-	top: 235px;
-	left: -263px;
+	/*top: 235px;*/
+	/*left: -263px;*/
+	top: 220px;
+	left: -264px;
 }
 .voip .poster .dial.two{
 	background: url(img/voip_dial_2-04.png) no-repeat;
 	width: 960px;
 	height: 944px;
-	top: 248px;
-	left: -236px;
+	/*top: 248px;*/
+	/*left: -236px;*/
+	top: 240px;
+	left: -264px;
+}
+.voip .poster .text{
+	position: absolute;
+	top: 35%;
+	left: 57%;
+	width: 38%;
+	/*height: 40%;*/
+	font-size: 1.25em;
+	line-height: 1.5em;
+	display:none;
+}
+.voip .poster .text p{
+	padding-bottom: 1.25em;
 }

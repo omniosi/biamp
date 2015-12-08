@@ -12,7 +12,9 @@ $(".poster").mousemove(function(event){
 	var relY = event.pageY - $(this).offset().top;
 	var relBoxCoords = "(" + relX + "," + relY + ")";
 	console.log("mouse position =" + relBoxCoords);
-	dialOne.style.transform = dialOne.style.webkitTransform = "rotate(" + relX + "deg)";
-	dialTwo.style.transform = dialTwo.style.webkitTransform = "rotate(-" + relY + "deg)";
+	dialOne.style.transform = dialOne.style.webkitTransform = "rotate(" + relY + "deg)";
+	dialTwo.style.transform = dialTwo.style.webkitTransform = "rotate(-" + relX + "deg)";
 	// dialTwo.style.transform = dialTwo.style.webkitTransform = "rotate(-" + relX + "deg)";
+	dialTwo.style.transformOrigin = dialTwo.style.webkitTransformOrigin = "480px 472px";
+	// dialTwo.style.transformOrigin = dialTwo.style.webkitTransformOrigin = "472px 480px";
 });
