@@ -20,313 +20,20 @@
         <!-- <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7367512/617108/css/fonts.css" /> -->
         <link rel="stylesheet" href="styles/new.css" type="text/css" />
    <style>
-     /*home styles*/
-.billboard{
-	/*position: absolute;*/
-	position: relative;
-	top: 80px;
-	/*bottom: 80px;*/
-	height: 360px;
-	background: url('img/animation.png') 50% 50% no-repeat;
-	background-size: cover;
-	width: 100%;
-	z-index: 800;
-}
-.main{
-	/*padding-top: 80px;*/
-	/*position: fixed;*/
-	/*top: 80px;*/
-}
-.main .billboard img{
-	width: 100%;
-}
-.main .poster{
-	width: 100%;
-	height: 330px;
-	background: url('img/solutions-hdr.jpg') 50% 50% no-repeat;
-	background-size: cover;
-	background-position: 74% 63%;
-	/*background-size: 350%;*/
-	/*background-position: 75% 100%;*/
-}
-.main .poster h1{
-	font-size: 32px;
-	line-height: 1.25em;
-	text-align: center;
-	color: #fff;
-	/*margin-left: 20%;*/
-	margin-left: -125px;
-	/*padding-top: 200px;*/
-	padding-top: 150px;
-	width: 250px;
-	text-transform: uppercase;
-	text-shadow: 0 0 10px rgba(0,0,0,0.35),0 0 5px rgba(0,0,0,0.35);
-	left: 50%;
-	position: relative;
-}
-.main .art-menu{
-	background: #fff;
-	display:none;
-}
-.art-menu ul{
-	background: #fff;
-	color: #585556;
-}
-.products .charts ul{
-	border-top: 1px solid #585556;
-}
-.products .charts ul li,
-.main .title,
-.copy h1,
-.art-menu ul li{
-	list-style: none;
-	border-bottom: 1px solid #585556;
-}
-.products .charts ul li a,
-.copy h1,
-.art-menu ul li a{
-	padding: 16px 20px;
-	display: block;
-	color: #585556;
-	font-size: 16px;
-	text-transform: uppercase;
-}
-.products .charts ul li a:before,
-.copy h1:before,
-.art-menu ul li a:before{
-	font-family: "icomoon-bia";
-	content:"\e805";
-	padding-bottom: 1em;
-	font-size: 25px;
-	position: absolute;
-	right: 20px;
-	line-height: 18px;
-}
-.art-menu ul li a:focus,
-.art-menu ul li a.focus,
-.art-menu ul li a:hover{
-	text-decoration: none;
-}
-.main .title{
-	padding: 20px;
-	color: #fff;
-	background: #585556;
-	font-size: 1.125em;
-}
-.main .title h1{
-	font-size: 1.5em;
-}
-.subhead{
-	padding: 20px;
-	text-align: center;
-	width: 100%;
-	margin: 0 auto;
-	display: none;
-}
-.subhead p{
-	font-family: 'Arvo', serif;
-	font-style: italic;
-	letter-spacing: 0.05em;
-	line-height: 1.65em;
-}
-.charts,
-.copy p{
-	display: none;
-}
-.section .copy h1{
-	/*display: block;*/
-}
      
        /*VoIP page CSS*/
      
     /*--tablet--*/
     @media (min-width:700px){
-     /*--tablet styles--*/
-.billboard{
-	height: 700px;
-}
-.main .poster{
-	background-size: cover;
-	background-position: 80%;
-}
-.main .poster h1{
-	width: 460px;
-	margin-left: -230px;
-}
-.main .art-menu{
-	/*height: 225px;*/
-	padding: 20px;
-	background: #f4f4f4;
-}
-.main .art-menu ul{
-	text-align: center;
-	background: url(img/menu-line-arrows.svg) no-repeat;
-	background-position: 0	73px;
-	background-size: 816px 12px;
-	width: 816px;
-	height: 155px;
-	position: relative;
-	left: 50%;
-	margin-left: -408px;
-}
-.main .art-menu ul li{
-	display: inline-block;
-	vertical-align: top;
-	margin: 0 20px;
-	border-bottom: none;
-}
-.main .art-menu ul li a{
-	display: block;
-	background: url(img/solutions-art-menu.svg) no-repeat;
-	background-position: 0	0;
-	background-size: 816px 180px;
-	width: 135px;
-	height: 155px;
-	padding: 0;
-	padding-top: 50%;
-	color: #808284;
-	font-size: 14px;
-}
-.main .art-menu ul li a:before{ content: ""; }
-.main .art-menu ul li a:hover{
-	background-position: -140px	0;
-	text-indent: -9999px;
-}
-.main .art-menu ul li a.support:hover{ background-position: -280px	0; }
-.main .art-menu ul li a.new:hover{ background-position: -420px	0; }
-.main .art-menu ul li a.events:hover{ background-position: -560px	0; }
      
     }
     /*--desktop--*/
     @media (min-width:1420px){
-     .billboard{
-	/*position: absolute;*/
-	top: 80px;
-	/*bottom: 80px;*/
-	width: 100%;
-	/*height: auto;*/
-	height: 1070px;
-}
-.content{
-	/*padding-bottom: 100px;*/
-	padding-bottom: 50px;
-}
-.main .poster{
-	height: 600px;
-	background-size: cover;
-}
-.main .poster h1{
-	font-size: 100px;
-	line-height: 1.25em;
-	margin-left: 6%;
-	padding-top: 100px;
-	width: 550px;
-	text-align: left;
-	left: 0;
-}
-.main .art-menu{
-	display:block;
-}
-.main .title{
-	background: #fff;
-	padding: 80px 20px 20px;
-	color: #000;
-	letter-spacing: 0.125em;
-	text-align: center;
-	border-bottom: none;
-}
-.main .title h1{
-	font-size: 50px;
-	font-weight: 100;
-}
-.subhead{
-	padding: 20px 20px 20px 40px;
-	width: 65%;
-}
-.section{
-	/*padding: 20px 20px 100px 40px;*/
-	padding: 60px 20px 60px 40px;
-	position: relative;
-}
-.section .copy,
-.section .charts{
-	display:inline-block;
-	vertical-align: top;
-	width: 40%;
-}
-.charts, .copy p{
-	display:block;
-}
-.copy h1{
-	font-size: 40px;
-	padding: 0;
-	text-transform: capitalize;
-	font-weight: bold;
-	display:inline;
-	border-bottom: none;
-}
-.copy h1:before{
-	content: "";
-}
-.copy p{
-	font-size: 1.25em;
-	font-weight: 100;
-	padding-top: 30px;
-}
-.section .charts{
-	/*position: absolute;*/
-	/*right: 0;*/
-	margin-left: 12%;
-}
-.charts li{
-	display: inline-block;
-	vertical-align: top;
-	text-align: center;
-	margin: 0 20px 20px 0;
-	width: 30%;
-}
-.charts li a{
-	/*padding: 20px 40px;*/
-	background: #E3EAEA;
-	border:1px solid #fff;
-	color: #585556;
-	display: block;
-	height: 80px;
-	/*line-height: 5em;*/
-	padding-top: 1.75em;
-}
-.section.alt{
-	background: url(img/desk-back.jpg) no-repeat;
-	background-size: cover;
-}
-.section.alt .copy{
-	float: right;
-	/*float: left;*/
-	margin-right: 8%;
-}
-.section.alt .charts{
-	margin-left: 0;
-	margin-right: 12%;
-	width: 33%;
-}
-.section.alt .charts li{
-	float: right;
-}
-.section.alt .charts li a{
-	background: #585556;
-	border-color: #585556;
-	color: #fff;
-}
-.section .charts li a:hover{
-	border:1px solid #D9272E;
-	background: none;
-	color: #D9272E;
-}
      
          /*VoIP page Desktop CSS*/
 .voip .poster{
 	background: url(img/VOIP_bkg.jpg) no-repeat;
-	/*background-size: cover;*/
+	background-size: cover;
 	min-height: 400px;
 	position: relative;
 	color: #497c77;
@@ -337,25 +44,29 @@
 }
 .voip .poster .dial{
 	position: absolute;
+	width: 50%;
+	height: 60%;
+	/*top: 15.5%;*/
+	top: 15%;
+	left: -13%;
 }
 .voip .poster .dial.one{
-	background: url(img/voip_dial_1-05.png) no-repeat;
-	width: 987px;
-	height: 978px;
-	/*top: 235px;*/
-	/*left: -263px;*/
-	top: 220px;
-	left: -264px;
+	background: url(img/voip_dial_under.png) no-repeat;
+	background-size: cover;
 }
 .voip .poster .dial.two{
-	background: url(img/voip_dial_2-04.png) no-repeat;
-	width: 960px;
-	height: 944px;
-	/*top: 248px;*/
-	/*left: -236px;*/
-	top: 240px;
-	left: -264px;
+	background: url(img/voip_dial_over.png) no-repeat;
+	background-size: cover;
+	/*top: 13%;*/
+	/*left: -12.5%;*/
 }
+.voip .poster .title{ position: absolute; top: 11%; left: 10%; }
+.voip .poster .title.one		{ top: 16%; left: 25%; }
+.voip .poster .title.two		{ top: 27%; left: 34%; }
+.voip .poster .title.three	{ top: 38%; left: 37%; }
+.voip .poster .title.four		{ top: 49%; left: 36%; }
+.voip .poster .title.five		{ top: 60%; left: 33%; }
+.voip .poster .title.six			{ top: 70%; left: 25%; }
 .voip .poster .text{
 	position: absolute;
 	top: 35%;
@@ -601,18 +312,18 @@
 				<p>The number-one question our Applications Engineering team receives is, &ldquo;How do I get started?&rdquo; With VoIP, you&lsquo;re getting into networking, which is on the far edge of many people&lsquo;s comfort zones. VoIP is a specific set of protocols that uses the network to exchange information. Because we offer third-party SIP phones, we support SIP in the same way that we believe other manufacturers would do so. By offering an agnostic device that can connect to any other manufacturer, we&lsquo;re out there for everybody.</p>
 				<p>We&lsquo;ve created a series of tools to help make the installation process as efficient as possible. These tools are available on <a href="http://support.biamp.com/VoIP" target="_blank">Cornerstone</a>.</p>
 			</li>
-			<li class="title"><h1>Certification and Testing</h1></li>
-			<li class="text"><p>Certification and testing are some of the first steps we&lsquo;ve taken to help our customers; we&lsquo;ve vetted our products and their ability to interact with other manufactures&lsquo; products. The key point of certification is that not only do we support a product, but the VoIP manufacturer also supports it. Certification and testing go a long way. We also maintain an extensive tech notes database, which can be accessed via Cornerstone. Tech notes cover a significant percentage of the VoIP issues we encounter. The remainder involves factors like unique network setups. We wrote all tech notes in-house, in the name of improved customer support.</p></li>
-			<li class="title"><h1>Product Matrix</h1></li>
-			<li class="text"><p>We&lsquo;ve created a product matrix that can be used as a reference when selecting initial equipment. The product matrix shows which of our VoIP products and connections are tested, and which are certified, to function with specific manufacturers&lsquo; equipment. If a device doesn&lsquo;t appear on either list, proceed at your own risk. However, if a device does appear on this list, we guarantee that we will work with you until that system is fully functional. We provide resources that educate and inform VoIP administrators so they feel more confident with installations. Engineering support and tech support are here to make it work.</p></li>
-			<li class="title"><h1>Checklist</h1></li>
-			<li class="text"><p>VoIP card installation is a complex process that relies on multiple factors to reach the desired result. With this in mind, we developed a thorough checklist designed to ask the right questions of the VoIP administrator and generate the important information to help each installation go smoothly. Although the checklist is detailed and includes every possible bit of information that may be required, the information needed varies. The checklist was developed to start the VoIP installation process off right, saving valuable time and reducing frustration for integrators and VoIP administrators. Before completing the checklist, we recommend checking out our VoIP product matrix.</p></li>
-			<li class="title"><h1>Configuration</h1></li>
-			<li class="text"><p>Once an integrator works with the VoIP administrator to fill out the VoIP checklist, the information is entered into our software. The VoIP system uses this data to determine whether everything matches, and when that is complete, the process of connecting to the VoIP system can continue. If there&lsquo;s a problem at any point, the equipment will prevent you from dialing. You can review the current state of the card and any status messages. If that section is blank, everything is working properly. If not, you can use the error message to diagnose and address the issue by searching Cornerstone or calling Biamp Support.</p></li>
-			<li class="title"><h1>Troubleshooting</h1></li>
-			<li class="text"><p>We&lsquo;re confident in our products and technology, but we recognize that things can go wrong even in the most expertly designed and developed systems. Some of the most common troubleshooting techniques are outlined on Cornerstone in the form of our status message key and Wireshark packet capture tech notes.</p></li>
-			<li class="title"><h1>Training</h1></li>
-			<li class="text"><p>To supplement these support services, we provide onsite and online training classes. Although all of Biamp&lsquo;s training courses cover VoIP to some degree, we launched a dedicated VoIP training course in February 2015. This course is hosted online and can be completed at a pace that suits your needs. Our goal is to ensure that people know what Tesira is capable of and how it operates. Upon passing the course and final exam, you'll receive Biamp VoIP certification. <a href="http://www.biamp.com/training/online_registration.aspx" target="_blank">Sign up for our VoIP training course</a>.</p></li>
+			<li class="title one"><h1>Certification and Testing</h1></li>
+			<li class="text one"><p>Certification and testing are some of the first steps we&lsquo;ve taken to help our customers; we&lsquo;ve vetted our products and their ability to interact with other manufactures&lsquo; products. The key point of certification is that not only do we support a product, but the VoIP manufacturer also supports it. Certification and testing go a long way. We also maintain an extensive tech notes database, which can be accessed via Cornerstone. Tech notes cover a significant percentage of the VoIP issues we encounter. The remainder involves factors like unique network setups. We wrote all tech notes in-house, in the name of improved customer support.</p></li>
+			<li class="title two"><h1>Product Matrix</h1></li>
+			<li class="text two"><p>We&lsquo;ve created a product matrix that can be used as a reference when selecting initial equipment. The product matrix shows which of our VoIP products and connections are tested, and which are certified, to function with specific manufacturers&lsquo; equipment. If a device doesn&lsquo;t appear on either list, proceed at your own risk. However, if a device does appear on this list, we guarantee that we will work with you until that system is fully functional. We provide resources that educate and inform VoIP administrators so they feel more confident with installations. Engineering support and tech support are here to make it work.</p></li>
+			<li class="title three"><h1>Checklist</h1></li>
+			<li class="text three"><p>VoIP card installation is a complex process that relies on multiple factors to reach the desired result. With this in mind, we developed a thorough checklist designed to ask the right questions of the VoIP administrator and generate the important information to help each installation go smoothly. Although the checklist is detailed and includes every possible bit of information that may be required, the information needed varies. The checklist was developed to start the VoIP installation process off right, saving valuable time and reducing frustration for integrators and VoIP administrators. Before completing the checklist, we recommend checking out our VoIP product matrix.</p></li>
+			<li class="title four"><h1>Configuration</h1></li>
+			<li class="text four"><p>Once an integrator works with the VoIP administrator to fill out the VoIP checklist, the information is entered into our software. The VoIP system uses this data to determine whether everything matches, and when that is complete, the process of connecting to the VoIP system can continue. If there&lsquo;s a problem at any point, the equipment will prevent you from dialing. You can review the current state of the card and any status messages. If that section is blank, everything is working properly. If not, you can use the error message to diagnose and address the issue by searching Cornerstone or calling Biamp Support.</p></li>
+			<li class="title five"><h1>Troubleshooting</h1></li>
+			<li class="text five"><p>We&lsquo;re confident in our products and technology, but we recognize that things can go wrong even in the most expertly designed and developed systems. Some of the most common troubleshooting techniques are outlined on Cornerstone in the form of our status message key and Wireshark packet capture tech notes.</p></li>
+			<li class="title six"><h1>Training</h1></li>
+			<li class="text six"><p>To supplement these support services, we provide onsite and online training classes. Although all of Biamp&lsquo;s training courses cover VoIP to some degree, we launched a dedicated VoIP training course in February 2015. This course is hosted online and can be completed at a pace that suits your needs. Our goal is to ensure that people know what Tesira is capable of and how it operates. Upon passing the course and final exam, you'll receive Biamp VoIP certification. <a href="http://www.biamp.com/training/online_registration.aspx" target="_blank">Sign up for our VoIP training course</a>.</p></li>
 		</ul>
 	</div>
 </div>
@@ -998,14 +709,94 @@ $(".poster").mousemove(function(event){
 	var relX = event.pageX - $(this).offset().left;
 	var relY = event.pageY - $(this).offset().top;
 	var relBoxCoords = "(" + relX + "," + relY + ")";
-	console.log("mouse position =" + relBoxCoords);
-	dialOne.style.transform = dialOne.style.webkitTransform = "rotate(" + relY + "deg)";
-	dialTwo.style.transform = dialTwo.style.webkitTransform = "rotate(-" + relX + "deg)";
-	// dialTwo.style.transform = dialTwo.style.webkitTransform = "rotate(-" + relX + "deg)";
-	dialTwo.style.transformOrigin = dialTwo.style.webkitTransformOrigin = "480px 472px";
-	// dialTwo.style.transformOrigin = dialTwo.style.webkitTransformOrigin = "472px 480px";
-});
+	var screenWidth = window.outerWidth;
+	var screenHeight = window.outerHeight;
+	// var screenHeight = window.clientHeight;
+	var percentage = ( screenWidth - relY ) / screenWidth * 100 + "%";
+	// var percY = ( screenHeight - relY ) / screenHeight * 100 + "%";
+	var percY = ( screenHeight - relY ) / screenHeight * 100;
+	var turn = percY * 1.8;
+	var text = document.getElementsByClassName("text")[0],
+			textOne	 = document.getElementsByClassName("text")[1],
+			textTwo	 = document.getElementsByClassName("text")[2],
+			textThree = document.getElementsByClassName("text")[3],
+			textFour	 = document.getElementsByClassName("text")[4],
+			textFive	 = document.getElementsByClassName("text")[5],
+			textSix		 = document.getElementsByClassName("text")[6];
 
+	// console.log( "width percentage = " + percentage );
+	console.log( "dial percentage = " + percY + "%" );
+	console.log( "turn = " + turn + "deg" );
+	console.log("mouse position =" + relBoxCoords);
+	// dialOne.style.transform = dialOne.style.webkitTransform = "rotate(-" + relY + "deg)";
+	// dialTwo.style.transform = dialTwo.style.webkitTransform = "rotate(" + relY + "deg)";
+	// dialOne.style.transform = dialOne.style.webkitTransform = "rotate(-" + percY + "deg)";
+	// dialTwo.style.transform = dialTwo.style.webkitTransform = "rotate(" + percY + "deg)";
+	dialOne.style.transform = dialOne.style.webkitTransform = "rotate(-" + turn + "deg)";
+	dialTwo.style.transform = dialTwo.style.webkitTransform = "rotate(" + turn + "deg)";
+	// dialTwo.style.transformOrigin = dialTwo.style.webkitTransformOrigin = "50% 60%";
+
+	// if( percY >= 30 && percY <= 60 ){
+	if( turn >= 40 && turn <= 60 ){
+		text.style.display = 			"none";
+		textOne.style.display = 	"block";
+		textTwo.style.display = 	"none";
+		textThree.style.display = 	"none";
+		textFour.style.display = 	"none";
+		textFive.style.display = 	"none";
+		textSix.style.display = 	"none";
+	// }else if( percY >= 60 && percY <= 80 ){
+	}else if( turn >= 60 && turn <= 80 ){
+		text.style.display = 			"none";
+		textOne.style.display = 	"none";
+		textTwo.style.display = 	"block";
+		textThree.style.display = 	"none";
+		textFour.style.display = 	"none";
+		textFive.style.display = 	"none";
+		textSix.style.display = 	"none";
+	// }else if( percY >= 80 && percY <= 100 ){
+	}else if( turn >= 80 && turn <= 100 ){
+		text.style.display = 			"none";
+		textOne.style.display = 	"none";
+		textTwo.style.display = 	"none";
+		textThree.style.display = 	"block";
+		textFour.style.display = 	"none";
+		textFive.style.display = 	"none";
+		textSix.style.display = 	"none";
+	}else if( turn >= 100 && turn <= 120 ){
+		text.style.display = 			"none";
+		textOne.style.display = 	"none";
+		textTwo.style.display = 	"none";
+		textThree.style.display = 	"none";
+		textFour.style.display = 	"block";
+		textFive.style.display = 	"none";
+		textSix.style.display = 	"none";
+	}else if( turn >= 120 && turn <= 140 ){
+		text.style.display = 			"none";
+		textOne.style.display = 	"none";
+		textTwo.style.display = 	"none";
+		textThree.style.display = 	"none";
+		textFour.style.display = 	"none";
+		textFive.style.display = 	"block";
+		textSix.style.display = 	"none";
+	}else if( turn >= 140 && turn <= 160 ){
+		text.style.display = 			"none";
+		textOne.style.display = 	"none";
+		textTwo.style.display = 	"none";
+		textThree.style.display = 	"none";
+		textFour.style.display = 	"none";
+		textFive.style.display = 	"none";
+		textSix.style.display = 	"block";
+	}else{
+		text.style.display = 			"block";
+		textOne.style.display = 	"none";
+		textTwo.style.display = 	"none";
+		textThree.style.display = 	"none";
+		textFour.style.display = 	"none";
+		textFive.style.display = 	"none";
+		textSix.style.display = 	"none";
+	}
+});
                 
 
             });

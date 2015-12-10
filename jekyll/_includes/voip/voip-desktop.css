@@ -1,7 +1,7 @@
 /*VoIP page Desktop CSS*/
 .voip .poster{
 	background: url(img/VOIP_bkg.jpg) no-repeat;
-	/*background-size: cover;*/
+	background-size: cover;
 	min-height: 400px;
 	position: relative;
 	color: {{site.voip}};
@@ -12,25 +12,29 @@
 }
 .voip .poster .dial{
 	position: absolute;
+	width: 50%;
+	height: 60%;
+	/*top: 15.5%;*/
+	top: 15%;
+	left: -13%;
 }
 .voip .poster .dial.one{
-	background: url(img/voip_dial_1-05.png) no-repeat;
-	width: 987px;
-	height: 978px;
-	/*top: 235px;*/
-	/*left: -263px;*/
-	top: 220px;
-	left: -264px;
+	background: url(img/voip_dial_under.png) no-repeat;
+	background-size: cover;
 }
 .voip .poster .dial.two{
-	background: url(img/voip_dial_2-04.png) no-repeat;
-	width: 960px;
-	height: 944px;
-	/*top: 248px;*/
-	/*left: -236px;*/
-	top: 240px;
-	left: -264px;
+	background: url(img/voip_dial_over.png) no-repeat;
+	background-size: cover;
+	/*top: 13%;*/
+	/*left: -12.5%;*/
 }
+.voip .poster .title{ position: absolute; top: 11%; left: 10%; }
+.voip .poster .title.one		{ top: 16%; left: 25%; }
+.voip .poster .title.two		{ top: 27%; left: 34%; }
+.voip .poster .title.three	{ top: 38%; left: 37%; }
+.voip .poster .title.four		{ top: 49%; left: 36%; }
+.voip .poster .title.five		{ top: 60%; left: 33%; }
+.voip .poster .title.six			{ top: 70%; left: 25%; }
 .voip .poster .text{
 	position: absolute;
 	top: 35%;

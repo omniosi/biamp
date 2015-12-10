@@ -20,8 +20,9 @@
         <!-- <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7367512/617108/css/fonts.css" /> -->
         <link rel="stylesheet" href="styles/new.css" type="text/css" />
    <style>
-     {% include solutions/solutions.css %}
-     {% if page.page == "products" %}
+     {% if page.page == "solutions" %}
+         {% include solutions/solutions.css %}
+     {% elsif page.page == "products" %}
        {% include products/products.css %}
      {% elsif page.page == "nmsystems" %}
        {% include nms/nms.css %}
@@ -30,15 +31,17 @@
      {% endif %}
     /*--tablet--*/
     @media (min-width:{{ site.tablet }}px){
-     {% include solutions/solutions-tablet.css %}
-     {% if page.page == "nmsystems" %}
+     {% if page.page == "solutions" %}
+         {% include solutions/solutions-tablet.css %}
+     {% elsif page.page == "nmsystems" %}
          {% include nms/nms-tablet.css %}
      {% endif %}
     }
     /*--desktop--*/
     @media (min-width:{{ site.desktop }}px){
-     {% include solutions/solutions-desktop.css %}
-     {% if page.page == "products" %}
+     {% if page.page == "solutions" %}
+         {% include solutions/solutions-desktop.css %}
+     {% elsif page.page == "products" %}
          {% include products/products-desktop.css %}
      {% elsif page.page == "nmsystems" %}
          {% include nms/nms-desktop.css %}
