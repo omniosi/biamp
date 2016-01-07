@@ -12,7 +12,7 @@ $(".poster").mousemove(function(event){
 	var relY = event.pageY - $(this).offset().top;
 	var relBoxCoords = "(" + relX + "," + relY + ")";
 	var screenWidth = window.outerWidth;
-	var screenHeight = window.outerHeight;
+	var screenHeight = window.outerHeight - 180;
 	// var screenHeight = window.clientHeight;
 	var percentage = ( screenWidth - relY ) / screenWidth * 100 + "%";
 	// var percY = ( screenHeight - relY ) / screenHeight * 100 + "%";
@@ -39,63 +39,63 @@ $(".poster").mousemove(function(event){
 	// dialTwo.style.transformOrigin = dialTwo.style.webkitTransformOrigin = "50% 60%";
 
 	// if( percY >= 30 && percY <= 60 ){
-	if( turn >= 40 && turn <= 60 ){
-		text.style.display = 			"none";
-		textOne.style.display = 	"block";
-		textTwo.style.display = 	"none";
-		textThree.style.display = 	"none";
-		textFour.style.display = 	"none";
-		textFive.style.display = 	"none";
-		textSix.style.display = 	"none";
+	if( turn >= 30 && turn < 60 ){
+		$(".text.start").fadeOut(200);
+		$(".text.one").fadeIn(200);
+		$(".text.two").fadeOut(200);
+		$(".text.three").fadeOut(200);
+		$(".text.four").fadeOut(200);
+		$(".text.five").fadeOut(200);
+		$(".text.six").fadeOut(200);
 	// }else if( percY >= 60 && percY <= 80 ){
-	}else if( turn >= 60 && turn <= 80 ){
-		text.style.display = 			"none";
-		textOne.style.display = 	"none";
-		textTwo.style.display = 	"block";
-		textThree.style.display = 	"none";
-		textFour.style.display = 	"none";
-		textFive.style.display = 	"none";
-		textSix.style.display = 	"none";
+	}else if( turn >= 60 && turn < 80 ){
+		$(".text.start").fadeOut(200);
+		$(".text.one").fadeOut(200);
+		$(".text.two").fadeIn(200);
+		$(".text.three").fadeOut(200);
+		$(".text.four").fadeOut(200);
+		$(".text.five").fadeOut(200);
+		$(".text.six").fadeOut(200);
 	// }else if( percY >= 80 && percY <= 100 ){
-	}else if( turn >= 80 && turn <= 100 ){
-		text.style.display = 			"none";
-		textOne.style.display = 	"none";
-		textTwo.style.display = 	"none";
-		textThree.style.display = 	"block";
-		textFour.style.display = 	"none";
-		textFive.style.display = 	"none";
-		textSix.style.display = 	"none";
-	}else if( turn >= 100 && turn <= 120 ){
-		text.style.display = 			"none";
-		textOne.style.display = 	"none";
-		textTwo.style.display = 	"none";
-		textThree.style.display = 	"none";
-		textFour.style.display = 	"block";
-		textFive.style.display = 	"none";
-		textSix.style.display = 	"none";
-	}else if( turn >= 120 && turn <= 140 ){
-		text.style.display = 			"none";
-		textOne.style.display = 	"none";
-		textTwo.style.display = 	"none";
-		textThree.style.display = 	"none";
-		textFour.style.display = 	"none";
-		textFive.style.display = 	"block";
-		textSix.style.display = 	"none";
-	}else if( turn >= 140 && turn <= 160 ){
-		text.style.display = 			"none";
-		textOne.style.display = 	"none";
-		textTwo.style.display = 	"none";
-		textThree.style.display = 	"none";
-		textFour.style.display = 	"none";
-		textFive.style.display = 	"none";
-		textSix.style.display = 	"block";
+	}else if( turn >= 80 && turn < 100 ){
+		$(".text.start").fadeOut(200);
+		$(".text.one").fadeOut(200);
+		$(".text.two").fadeOut(200);
+		$(".text.three").fadeIn(200);
+		$(".text.four").fadeOut(200);
+		$(".text.five").fadeOut(200);
+		$(".text.six").fadeOut(200);
+	}else if( turn >= 100 && turn < 120 ){
+		$(".text.start").fadeOut(200);
+		$(".text.one").fadeOut(200);
+		$(".text.two").fadeOut(200);
+		$(".text.three").fadeOut(200);
+		$(".text.four").fadeIn(200);
+		$(".text.five").fadeOut(200);
+		$(".text.six").fadeOut(200);
+	}else if( turn >= 120 && turn < 140 ){
+		$(".text.start").fadeOut(200);
+		$(".text.one").fadeOut(200);
+		$(".text.two").fadeOut(200);
+		$(".text.three").fadeOut(200);
+		$(".text.four").fadeOut(200);
+		$(".text.five").fadeIn(200);
+		$(".text.six").fadeOut(200);
+	}else if( turn >= 140 && turn < 160 ){
+		$(".text.start").fadeOut(200);
+		$(".text.one").fadeOut(200);
+		$(".text.two").fadeOut(200);
+		$(".text.three").fadeOut(200);
+		$(".text.four").fadeOut(200);
+		$(".text.five").fadeOut(200);
+		$(".text.six").fadeIn(200);
 	}else{
-		text.style.display = 			"block";
-		textOne.style.display = 	"none";
-		textTwo.style.display = 	"none";
-		textThree.style.display = 	"none";
-		textFour.style.display = 	"none";
-		textFive.style.display = 	"none";
-		textSix.style.display = 	"none";
+		$(".text.start").fadeIn(200);
+		$(".text.one").fadeOut(200);
+		$(".text.two").fadeOut(200);
+		$(".text.three").fadeOut(200);
+		$(".text.four").fadeOut(200);
+		$(".text.five").fadeOut(200);
+		$(".text.six").fadeOut(200);
 	}
 });

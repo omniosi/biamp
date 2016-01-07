@@ -1,0 +1,6 @@
+{% extends "layout.nunjucks" %}
+{% set pagename = "home" %}
+
+{% block content %}
+
+{% endblock %}

@@ -1,0 +1,3 @@
+{% macro tname(currentPage='home') %}
+	<title>{% if currentPage == 'home' %}Home{% endif %}</title>
+{% endmacro %}
